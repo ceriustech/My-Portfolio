@@ -7,9 +7,7 @@
     <meta name="keywords" content="web design, affordable web design, urban, urban global, urban global.net, urban freelancer, freelancer, freelancers, professional web design, web development, development, Urban, Urban Freelancer, web design company, web development company">
   <meta name="description" content="Affordable web design, affordable web development, professional web design, professional web development">
   <meta name="author" content="Bilal Masters">
-    
     <!-- Bootstrap -->
-      
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -19,35 +17,29 @@
     <!-- Native CSS -->
     <link rel="stylesheet" type="text/css" href="CSS/reset.css"/>
    <link rel="stylesheet" type="text/css" href="CSS/styles.css"/>
+   <!-- External CSS -->
+   <link rel="stylesheet" type="text/css" href="CSS/slicknav.min.css"/>
    <!-- CSS Animations -->
     <link rel="stylesheet" type="text/css" href="CSS/animate.css"/> 
-    <!-- Font Awesome -->
-    
     <!-- Google Fonts -->
     
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     
-
     </head>
     
-
-
-
 <body>
-    
    <header id="header">
         <div class="container">
             <div class="row">
                <h1 id="logo"><a class="logo" href="#" style="color: #fff">B<span class="primary">M</span></a></h1>
-              
-           
-            <nav class="menu" id="menu">
+            <nav>
                <a class="burger-nav"></a>
-                <ul>
-                    <li class="current"><a href="#">Home</a></li>
+                <ul class="menu" id="menu">
+                    <li class="current"><a href="#slider">Home</a></li>
                     <li class="current"><a href="#services">Services</a></li>
                     <li class="current"><a href="#portfolio">Portfolio</a></li>
                     <li class="current"><a href="#about">About</a></li>
+                    <li class="current"><a href="#my-skills">Skills</a></li>
                     <li class="current"><a href="#testimonials">Testimonials</a></li>
                     <li class="current"><a href="#blog">Blog</a></li>
                     <li class="current"><a href="#contact">Contact</a></li>
@@ -58,18 +50,18 @@
         </div>
     </header>
     
-    <section class="slider img1">
- <ul class="slider-carousel" id="slider-carousel">
-    <li class="img1">
-        <h1>Bilal <span class="primary">Masters</span></h1>
-        <p>Welcome to my website, where I get to share my love for coding and building web apps with you. </p> <a href="#" class="primary-bg cta1">Get Started</a> <a href="#" class="secondary-sky-blue-bg cta2">Contact Us</a> </li>
-    <li class="img1">
-        <h1>Bilal <span class="primary">Masters</span></h1>
-        <p>Welcome to my website, where I get to share my love for coding and building web apps with you. </p> <a href="#" class="primary-bg cta1">Get Started</a> <a href="#" class="secondary-sky-blue-bg cta2">Contact Us</a> </li>
-    <li class="img1">
-        <h1>Bilal <span class="primary">Masters</span></h1>
-        <p>Welcome to my website, where I get to share my love for coding and building web apps with you. </p> <a href="#" class="primary-bg cta1">Get Started</a> <a href="#" class="secondary-sky-blue-bg cta2">Contact Us</a> </li>
+    <section id="slider" class="slider img1">
+    <h1>Bilal <span class="primary">Masters</span></h1>
+    <ul class="slider-carousel" id="slider-carousel">
+    <li>
+        <p>Welcome to my website, where I get to share my love for coding and building web apps with you.</p></li>
+    <li>
+        <p>Welcome to my website, where I get to share my love for coding and building web apps with you.</p></li>
+    <li>
+        <p>Welcome to my website, where I get to share my love for coding and building web apps with you.</p></li>
 </ul>
+   <div class="slider-btn"><a href="#" class="primary-bg cta1">Get Started</a> <a href="#" class="secondary-sky-blue-bg cta2">Contact Us</a>
+   </div>
    <ul class="sliderpager">
        <li><a href="#"><i class="fa fa-circle"></i></a></li>
        <li><a href="#"><i class="fa fa-circle"></i></a></li>
@@ -228,14 +220,19 @@
                     <div class="col-md-4">
                      <img src="Img/my-pic-3.jpg" alt="my-image" id="my-image">
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-sm-8 about-me-text">
                         <p>I'm a web developer that enjoys turning ideas into functional, simple and intuitive web apps. Technology isn't just a hobby, it's a passion. I started out my career in tech as an IT Consultant and became enthralled with web development. I love building websites and web apps because it's like creating a beautiful and functional piece of art. If you'd like to see the code behind some of the projects that I've been working on in my free time <a href="https://github.com/ceriustech" target="_blank"><span class="primary" tyle="text-decoration: none;">Click Here</span></a>.</p>
                     </div>
                      </div>
+                </div>
+                </div>
+            </div>
+           </section>    
+        <section id="my-skills" class="my-skills section-padding">    
                         <div class="caption col-md-12">
                             <h2>My Skills </h2>
                         </div>
-                <div class="services-content">
+                <div class="skills-content">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 caption-2">
@@ -281,12 +278,8 @@
                 </div>
             </div>
         </div>
-                         
-                 </div>
-                </div>
-            </div>
-        </section> 
-        
+    </section> 
+                        
         <section id="testimonials" class="testimonials section-padding">
             <div class="testimonials-header">
                 <h1>Testimonials</h1>
@@ -349,7 +342,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<div class="animation" data-animation="fadeInLeft">
+					<div class="animation" data-animation="">
 						<img src="Img/RecentBlogs/awesome-city.png" alt="post1" class="img-responsive" />
 						<h3><a href="#" class="secondary-sky-blue">Getting Started In Web Development</a></h3>
 						<p class="post-description"><i>by</i> <b><span class="primary">Bilal</span></b> <i>on</i> <b class="date">12 Feb 2018</b></p>
@@ -358,7 +351,7 @@
 				</div>
 
 				<div class="col-md-4">
-					<div class="animation" data-animation="fadeInLeft">
+					<div class="animation" data-animation="">
 						<img src="Img/RecentBlogs/beautiful-sky.png" alt="post2" class="img-responsive" />
 						<h3><a href="#" class="secondary-sky-blue">What Are  Your Goals in 2018</a></h3>
 						<p class="post-description"><i>by</i> <b><span class="primary">Bilal</span></b> <i>on</i> <b class="date">12 Feb 2018</b></p>
@@ -367,7 +360,7 @@
 				</div>
 
 				<div class="col-md-4">
-					<div class="animation" data-animation="fadeInLeft">
+					<div class="animation" data-animation="">
 						<img src="Img/RecentBlogs/Untitled-1.png" alt="post2" class="img-responsive" />
 						<h3><a href="#" class="secondary-sky-blue">Putting Your Goals to Work</a></h3>
 						<p class="post-description"><i>by</i> <b><span class="primary">Bilal</span></b> <i>on</i> <b class="date">12 Feb 2018</b></p>
@@ -410,11 +403,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<div class="animation" data-animation="fadeInLeft">
+					<div>
 						<h1>Direct Contact Info</h1>
+						<div class="contact-info">
 						<p class="contact-icon"><i class="fa fa-envelope"></i><span class="contact-email">Bilal.Masters66@gmail.com</span></p>
 						<p class="contact-icon"><i class="fa fa-mobile"></i><span class="contact-phone"> (414) 777-7777</span></p>
 						<p class="contact-icon"><i class="fa fa-location-arrow"></i><span class="contact-location">Milwaukee, WI</span></p>
+                        </div>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -449,8 +444,7 @@
             <p>Copyright &copy;<span class="primary">LimbleMedia</span> 2018  <span class="secondary">All Rights Reserved</span>.</p>
 		</div>
 	</footer>
-    
-    
+
     
 <!-- Javascript Bootstrap Links -->
 
@@ -459,7 +453,9 @@
 
 <!-- Native JS -->
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script type="text/javascript" src="Js/jquery.slicknav.min.js"></script>
 <script type="text/javascript" src="Js/main.js"></script>
+<script type="text/javascript" src="Js/smoothscroll.js"></script>
 <script src="Js/jquery.waypoints.min.js"></script>
  <script src="js/wow.min.js"></script>
 </body>
