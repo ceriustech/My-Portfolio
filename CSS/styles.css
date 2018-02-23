@@ -54,24 +54,43 @@ header nav ul li a {
 header nav ul li a:hover, header nav ul li a:focus {
     color: #e74c3c;
     text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.slicknav_menu {
+    display: none;
 }
 
 /* Slider Section */
 
-.slider, .slider ul.slider-carousel, .slider ul.slider-carousel li {
+.slider, .slider .slider-carousel, .slider .slider-carousel li {
     height: 600px;
     width: 100%;
     text-align: center;
     color: #fff;
 }
 
-.slider ul.slider-carousel li h1 {
-    margin-top: 150px;
-    margin-bottom: 30px;
+.img1 {
+    background: url(../Img/Slider/milwaukee-header2.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover; 
+}
+
+.slider h1{
+    margin-top: 0;
+    position: relative;
+    top: 200px;
+    color: #fff;
+}
+.slider .slider-carousel li  {
     color: #fff;
 }
 
-.slider ul.slider-carousel li p {
+.slider .slider-carousel li p {
+    position: relative;
+    top: 250px;
     margin-bottom: 50px;
 }
 
@@ -90,7 +109,13 @@ header nav ul li a:hover, header nav ul li a:focus {
     margin-right: 0;
 }
 
-.slider ul.slider-carousel li a.cta1:hover{
+.slider-btn {
+    position: relative;
+    bottom: 250px;
+    
+}
+
+.slider .slider-btn a.cta1:hover{
     background-color: #f66354;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -98,20 +123,12 @@ header nav ul li a:hover, header nav ul li a:focus {
     -o-border-radius: 5px;
 }
 
-.slider ul.slider-carousel li a.cta2:hover{
+.slider .slider-btn a.cta2:hover{
     background-color: #4297ed;
       border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
-}
-
-
-.img1 {
-    background: url(../Img/Slider/milwaukee-header2.jpg) no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-    background-size: cover; 
 }
 
 .slider .sliderpager li a {
@@ -129,12 +146,14 @@ header nav ul li a:hover, header nav ul li a:focus {
 {
     align-content: center; 
     position: relative;
-    bottom: 60px;
+    bottom: 120px;
+    right: 15px;
 }
 
 .slider .sliderpager li  a {
     margin-right: 0; 
 }
+
 
 /* Services */
 
@@ -290,8 +309,14 @@ header nav ul li a:hover, header nav ul li a:focus {
     
 }
 
+/* My Skills */
+
+.my-skills {
+    background: #E7E4E8; 
+    background: linear-gradient(to top, rgba(231,228,232,0), rgba(231,228,232,1));
+}
+
 .caption {
-    border-top: 5px solid #0d2c36;
     text-align: center;
     margin-bottom: 15px;
     color: #0d2c36; 
@@ -575,34 +600,29 @@ footer p span {
 
 /******** Media Quieries *********/
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 991px) {
+    /* About */
     
+    .about-me-text{
+        width: 100%;
+        text-align: center;
+    }
     
-}
-    
-    
-}
+    .about-me-text p{
+        padding: 0;
+    }
 
-@media only screen and (max-width: 992px) {
     /* Blog */
     
     .animation img {
         margin: 0 auto;
         display: block;
         
-    }
+    } 
     
-    
-   
-   
-
-    
+    form {
+    width: 60%;
 }
-
-@media only screen and (max-width: 990px) {
-    /* Portfolio */
-
-    
 }
 
 @media only screen and (max-width: 768px) {
@@ -619,64 +639,78 @@ footer p span {
         top: 5px;
         display: block;
     }
-
     
-    .burger-nav {
-        background: url(../Img/hamburger.png) no-repeat 100% center; 
-        display: block;
-        height: 32px;
-        width: 40px;
-        cursor: pointer;
-        float: right;
-        margin-top: 30px;
+    #menu {
+        display: none;
+    }
+    .slicknav_nav {
+        background: #34495e;
+        width: 350px !important;
+        
     }
     
-    .container nav ul {
-        height: 0;
-        overflow: hidden;
-        background: #10202f;
-    }
-   
-    .container nav ul.open {
-        height: auto;
-        clear: both;
+     .slicknav_nav li {   
+         margin: 0;
+         padding: 0;
+         height: 3em;
+         width: 350px; 
     }
     
-    .container nav ul li {
-        float: none;
-        text-align: left;
-        width: 100%;                                                                                   
-        margin: 0;
-        display: block;
+    .slicknav_nav li a:hover{
+        background-color: rgba(0,0,0,0);
+        color: #e74c3c;
+        font-size: 1.5em;
+        font-weight: bold;
     }
-   
-    .container nav ul li a{
-        color: #fff;
-        padding: 10px;
-        display: block;
-        margin: 0;
+    .slicknav_menutxt{
+        display: none !important;
     }
     
-    .container nav ul li a:hover{
-        border: none;
-        color: #282828;
-        background: #fff;
-
+    .slicknav_menu {
+        display: inline-block;
+        padding: 0;
+        position: fixed;
+        background: rgba(0,0,0,0) !important; 
+        z-index: 1000;
+        right: 0px;
+        margin-top: 25px;
+    }
+    
+    
+    
+    
+    .slicknav_icon {
+        position: relative !important;
+        bottom: 7px;
+        right: 25px;
+    }
+    
+    .slicknav_icon-bar {
+        width: 3em !important;
+        height: .35em !important;
+        border-radius: 25%;
+        margin-bottom: 5px;
+    }
+    
+  /* Footer */ 
+    
+    footer {
+        text-align: center;
+    }
+    
+    footer .contact-icon {
+    text-align: center;
 }
-    
-  
-    
-    
-    
-    
 }
 
+    
 
-@media only screen and (max-width: 692px) {
+@media only screen and (max-width: 550px) {
+    /*  Contact */
     
-    
-   
-    
+    form {
+        width: 80%;
+}
     
 }
 
@@ -688,23 +722,38 @@ footer p span {
     }
     
 }
+@media only screen and (max-width: 465px){
+    .slider-btn a {
+        display: block;
+        width: 80%;
+        text-align: center;
+        position: relative;
+        margin: 0 auto 15px auto;
+    }
+    
+    .slider ul li a{
+        position: relative;
+        bottom: 80px;
+    }
+}
 
 @media only screen and (max-width: 435px) {
     
     /* Slider */
     
     
-    .slider ul li a {
+    .slider-btn a {
         display: block;
         width: 80%;
         text-align: center;
-        margin-bottom: 20px;
+        position: relative;
+        margin: 0 auto 15px auto;
     }
     
-    .cta1, .cta2 {
+    .slider ul li a{
         position: relative;
-        left: 45px;
-    } 
+        bottom: 80px;
+    }
 }
 
 @media only screen and (max-width: 375px) {
