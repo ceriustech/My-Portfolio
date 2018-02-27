@@ -1,9 +1,8 @@
 $(document).ready(function(){
 
 	"use strict";
-    
-    $(".burger-nav").on("click", function(){
-        $(".container nav ul").toggleClass("open");
+    $(function(){
+        $('#menu').slicknav();
     });
     
 	$('#slider-carousel').carouFredSel({
@@ -59,7 +58,7 @@ $(document).ready(function(){
     $(window).scroll(function(){
         
         var top = $(window).scrollTop();
-            if(top>=60){
+            if(top>=600){
                 $("header").addClass('secondary-dark-blue-bg');
             }
             else
@@ -68,4 +67,27 @@ $(document).ready(function(){
                 }
     });
     
+    $('a').smoothScroll();
+    
+    /****  Contact Form  ****/
+    
+    $(".contact #submit").on("click", function(e){
+            e.preventDefault();
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var subject = $("#subject").val();
+        var message = $("#message").val();
+        var form = new Array({"name": name, "email": email, "subject": subject, "message": message});
+        
+        $.ajax({
+           type: 'POST',
+            url: "contact.php",
+            data: ({"action": "contact", "form": form})
+        }).done(function(data) {
+                $('#contact .result').html(data);
+
+            $(".contact-form")[0].reset();
+    });
 });
+
+
