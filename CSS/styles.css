@@ -13,7 +13,7 @@
 /*  Header-Navigation */
 
 header{
-    height: 112px; 
+    height: 100px; 
     color: #fff;
     line-height: 112px;
     position: fixed;
@@ -54,7 +54,7 @@ header nav ul li a {
 header nav ul li a:hover, header nav ul li a:focus {
     color: #e74c3c;
     text-decoration: none;
-    font-size: 1.5em;
+    border-bottom: 2px solid #e74c3c;
     font-weight: bold;
 }
 
@@ -92,6 +92,8 @@ header nav ul li a:hover, header nav ul li a:focus {
     position: relative;
     top: 250px;
     margin-bottom: 50px;
+    font-size: 1.25em;
+    font-weight: bold;
 }
 
 
@@ -147,7 +149,7 @@ header nav ul li a:hover, header nav ul li a:focus {
     align-content: center; 
     position: relative;
     bottom: 120px;
-    right: 15px;
+    right: 5px;
 }
 
 .slider .sliderpager li  a {
@@ -304,7 +306,6 @@ header nav ul li a:hover, header nav ul li a:focus {
     width: 100%; 
     border: 1px solid #ddd;
     padding: 5px;
-    border-radius: 25%;
     margin-bottom: 20px;
     
 }
@@ -361,8 +362,12 @@ header nav ul li a:hover, header nav ul li a:focus {
     margin-bottom: 40px;
 }
 
-.services-content h3 {
+.skills-content h3 {
     color: #7B8FA2;
+}
+
+.skills-content h5{
+    font-weight: bold;
 }
 
 
@@ -374,12 +379,11 @@ header nav ul li a:hover, header nav ul li a:focus {
 
 #testimonials {
     background-color: #10202f;
-    padding: 10px 0 0 0;
     background: linear-gradient( rgba(28, 36, 46, 0.99), rgba(28, 36, 46, 0.95)),url(../Img/ClientTestimonials/meeting.jpg) no-repeat;
     background-position: center; 
     background-size: cover;
     color: #fff;
-    height: 600px;
+    height: 650px;
 }
 
 #testimonials h1 {
@@ -456,11 +460,13 @@ blockquote {
 /* Blog */
 
 .animation img {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.6), 0 6px 20px 0 rgba(0,0,0,0.9)
+    box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.6), 0 6px 20px 0 rgba(0,0,0,0.9);
+    margin: 15px;
 }
 
 .animation h3 {
     text-align: center;
+    margin: 15px;
 }
 
 .animation p {
@@ -492,7 +498,6 @@ input:not([type=submit]), textarea {
     width: 100%;
     margin-bottom: 20px;
     padding-left: 20px;
-    box-shadow: 0 3px 8px 0 rgba(0,0,0, 0.6), 0 6px 2px 0 rgba(0,0,0,0.9);
     border: none;
 }
 
@@ -560,11 +565,12 @@ footer p span {
     color: #fff;
     border-style: none;
     font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.6), 0 6px 2px 0 rgba(0,0,0,0.9);
 }
 
 .footer-social-links li {
     padding-right: 20px;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .footer-social-links li a .fa-facebook-f {
@@ -659,9 +665,10 @@ footer p span {
     .slicknav_nav li a:hover{
         background-color: rgba(0,0,0,0);
         color: #e74c3c;
-        font-size: 1.5em;
+        border-bottom: 2px solid #e74c3c;
         font-weight: bold;
     }
+    
     .slicknav_menutxt{
         display: none !important;
     }
@@ -692,6 +699,24 @@ footer p span {
         margin-bottom: 5px;
     }
     
+    /* About */
+    .polaroid{
+        text-align: center;
+    }
+    
+    #my-image {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 80%; 
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin-bottom: 20px;
+    
+}
+    /* Testimonials  */
+    
+    #testimonials{
+        height: 675px;
+    }
   /* Footer */ 
     
     footer {
@@ -701,6 +726,10 @@ footer p span {
     footer .contact-icon {
     text-align: center;
 }
+    footer .contact-info .fa-mobile, .fa-location-arrow, .contact-phone, .contact-location {
+        position: relative;
+        right: 45px; 
+    }
 }
 
     
@@ -717,8 +746,8 @@ footer p span {
 @media only screen and (max-width: 490px) {
     /* Testimonials */
     
-    .testimonials {
-        height: 650px !important;
+    #testimonials {
+        height: 695px !important;
     }
     
 }
@@ -734,6 +763,12 @@ footer p span {
     .slider ul li a{
         position: relative;
         bottom: 80px;
+    }
+    
+     /* Testimonials  */
+    
+    #testimonials{
+        height: 725px !important;
     }
 }
 
