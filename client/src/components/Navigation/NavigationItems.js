@@ -1,8 +1,8 @@
 import React from 'react';
-import NavigationItem from '../../styles/components/NavigationItem.Styles';
+import { NavigationItem } from '../../styles/components/NavigationItem.Styles';
 
-const NavigationItems = () => {
-	return <NavigationItem>NavigationItems</NavigationItem>;
+const NavigationItems = ({ data }) => {
+	return <NavigationItem>{data.name}</NavigationItem>;
 };
 
 export default NavigationItems;
