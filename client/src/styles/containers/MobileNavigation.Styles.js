@@ -20,10 +20,11 @@ export const MobileMenuToggleContainer = styled.div`
 export const MobileListContainer = styled(motion.ul)`
 	min-width: 300px;
 	width: 100%;
+	height: 50vh;
 	max-width: 44%;
-	height: 100%;
 	background-color: #fff;
-	box-shadow: -2px 0 2px rgba(15, 15, 15, 0.3);
+	-webkit-box-shadow: 1px 1px 15px 1px #a18a8a;
+	box-shadow: 1px 1px 15px 1px #a18a8a;
 	z-index: 90;
 	position: fixed;
 	top: 0;
@@ -31,4 +32,8 @@ export const MobileListContainer = styled(motion.ul)`
 	transform: translateX(4em);
 	user-select: none;
 	padding: 1em 2.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
 `;

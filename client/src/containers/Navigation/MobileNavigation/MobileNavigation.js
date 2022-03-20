@@ -24,23 +24,6 @@ const menuTransition = {
 	delay: 0.1,
 };
 
-const commonVariants = {
-	show: {
-		transform: 'translateX(0em)',
-		opacity: 1,
-		transition: {
-			delay: 0.3,
-			duration: 0.01,
-		},
-	},
-	hide: {
-		transform: 'translateX(5em)',
-		opacity: 0,
-	},
-};
-
-const commonTransition = { type: 'spring', duration: 0.05 };
-
 const MobileNavigation = ({ children }) => {
 	const [isOpen, setOpen] = useState(false);
 
@@ -67,8 +50,9 @@ const MobileNavigation = ({ children }) => {
 
 			{isOpen && (
 				<MobileListContainer
-					initial={false}
-					animate={isOpen ? 'open' : 'closed'}
+					initial={{ x: 300, opacity: 0 }}
+					animate={{ x: 0, opacity: 1 }}
+					exit={{ x: -300, opacity: 0 }}
 					variants={menuVariants}
 					transition={menuTransition}
 				>
