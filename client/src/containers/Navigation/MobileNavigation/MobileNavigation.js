@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import MobileMenuToggle from '../../../components/globalcomponents/MobileMenuToggle.js';
-import { motion } from 'framer-motion';
 import {
 	MobileNavContainer,
 	MobileMenuToggleContainer,
@@ -54,7 +53,7 @@ const MobileNavigation = ({ children }) => {
 	);
 
 	const ref = useRef();
-	const inVew = useIntersection(ref, '0px');
+	// const inVew = useIntersection(ref, '0px');
 
 	// if (inVew) {
 	// 	console.log('%cIN VIEW', 'font-size: 2em; color: red');
@@ -65,6 +64,17 @@ const MobileNavigation = ({ children }) => {
 			<MobileMenuToggleContainer>
 				<MobileMenuToggle toggle={toggleMenu} isOpen={isOpen} />
 			</MobileMenuToggleContainer>
+
+			{isOpen && (
+				<MobileListContainer
+					initial={false}
+					animate={isOpen ? 'open' : 'closed'}
+					variants={menuVariants}
+					transition={menuTransition}
+				>
+					{children}
+				</MobileListContainer>
+			)}
 
 			{/* {toggle && (
 				<motion.div

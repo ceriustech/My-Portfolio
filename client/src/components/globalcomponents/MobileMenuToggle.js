@@ -1,8 +1,29 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import styled from 'styled-components';
+import { defaultColors } from '../../styles/globalstyles/colors.styles';
+
+const gray = defaultColors.root.grayColor;
+const blue = defaultColors.gradient.blue;
+const darkBlue = defaultColors.gradient.darkBlue;
+const purple = defaultColors.gradient.purple;
+const red = defaultColors.gradient.red;
+const orange = defaultColors.gradient.orange;
+const lightOrange = defaultColors.gradient.lightOrange;
 
 const Icon = styled.i`
+	background: linear-gradient(
+			to right,
+			${blue},
+			${darkBlue},
+			${purple},
+			${red},
+			${orange},
+			${lightOrange}
+		)
+		border-box;
+	border-radius: 50%;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
