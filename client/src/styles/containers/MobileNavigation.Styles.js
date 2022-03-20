@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { defaultColors } from '../globalstyles/colors.styles';
 import { motion } from 'framer-motion';
 
 export const MobileNavContainer = styled.div`

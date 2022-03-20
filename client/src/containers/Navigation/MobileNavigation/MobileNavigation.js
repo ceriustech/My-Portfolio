@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import MobileMenuToggle from '../../../components/globalcomponents/MobileMenuToggle.js';
 import {
 	MobileNavContainer,
@@ -47,18 +48,19 @@ const MobileNavigation = ({ children }) => {
 			<MobileMenuToggleContainer>
 				<MobileMenuToggle toggle={toggleMenu} isOpen={isOpen} />
 			</MobileMenuToggleContainer>
-
-			{isOpen && (
-				<MobileListContainer
-					initial={{ x: 300, opacity: 0 }}
-					animate={{ x: 0, opacity: 1 }}
-					exit={{ x: -300, opacity: 0 }}
-					variants={menuVariants}
-					transition={menuTransition}
-				>
-					{children}
-				</MobileListContainer>
-			)}
+			<AnimatePresence>
+				{isOpen && (
+					<MobileListContainer
+						initial={{ x: 300, opacity: 0 }}
+						animate={{ x: 0, opacity: 1 }}
+						exit={{ x: 300, opacity: 0 }}
+						variants={menuVariants}
+						transition={menuTransition}
+					>
+						{children}
+					</MobileListContainer>
+				)}
+			</AnimatePresence>
 
 			{/* {toggle && (
 				<motion.div
