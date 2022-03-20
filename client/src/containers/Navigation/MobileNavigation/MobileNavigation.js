@@ -9,10 +9,45 @@ import {
 import { images } from '../../../constants/Images';
 import useIntersection from '../../../custom_hooks/intersectionObserver';
 
-const MobileNavigation = ({ children }) => {
-	const [toggle, setToggle] = useState(false);
+const menuVariants = {
+	open: {
+		transform: 'translateX(3%)',
+	},
+	closed: {
+		transform: 'translateX(103%)',
+	},
+};
 
-	const toggleHandler = () => setToggle(!toggle);
+const menuTransition = {
+	type: 'spring',
+	duration: 1,
+	stiffness: 33,
+	delay: 0.1,
+};
+
+const commonVariants = {
+	show: {
+		transform: 'translateX(0em)',
+		opacity: 1,
+		transition: {
+			delay: 0.3,
+			duration: 0.01,
+		},
+	},
+	hide: {
+		transform: 'translateX(5em)',
+		opacity: 0,
+	},
+};
+
+const commonTransition = { type: 'spring', duration: 0.05 };
+
+const MobileNavigation = ({ children }) => {
+	const [isOpen, setOpen] = useState(false);
+
+	const toggleMenu = () => {
+		setOpen(!isOpen);
+	};
 
 	const mobileListContainer = (
 		<MobileListContainer>{children}</MobileListContainer>
@@ -26,9 +61,9 @@ const MobileNavigation = ({ children }) => {
 	// }
 
 	return (
-		<MobileNavContainer image={images} className="mobile-nav-container">
+		<MobileNavContainer className="mobile-nav-container">
 			<MobileMenuToggleContainer>
-				<MobileMenuToggle toggle={toggleHandler} />
+				<MobileMenuToggle toggle={toggleMenu} isOpen={isOpen} />
 			</MobileMenuToggleContainer>
 
 			{/* {toggle && (
