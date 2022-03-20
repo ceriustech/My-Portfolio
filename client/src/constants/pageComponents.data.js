@@ -3,7 +3,7 @@ import {
 	Blog,
 	Contact,
 	Footer,
-	Header,
+	Hero,
 	Navigation,
 	Portfolio,
 	Skills,
@@ -16,9 +16,9 @@ export const pageComponents = [
 		component: Navigation,
 	},
 	{
-		id: 'header',
-		name: 'Header',
-		component: Header,
+		id: 'hero',
+		name: 'Hero',
+		component: Hero,
 	},
 	{
 		id: 'about',

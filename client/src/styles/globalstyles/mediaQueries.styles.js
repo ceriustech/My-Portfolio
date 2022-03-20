@@ -1,4 +1,4 @@
-const size = {
+export const size = {
 	mobileS: '320px',
 	mobileM: '375px',
 	mobileL: '425px',
@@ -8,7 +8,17 @@ const size = {
 	desktopL: '2560px',
 };
 
-export const device = {
+export const maxView = {
+	mobileS: `(max-width: ${size.mobileS})`,
+	mobileM: `(max-width: ${size.mobileM})`,
+	mobileL: `(max-width: ${size.mobileL})`,
+	tablet: `(max-width: ${size.tablet})`,
+	laptop: `(max-width: ${size.laptop})`,
+	desktopM: `(max-width: ${size.desktopM})`,
+	desktopL: `(max-width: ${size.desktopL})`,
+};
+
+export const minView = {
 	mobileS: `(min-width: ${size.mobileS})`,
 	mobileM: `(min-width: ${size.mobileM})`,
 	mobileL: `(min-width: ${size.mobileL})`,
