@@ -7,7 +7,11 @@ const App = () => {
 		React.createElement(item.component, { key: item.id })
 	);
 
-	return <Layout className="app">{Components}</Layout>;
+	return (
+		<Layout component={pageComponents} className="app">
+			{Components}
+		</Layout>
+	);
 };
 
 export default App;
