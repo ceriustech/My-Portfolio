@@ -14,6 +14,7 @@ export const NavigationContainer = styled.ul`
 	align-items: center;
 	padding: 1rem 2rem;
 	position: fixed;
+	top: 0;
 	width: 100%;
 	z-index: 2;
 `;
