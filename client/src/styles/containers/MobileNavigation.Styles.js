@@ -19,7 +19,7 @@ export const MobileMenuToggleContainer = styled.div`
 export const MobileListContainer = styled(motion.ul)`
 	min-width: 300px;
 	width: 100%;
-	height: 50vh;
+	height: 450px;
 	max-width: 44%;
 	background-color: #fff;
 	-webkit-box-shadow: 1px 1px 15px 1px #a18a8a;
