@@ -7,7 +7,11 @@ const bgSectionColor = defaultColors.root.primary;
 export const Layout = styled.div`
 	font-family: 'DM Sans', sans-serif;
 
-	& > section:nth-child(even) {
+	& > section:nth-child(odd) {
+		background-color: ${bgSectionColor};
+	}
+
+	& div section:nth-child(even) {
 		background-color: ${bgSectionColor};
 	}
 `;

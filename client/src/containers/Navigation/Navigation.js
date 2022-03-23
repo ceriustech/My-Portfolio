@@ -23,7 +23,7 @@ const Navigation = () => {
 
 	return (
 		<>
-			<NavigationHeader>
+			<NavigationHeader role="navigation" aria-label="Main">
 				<NavigationContainer>
 					<Picture
 						srcset={images.logo}
