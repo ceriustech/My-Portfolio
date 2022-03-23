@@ -1,6 +1,7 @@
 import React from 'react';
 import {
 	HeroBadgeContainer,
+	HeroBadgeInnerDiv,
 	HeroBadgeCmp,
 	HeroBadgeTag,
 } from '../../styles/components/Hero/HeroBadge.Styles';
@@ -10,10 +11,10 @@ const HeroBadge = () => {
 		<HeroBadgeContainer>
 			<HeroBadgeCmp>
 				<span>👋</span>
-				<div style={{ marginLeft: 20 }}>
-					<p>Hello, I am</p>
+				<HeroBadgeInnerDiv>
+					<p>Hello, I'm</p>
 					<h1>Bilal</h1>
-				</div>
+				</HeroBadgeInnerDiv>
 			</HeroBadgeCmp>
 			<HeroBadgeTag>
 				<p>Software Engineer</p>

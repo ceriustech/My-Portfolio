@@ -26,6 +26,14 @@ export const HeroBadgeCmp = styled.div`
 	display: flex;
 	justify-content: center;
 
+	span {
+		font-size: 2.5rem;
+	}
+`;
+
+export const HeroBadgeInnerDiv = styled.div`
+	margin-left: 20px;
+
 	h1 {
 		font-size: 2.75rem;
 		font-weight: 800;
