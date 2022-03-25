@@ -1,4 +1,3 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 import { defaultColors } from '../../globalstyles/colors.styles';
@@ -24,6 +23,7 @@ export const HeroMainContainer = styled(motion.div)`
 export const Title = styled.h1`
 	text-transform: uppercase;
 	width: 100%;
+	z-index: 1;
 
 	span {
 		background: linear-gradient(
