@@ -7,7 +7,7 @@ const lightGray = defaultColors?.root.lightGrayColor;
 
 export const AboutTileContainer = styled.div`
 	background-color: ${white};
-	border-bottom: 2px solid ${(props) => props.color};
+	border-bottom: 3px solid ${(props) => props.backgroundColor};
 	border-radius: 0.5rem;
 	-webkit-box-shadow: 0px 2px 11px 4px #e0e0e0;
 	box-shadow: 0px 2px 11px 4px #e0e0e0;
