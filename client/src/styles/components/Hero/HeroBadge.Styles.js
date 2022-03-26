@@ -1,7 +1,11 @@
 import styled, { css } from 'styled-components';
 import { defaultColors } from '../../globalstyles/colors.styles';
+import { maxView, minView } from '../../globalstyles/mediaQueries.styles';
 
 const white = defaultColors.root.whiteColor;
+
+const dtMediumMin = minView?.desktopM;
+const laptopMax = maxView?.laptop;
 
 export const HeroBadgeContainer = styled.div`
 	align-items: flex-end;
@@ -12,6 +16,11 @@ export const HeroBadgeContainer = styled.div`
 
 	p {
 		line-height: 1.5;
+	}
+
+	@media screen and ${laptopMax} {
+		justify-content: flex-start;
+		align-items: flex-start;
 	}
 `;
 
@@ -28,6 +37,10 @@ export const HeroBadgeCmp = styled.div`
 
 	span {
 		font-size: 2.5rem;
+
+		@media screen and ${dtMediumMin} {
+			font-size: 5rem;
+		}
 	}
 `;
 

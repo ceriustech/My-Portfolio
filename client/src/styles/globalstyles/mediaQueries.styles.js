@@ -8,6 +8,11 @@ export const size = {
 	desktopL: '2560px',
 };
 
+export const miscSize = {
+	miscSmall: '505px',
+	miscLarge: '1800px',
+};
+
 export const maxView = {
 	mobileS: `(max-width: ${size.mobileS})`,
 	mobileM: `(max-width: ${size.mobileM})`,
@@ -26,4 +31,14 @@ export const minView = {
 	laptop: `(min-width: ${size.laptop})`,
 	desktopM: `(min-width: ${size.desktopM})`,
 	desktopL: `(min-width: ${size.desktopL})`,
+};
+
+export const miscMinView = {
+	miscSmall: `(min-width: ${miscSize.miscSmall})`,
+	miscLarge: `(min-width: ${miscSize.miscLarge})`,
+};
+
+export const miscMaxView = {
+	miscSmall: `(max-width: ${miscSize.miscSmall})`,
+	miscLarge: `(max-width: ${miscSize.miscLarge})`,
 };
