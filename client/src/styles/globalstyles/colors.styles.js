@@ -1,5 +1,6 @@
 export const defaultColors = {
 	root: {
+		lightBlue: '#cbe8f8',
 		primary: '#edf2f8',
 		secondaryColor: '#313bac',
 		blackColor: '#030303',
@@ -7,7 +8,11 @@ export const defaultColors = {
 		grayColor: '#6b7688',
 		brownColor: '#46364a',
 		whiteColor: '#ffffff',
+		purpleColor: '#553A9B',
+		redColor: '#D91666',
+		orangeColor: '#F26247',
 	},
+
 	gradient: {
 		blue: '#2794D3',
 		darkBlue: '#415EAD',
@@ -20,3 +25,5 @@ export const defaultColors = {
 		lightOrange: '#FBB040',
 	},
 };
+
+

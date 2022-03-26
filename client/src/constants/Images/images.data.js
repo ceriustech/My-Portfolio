@@ -34,6 +34,9 @@ import nb from '../../assets/nb.png';
 import skype from '../../assets/skype.png';
 import spotify from '../../assets/spotify.png';
 import bgIMG from '../../assets/bgIMG.png';
+import mobileWeb from '../../assets/mobile-web-development.svg';
+import frontendWeb from '../../assets/frontend-development.png';
+import accessiblity from '../../assets/accessiblity.svg';
 
 export default {
 	email,
@@ -70,4 +73,7 @@ export default {
 	skype,
 	spotify,
 	bgIMG,
+	mobileWeb,
+	frontendWeb,
+	accessiblity,
 };

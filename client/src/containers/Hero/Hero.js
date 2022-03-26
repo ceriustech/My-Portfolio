@@ -60,7 +60,7 @@ const Hero = () => {
 					variants={scaleVariants}
 					whileInView={scaleVariants.whileInView}
 				>
-					{[images.flutter, images.redux, images.sass].map((circle, index) => (
+					{[images.react, images.api, images.node].map((circle, index) => (
 						<HeroCircleContainer key={`circle-${index}`}>
 							<img src={circle} alt="profile_bg" />
 						</HeroCircleContainer>
