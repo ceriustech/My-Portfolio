@@ -66,5 +66,9 @@ export const AboutTileContainer = styled(motion.div)`
 		width: 370px;
 		margin: 1rem 2.5rem;
 		padding: 20px;
+
+		&:hover {
+			transform: scale(1.025);
+		}
 	}
 `;
