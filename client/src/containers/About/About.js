@@ -14,11 +14,13 @@ const About = () => {
 			<AboutInnerWrapper>
 				{aboutSectionData.map((item, index) => (
 					<AboutTileContainer
-						backgroundColor={item?.bottomBorderColor}
+						whileInView={{ opacity: 1 }}
+						transition={{ duration: 0.5, type: 'tween' }}
+						bordercolor={item?.color}
 						key={index}
 					>
 						<img src={item?.image} alt={item.altText} />
-						<h2>{item?.tileHeader}</h2>
+						<h2 color={item?.color}>{item?.tileHeader}</h2>
 						<p>{item?.tileDescription}</p>
 					</AboutTileContainer>
 				))}

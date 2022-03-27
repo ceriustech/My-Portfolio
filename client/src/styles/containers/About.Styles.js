@@ -7,6 +7,7 @@ export const AboutInnerWrapper = styled.div`
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	flex-basis: 25%;
 	justify-content: center;
+	max-width: 1450px;
+	margin: 2rem auto 0;
 `;

@@ -21,7 +21,7 @@ export const ServiceHeaderContainer = styled.div`
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	margin: 0 auto;
+	margin: 3rem auto 0;
 `;
 
 export const ServiceHeaderShape = styled.div`
