@@ -27,7 +27,7 @@ export const AboutTileContainer = styled(motion.div)`
 	width: 25%;
 
 	img {
-		width: 90%;
+		width: 100%;
 		height: 170px;
 		border-radius: 15px;
 		object-fit: cover;

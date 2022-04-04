@@ -13,7 +13,7 @@ const aboutSectionData = [
 		image: images.about04,
 		tileHeader: 'fullstack development',
 		tileDescription:
-			"I'm proficient with fullstack developer with a passion for for building functional data driven web apps that scale.",
+			"I'm proficient with fullstack development with a passion for for building functional data driven web apps that scale.",
 		altText: 'fullstack development',
 		color: '#da7962',
 	},
