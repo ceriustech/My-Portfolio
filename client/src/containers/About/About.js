@@ -5,23 +5,40 @@ import {
 } from '../../styles/containers/About.Styles';
 import { AboutTileContainer } from '../../styles/components/About/AboutTiles.Styles';
 import { ServiceTitle } from '../../components/globalcomponents/SectionHeaders';
-import aboutSectionData from '../../constants/about.data';
+import { urlFor, client } from '../../client';
+import retrieveAboutData from '../../constants/about.data';
 
 const About = () => {
+	const [abouts, setAbouts] = useState([]);
+
+	useEffect(() => {
+		const query = '*[_type == "abouts"]';
+
+		try {
+			client.fetch(query).then((data) => {
+				const tileData = data.splice(3).concat(data.splice(0));
+				return setAbouts(tileData);
+			});
+		} catch (err) {
+			console.error(err);
+			return [];
+		}
+	}, []);
+
 	return (
 		<AboutContainer>
 			<ServiceTitle />
 			<AboutInnerWrapper>
-				{aboutSectionData.map((item, index) => (
+				{abouts.map((item, index) => (
 					<AboutTileContainer
 						whileInView={{ opacity: 1 }}
 						transition={{ duration: 0.5, type: 'tween' }}
-						bordercolor={item?.color}
+						bordercolor={'#' + item?.color}
 						key={index}
 					>
-						<img src={item?.image} alt={item.altText} />
-						<h2 color={item?.color}>{item?.tileHeader}</h2>
-						<p>{item?.tileDescription}</p>
+						<img src={urlFor(item?.imgUrl)} alt={item.altText} />
+						<h2 color={item?.color}>{item?.title}</h2>
+						<p>{item?.description}</p>
 					</AboutTileContainer>
 				))}
 			</AboutInnerWrapper>
