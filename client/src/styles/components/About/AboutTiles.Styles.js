@@ -58,14 +58,15 @@ export const AboutTileContainer = styled(motion.div)`
 	}
 
 	@media screen and ${laptopMax} {
-		width: 370px;
+		width: 300px;
 		margin: 1rem 2rem;
+		padding: 20px;
 	}
 
 	@media screen and ${mobileLargeMax} {
 		width: 370px;
 		margin: 1rem 2.5rem;
-		padding: 20px;
+		padding: 15px;
 
 		&:hover {
 			transform: scale(1.025);
