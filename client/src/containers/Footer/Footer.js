@@ -2,17 +2,17 @@ import React from 'react';
 import {
 	FooterContainer,
 	CaptionText,
+	CaptionTextContainer,
 } from '../../styles/containers/Footer.Styles';
 import SocialMedia from '../../components/globalcomponents/SocialMedia';
 
 const Footer = () => (
 	<FooterContainer>
 		<SocialMedia />
-		<CaptionText>
-			Created by Bilal Masters
-			<br />
-			<span>&#x40;2022 ALL RIGHTS RESERVED</span>
-		</CaptionText>
+		<CaptionTextContainer>
+			<CaptionText>Created by Bilal Masters</CaptionText>
+			<CaptionText>&#x40;2022 ALL RIGHTS RESERVED</CaptionText>
+		</CaptionTextContainer>
 	</FooterContainer>
 );
 

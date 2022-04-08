@@ -24,7 +24,8 @@ const socialIcons = [
 		id: 'instagram',
 		icon: <BsInstagram />,
 		url: '/',
-		color: '#bd3e4d',
+		color:
+			'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);',
 	},
 ];
 
