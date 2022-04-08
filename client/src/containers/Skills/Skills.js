@@ -4,7 +4,7 @@ import { SkillsHeader } from '../../components/globalcomponents/SectionHeaders';
 
 const Skills = () => {
 	return (
-		<SkillsContainer id="#skills-section">
+		<SkillsContainer id="skills-section">
 			<SkillsHeader />
 		</SkillsContainer>
 	);

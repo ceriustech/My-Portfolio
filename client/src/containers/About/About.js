@@ -25,7 +25,7 @@ const About = () => {
 	}, []);
 
 	return (
-		<AboutContainer id="about">
+		<AboutContainer id="about-section">
 			<ServiceTitle />
 			<AboutInnerWrapper>
 				{abouts.map((item, index) => (

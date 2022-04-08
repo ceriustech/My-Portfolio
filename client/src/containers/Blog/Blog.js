@@ -4,7 +4,7 @@ import { BlogHeader } from '../../components/globalcomponents/SectionHeaders';
 
 const Blog = () => {
 	return (
-		<BlogContainer id="#blog-section">
+		<BlogContainer id="blog-section">
 			<BlogHeader />
 		</BlogContainer>
 	);

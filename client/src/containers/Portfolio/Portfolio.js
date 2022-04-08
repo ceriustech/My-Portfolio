@@ -6,7 +6,7 @@ import { urlFor, client } from '../../client';
 
 const Portfolio = () => {
 	return (
-		<PortfolioContainer id="#portfolio-section">
+		<PortfolioContainer id="portfolio-section">
 			<PortfolioHeader />
 		</PortfolioContainer>
 	);

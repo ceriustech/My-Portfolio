@@ -4,7 +4,7 @@ import { ContactHeader } from '../../components/globalcomponents/SectionHeaders'
 
 const Contact = () => {
 	return (
-		<ContactContainer id="#contact-section">
+		<ContactContainer id="contact-section">
 			<ContactHeader />
 		</ContactContainer>
 	);
