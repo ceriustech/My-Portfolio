@@ -37,7 +37,7 @@ export const ServiceHeaderShape = styled.div`
 export const ServiceHeaderTitle = styled.h1`
 	color: ${black};
 	position: relative;
-	font-size: calc(35px + (26 - 15) * ((100vw - 300px) / (1600 - 300)));
+	font-size: calc(25px + (26 - 15) * ((100vw - 300px) / (1600 - 300)));
 	text-transform: uppercase;
 	font-weight: 600;
 	letter-spacing: 2px;

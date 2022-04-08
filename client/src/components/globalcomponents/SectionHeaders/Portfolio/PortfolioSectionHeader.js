@@ -8,9 +8,8 @@ import {
 const PortfolioSectionHeader = () => {
 	return (
 		<PortfolioHeaderContainer>
-			<PortfolioHeaderShape>
-				<PortfolioHeaderTitle>What I've Built</PortfolioHeaderTitle>
-			</PortfolioHeaderShape>
+			<PortfolioHeaderShape />
+			<PortfolioHeaderTitle>What I've Built</PortfolioHeaderTitle>
 		</PortfolioHeaderContainer>
 	);
 };

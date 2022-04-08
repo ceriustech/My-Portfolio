@@ -8,32 +8,31 @@ export const navigationItem = [
 	{
 		id: 'about',
 		name: 'About',
-		inPageLink: '#about',
+		inPageLink: '#about-section',
 		routedLink: '/about',
 	},
 	{
 		id: 'portfolio',
 		name: 'Portfolio',
-		inPageLink: '#portfolio',
+		inPageLink: '#portfolio-section',
 		routedLink: '/portfolio',
 	},
 	{
 		id: 'skills',
 		name: 'Skills',
-		inPageLink: '#skills',
+		inPageLink: '#skills-section',
 		routedLink: '/skills',
 	},
 	{
 		id: 'blog',
 		name: 'Blog',
-		inPageLink: '#blog',
+		inPageLink: '#blog-section',
 		routedLink: '/blog',
 	},
 	{
 		id: 'contact',
 		name: 'Contact',
-		inPageLink: '#contact',
+		inPageLink: '#contact-section',
 		routedLink: '/contact',
 	},
 ];
-
