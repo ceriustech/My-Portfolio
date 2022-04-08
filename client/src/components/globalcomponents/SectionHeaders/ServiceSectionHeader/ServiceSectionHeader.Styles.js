@@ -1,16 +1,14 @@
 import styled, { css } from 'styled-components';
-import { defaultColors } from '../../../globalstyles/colors.styles';
+import { defaultColors } from '../../../../styles/globalstyles/colors.styles';
+import { maxView } from '../../../../styles/globalstyles/mediaQueries.styles';
 
 const black = defaultColors.root.blackColor;
 
-const blue = defaultColors.root.lightBlue;
-const red = defaultColors.gradient.red;
-const orange = defaultColors.gradient.orange;
-const lightOrange = defaultColors.gradient.lightOrange;
+const mobileLargeMax = maxView?.mobileL;
 
 export const ServiceHeaderContainer = styled.div`
 	position: relative;
-	width: 200px;
+	width: 350px;
 	height: 200px;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -22,10 +20,14 @@ export const ServiceHeaderContainer = styled.div`
 	-ms-flex-align: center;
 	align-items: center;
 	margin: 3rem auto 0;
+
+	@media ${mobileLargeMax} {
+		width: 250px;
+	}
 `;
 
 export const ServiceHeaderShape = styled.div`
-	background: ${blue};
+	background: linear-gradient(90deg, #d498ff 0%, #ffffff 100%, #ffffff 100%);
 	width: 150px;
 	height: 150px;
 	border-radius: 50%;
@@ -33,14 +35,11 @@ export const ServiceHeaderShape = styled.div`
 `;
 
 export const ServiceHeaderTitle = styled.h1`
+	color: ${black};
 	position: relative;
-	font-size: 3em;
+	font-size: calc(35px + (26 - 15) * ((100vw - 300px) / (1600 - 300)));
 	text-transform: uppercase;
 	font-weight: 600;
-	// background: linear-gradient(to right, ${red}, ${orange}, ${lightOrange});
-	// color: transparent;
-	// background-clip: text;
-	// -webkit-background-clip: text;
 	letter-spacing: 2px;
 	z-index: 1;
 `;

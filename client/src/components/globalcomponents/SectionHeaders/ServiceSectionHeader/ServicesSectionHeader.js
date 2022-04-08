@@ -3,13 +3,13 @@ import {
 	ServiceHeaderContainer,
 	ServiceHeaderShape,
 	ServiceHeaderTitle,
-} from '../../../styles/components/globalcomponents/SectionHeaders/ServiceSectionHeader.Styles';
+} from './ServiceSectionHeader.Styles';
 
 const ServicesSectionHeader = () => {
 	return (
 		<ServiceHeaderContainer>
 			<ServiceHeaderShape />
-			<ServiceHeaderTitle>Services</ServiceHeaderTitle>
+			<ServiceHeaderTitle>what I do</ServiceHeaderTitle>
 		</ServiceHeaderContainer>
 	);
 };

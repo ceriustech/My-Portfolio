@@ -6,7 +6,6 @@ import {
 import { AboutTileContainer } from '../../styles/components/About/AboutTiles.Styles';
 import { ServiceTitle } from '../../components/globalcomponents/SectionHeaders';
 import { urlFor, client } from '../../client';
-import retrieveAboutData from '../../constants/about.data';
 
 const About = () => {
 	const [abouts, setAbouts] = useState([]);
