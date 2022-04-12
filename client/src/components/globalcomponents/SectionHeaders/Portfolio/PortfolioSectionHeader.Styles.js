@@ -8,11 +8,12 @@ const mobileLargeMax = maxView?.mobileL;
 
 export const PortfolioHeaderContainer = styled.div`
 	position: relative;
-	width: 350px;
+	width: 375px;
 	height: 200px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	flex-direction: row;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
@@ -20,13 +21,17 @@ export const PortfolioHeaderContainer = styled.div`
 	-ms-flex-align: center;
 	align-items: center;
 	margin: 3rem auto 0;
+
+	@media screen and ${mobileLargeMax} {
+		width: 320px;
+	}
 `;
 
 export const PortfolioHeaderShape = styled.div`
 	background: linear-gradient(90deg, #ff9898 0, #ffffff 100%, #ffffff 100%);
-	width: 135px;
-	height: 130px;
-	position: absolute;
+	width: 35px;
+	height: 30px;
+	margin-right: 10px;
 `;
 
 export const PortfolioHeaderTitle = styled.h1`
