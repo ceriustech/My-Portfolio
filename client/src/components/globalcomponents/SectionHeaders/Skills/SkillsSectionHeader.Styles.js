@@ -8,11 +8,12 @@ const mobileLargeMax = maxView?.mobileL;
 
 export const SkillsHeaderContainer = styled.div`
 	position: relative;
-	width: 350px;
+	width: 375px;
 	height: 200px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	flex-direction: row;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
@@ -20,6 +21,7 @@ export const SkillsHeaderContainer = styled.div`
 	-ms-flex-align: center;
 	align-items: center;
 	margin: 3rem auto 0;
+	padding-right: 10px;
 
 	@media ${mobileLargeMax} {
 		width: 250px;
@@ -29,11 +31,10 @@ export const SkillsHeaderContainer = styled.div`
 export const SkillsHeaderShape = styled.div`
 	overflow: hidden;
 	background: transparent;
-	width: 10em;
-	height: 10em;
-	position: absolute;
+	width: 35px;
+	height: 30px;
 	transform: rotate(-30deg) skewX(30deg) scaleY(0.866);
-	margin: 0 auto;
+	margin-right: 10px;
 
 	&:before {
 		position: absolute;

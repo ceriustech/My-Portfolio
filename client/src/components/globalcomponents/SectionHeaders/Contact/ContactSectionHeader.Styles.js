@@ -8,11 +8,12 @@ const mobileLargeMax = maxView?.mobileL;
 
 export const ContactHeaderContainer = styled.div`
 	position: relative;
-	width: 350px;
+	width: 375px;
 	height: 200px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	flex-direction: row;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
@@ -20,46 +21,19 @@ export const ContactHeaderContainer = styled.div`
 	-ms-flex-align: center;
 	align-items: center;
 	margin: 3rem auto 0;
+	padding-right: 10px;
 
 	@media ${mobileLargeMax} {
-		width: 250px;
+		width: 265px;
 	}
 `;
 
 export const ContactHeaderShape = styled.div`
-	text-align: center;
-	padding: 12px;
-	margin-bottom: 6px;
-	height: 60px;
-	width: 200px;
-
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 51%;
-		background: linear-gradient(90deg, #f9af7a 46%, #ffffff 100%, #ffffff 100%);
-		transform: skew(0deg, 6deg);
-	}
-
-	&:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 100%;
-		width: 50%;
-		background: linear-gradient(
-			270deg,
-			#f9af7a 46%,
-			#ffffff 100%,
-			#ffffff 100%
-		);
-		transform: skew(0deg, -6deg);
-	}
-	position: absolute;
+	background: linear-gradient(90deg, #6a7cff 0%, #ffffff 100%, #ffffff 100%);
+	width: 35px;
+	height: 30px;
+	border-radius: 50%;
+	margin-right: 10px;
 `;
 
 export const ContactHeaderTitle = styled.h1`

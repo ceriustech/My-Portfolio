@@ -8,11 +8,12 @@ const mobileLargeMax = maxView?.mobileL;
 
 export const BlogHeaderContainer = styled.div`
 	position: relative;
-	width: 350px;
+	width: 375px;
 	height: 200px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	flex-direction: row;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
@@ -20,6 +21,7 @@ export const BlogHeaderContainer = styled.div`
 	-ms-flex-align: center;
 	align-items: center;
 	margin: 3rem auto 0;
+	padding-right: 10px;
 
 	@media ${mobileLargeMax} {
 		width: 250px;
@@ -28,24 +30,24 @@ export const BlogHeaderContainer = styled.div`
 
 export const BlogHeaderShape = styled.div`
 	background: linear-gradient(90deg, #abff98 0%, #ffffff 100%, #ffffff 100%);
-	width: 170px;
-	height: 120px;
+	width: 35px;
+	height: 30px;
 	position: relative;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
-	position: absolute;
+	margin-right: 10px;
 
 	&:before {
 		content: '';
 		position: absolute;
-		right: 100%;
-		top: 45px;
+		right: 35px;
+		top: 8px;
 		width: 0;
 		height: 0;
-		border-top: 13px solid transparent;
-		border-right: 26px solid #abff98;
-		border-bottom: 13px solid transparent;
+		border-top: 6px solid transparent;
+		border-right: 10px solid #abff98;
+		border-bottom: 6px solid transparent;
 	}
 `;
 
