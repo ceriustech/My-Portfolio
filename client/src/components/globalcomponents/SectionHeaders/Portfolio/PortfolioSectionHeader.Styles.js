@@ -9,7 +9,7 @@ const mobileLargeMax = maxView?.mobileL;
 export const PortfolioHeaderContainer = styled.div`
 	position: relative;
 	width: 375px;
-	height: 200px;
+	height: 150px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -20,7 +20,7 @@ export const PortfolioHeaderContainer = styled.div`
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	margin: 3rem auto 0;
+	margin: 0 auto;
 
 	@media screen and ${mobileLargeMax} {
 		width: 320px;

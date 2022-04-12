@@ -23,7 +23,7 @@ export const AboutTileContainer = styled(motion.div)`
 	-webkit-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
 	padding: 40px;
-	margin: 25px;
+	margin: 15px;
 	width: 25%;
 
 	img {

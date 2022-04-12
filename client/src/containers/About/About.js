@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {
-	AboutContainer,
-	AboutInnerWrapper,
-} from '../../styles/containers/About.Styles';
+import { AboutContainer } from '../../styles/containers/About.Styles';
+import { SectionWrapper } from '../../styles/globalstyles/container.styles';
 import { AboutTileContainer } from '../../styles/components/About/AboutTiles.Styles';
 import { ServiceTitle } from '../../components/globalcomponents/SectionHeaders';
 import { urlFor, client } from '../../client';
@@ -27,7 +25,7 @@ const About = () => {
 	return (
 		<AboutContainer id="about-section">
 			<ServiceTitle />
-			<AboutInnerWrapper>
+			<SectionWrapper>
 				{abouts.map((item, index) => (
 					<AboutTileContainer
 						whileInView={{ opacity: 1 }}
@@ -40,7 +38,7 @@ const About = () => {
 						<p>{item?.description}</p>
 					</AboutTileContainer>
 				))}
-			</AboutInnerWrapper>
+			</SectionWrapper>
 		</AboutContainer>
 	);
 };
