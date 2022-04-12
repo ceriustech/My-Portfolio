@@ -32,8 +32,8 @@ const socialIcons = [
 const SocialMedia = () => (
 	<SocialMediaContainer>
 		{socialIcons.map((item) => (
-			<IconLink to={item.url} color={item.color}>
-				<SocialMediaIcon key={item.id}>{item.icon}</SocialMediaIcon>
+			<IconLink key={item.id} to={item.url} color={item.color}>
+				<SocialMediaIcon>{item.icon}</SocialMediaIcon>
 			</IconLink>
 		))}
 	</SocialMediaContainer>

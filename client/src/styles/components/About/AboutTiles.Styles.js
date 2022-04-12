@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { defaultColors } from '../../globalstyles/colors.styles';
 import { motion } from 'framer-motion';
 import {
