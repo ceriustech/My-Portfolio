@@ -5,11 +5,10 @@ import {
 } from '../../styles/components/PortfolioButtonFilter/PortfolioButtonFilter.Styles';
 
 const PortfolioButtonFilter = ({ handlePortfolioFilter }) => {
-
-  
 	return (
 		<PortfolioButtonFilterContainer>
 			{[
+				'All',
 				'Frontend',
 				'Fullstack',
 				'Web3',

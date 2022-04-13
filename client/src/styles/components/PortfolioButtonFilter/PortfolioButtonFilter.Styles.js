@@ -14,6 +14,7 @@ const laptopMax = maxView?.laptop;
 const mobileLargeMax = maxView?.mobileL;
 
 const white = defaultColors?.root.whiteColor;
+const darkBlue = defaultColors?.gradient.darkBlue;
 
 export const PortfolioButtonFilterContainer = styled.div`
 	display: flex;
@@ -30,18 +31,19 @@ export const PortfolioButton = styled.button`
 	background-color: #fff;
 	color: #000;
 	font-weight: 800;
+	font-size: 1.15rem;
 
 	cursor: pointer;
 	transition: all 0.3s ease;
 	margin: 0.5rem;
 
 	&:hover {
-		background-color: var(--secondary-color);
-		color: #fff;
+		background-color: ${darkBlue};
+		color: ${white};
 	}
 
-	@media screen and (min-width: 2000px) {
-		padding: 1rem 2rem;
+	@media screen and ${dtMediumMin} {
+		padding: 0.5rem 1rem;
 		border-radius: 0.85rem;
 	}
 `;

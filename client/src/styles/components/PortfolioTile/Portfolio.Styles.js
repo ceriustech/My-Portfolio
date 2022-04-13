@@ -16,4 +16,12 @@ const mobileLargeMax = maxView?.mobileL;
 const white = defaultColors?.root.whiteColor;
 const gray = defaultColors?.root.grayColor;
 
-export const PortfolioTileContainer = styled(motion.div)``;
+export const PortfolioTileContainer = styled(motion.div)`
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-flow: wrap;
+	align-items: center;
+`;
+
+export const PortfolioTileInner = styled(motion.div)``;
