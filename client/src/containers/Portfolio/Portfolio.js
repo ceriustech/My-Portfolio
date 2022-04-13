@@ -39,7 +39,7 @@ const Portfolio = () => {
 	return (
 		<PortfolioContainer id="portfolio-section">
 			<PortfolioHeader />
-			<SectionWrapper>
+			<SectionWrapper flexDirection="column">
 				<PortfolioButtonFilter
 					className={activeFilter === item ? 'item-active' : ''}
 					handlePortfolioFilter={() => handlePortfolioFilter(item)}
@@ -49,7 +49,7 @@ const Portfolio = () => {
 					transition={{ duration: 0.5, delayChildren: 0.5 }}
 				>
 					{filterPortfolio.map((tile, index) => (
-						<PortfolioTileInner>
+						<PortfolioTileInner key={index}>
 							<PortfolioImage
 								key={index}
 								image={urlFor(tile.imgUrl)}

@@ -25,7 +25,7 @@ const About = () => {
 	return (
 		<AboutContainer id="about-section">
 			<ServiceTitle />
-			<SectionWrapper>
+			<SectionWrapper flexDirection="row">
 				{abouts.map((item, index) => (
 					<AboutTileContainer
 						whileInView={{ opacity: 1 }}
