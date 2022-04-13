@@ -32,7 +32,11 @@ export default {
 				hotspot: true,
 			},
 		},
-
+		{
+			name: 'altText',
+			title: 'Alt Text',
+			type: 'string',
+		},
 		{
 			name: 'tags',
 			title: 'Tags',
