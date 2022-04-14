@@ -11,6 +11,7 @@ export const size = {
 export const miscSize = {
 	miscSmall: '505px',
 	miscLarge: '1800px',
+	miscXLarge: '2000px',
 };
 
 export const maxView = {
@@ -36,6 +37,7 @@ export const minView = {
 export const miscMinView = {
 	miscSmall: `(min-width: ${miscSize.miscSmall})`,
 	miscLarge: `(min-width: ${miscSize.miscLarge})`,
+	miscXLarge: `(min-width: ${miscSize.miscXLarge})`,
 };
 
 export const miscMaxView = {

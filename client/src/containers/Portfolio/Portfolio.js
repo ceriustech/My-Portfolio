@@ -10,6 +10,8 @@ import {
 	PortfolioOverlayContainer,
 	PortfolioOverlayLink,
 	PortfolioOverlayLinkDiv,
+	ApplicationInfo,
+	ApplicationInfoTag,
 } from '../../styles/components/PortfolioTile/Portfolio.Styles';
 import { SectionWrapper } from '../../styles/globalstyles/container.styles';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
@@ -64,7 +66,7 @@ const Portfolio = () => {
 									maxView={maxViewPort}
 									alt={item.altText}
 								/>
-								<PortfolioOverlayContainer>
+								<PortfolioOverlayContainer className="app__work-hover">
 									<PortfolioOverlayLink
 										to={tile.projectLink}
 										target="_blank"
@@ -93,6 +95,12 @@ const Portfolio = () => {
 									</PortfolioOverlayLink>
 								</PortfolioOverlayContainer>
 							</PortfolioPictureContainer>
+							<ApplicationInfo>
+								<h3>{tile.title}</h3>
+								<ApplicationInfoTag>
+									<p>{tile.tags[0]}</p>
+								</ApplicationInfoTag>
+							</ApplicationInfo>
 						</PortfolioTileInner>
 					))}
 				</PortfolioTileContainer>

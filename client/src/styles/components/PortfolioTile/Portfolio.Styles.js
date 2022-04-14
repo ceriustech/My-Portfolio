@@ -9,22 +9,21 @@ import {
 import Picture from '../../../components/Picture';
 import { Link } from 'react-router-dom';
 
-const miscLarge = miscMinView?.miscLarge;
+const miscXLarge = miscMinView?.miscXLarge;
 const dtMediumMin = minView?.desktopM;
 const laptopMin = minView?.laptop;
 const laptopMax = maxView?.laptop;
-const mobileLargeMax = maxView?.mobileL;
+const mobileSmalleMax = maxView?.mobileS;
 
 const white = defaultColors?.root.whiteColor;
 const black = defaultColors?.root.blackColor;
 const gray = defaultColors?.root.grayColor;
 
 export const PortfolioTileContainer = styled(motion.div)`
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	flex-flow: wrap;
 	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 `;
 
 export const PortfolioTileInner = styled.div`
@@ -48,13 +47,13 @@ export const PortfolioTileInner = styled.div`
 		box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 	}
 
-  @media screen and (min-width: 2000px) {
+  @media screen and ${miscXLarge} {
     width: 470px;
     padding: 1.25rem;
     border-radius: 0.75rem;
   }
 
-  @media screen and (max-width: 300px) {
+  @media screen and ${mobileSmalleMax} {
     width: 100%;
     margin: 1rem;
   }
@@ -66,12 +65,14 @@ export const PortfolioPictureContainer = styled.div`
 	height: 230px;
 	position: relative;
 	width: 100%;
-`;
 
-export const PortfolioImage = styled(Picture)`
-	border-radius: 0.5rem;
-	height: 100%;
-	width: 100%;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+
+	picture {
+		height: 100%;
+	}
 
 	img {
 		border-radius: 0.5rem;
@@ -79,6 +80,8 @@ export const PortfolioImage = styled(Picture)`
 		width: 100%;
 	}
 `;
+
+export const PortfolioImage = styled(Picture)``;
 
 export const PortfolioOverlayContainer = styled(motion.div)`
 	align-items: center;
@@ -107,9 +110,9 @@ export const PortfolioOverlayLinkDiv = styled(motion.div)`
 	justify-content: center;
 
 	border-radius: 50%;
-	color: #fff;
+	color: ${white};
 	cursor: pointer;
-	font-family: var(--font-base);
+	font-family: 'DM Sans', sans-serif;
 	font-weight: 800;
 	height: 50px;
 	margin: 1rem;
@@ -117,4 +120,49 @@ export const PortfolioOverlayLinkDiv = styled(motion.div)`
 
 	background-color: rgba(0, 0, 0, 0.5);
 	transition: all 0.3s ease;
+
+	svg {
+		color: ${white};
+		height: 50%;
+		width: 50%;
+	}
+`;
+
+export const ApplicationInfo = styled.div`
+	align-items: center;
+	display: flex;
+	justify-content: center;
+
+	padding: 0.5rem;
+	position: relative;
+	width: 100%;
+
+	h3 {
+		line-height: 1.5;
+		margin-top: 1rem;
+
+		color: ${black};
+		font-size: 1rem;
+		font-weight: 800;
+		text-align: left;
+	}
+`;
+
+export const ApplicationInfoTag = styled.div`
+	align-items: center;
+	display: flex;
+	justify-content: center;
+
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 0.5rem 1rem;
+	position: absolute;
+	top: -25px;
+
+	p {
+		color: ${gray};
+		font-size: 0.8rem;
+		line-height: 1.5;
+		text-align: left;
+	}
 `;
