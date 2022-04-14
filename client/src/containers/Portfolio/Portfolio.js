@@ -5,10 +5,14 @@ import PortfolioButtonFilter from '../../components/PortfolioButtonFilter/Portfo
 import {
 	PortfolioTileContainer,
 	PortfolioTileInner,
+	PortfolioPictureContainer,
 	PortfolioImage,
+	PortfolioOverlayContainer,
+	PortfolioOverlayLink,
+	PortfolioOverlayLinkDiv,
 } from '../../styles/components/PortfolioTile/Portfolio.Styles';
 import { SectionWrapper } from '../../styles/globalstyles/container.styles';
-import { AiFillEye, AIFillGithub } from 'react-icons/ai';
+import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { urlFor, client } from '../../client';
 import { maxView } from '../../styles/globalstyles/mediaQueries.styles';
 
@@ -45,18 +49,50 @@ const Portfolio = () => {
 					handlePortfolioFilter={() => handlePortfolioFilter(item)}
 				/>
 				<PortfolioTileContainer
+					className="app__work-portfolio"
 					animate={animateCard}
 					transition={{ duration: 0.5, delayChildren: 0.5 }}
 				>
 					{filterPortfolio.map((tile, index) => (
-						<PortfolioTileInner key={index}>
-							<PortfolioImage
-								key={index}
-								image={urlFor(tile.imgUrl)}
-								srcSet={urlFor(tile.imgUrl)}
-								media={maxViewPort}
-								alt={item.altText}
-							/>
+						<PortfolioTileInner key={index} className="app__work-item ">
+							<PortfolioPictureContainer className="app__work-img">
+								<PortfolioImage
+									key={index}
+									className="img"
+									image={urlFor(tile.imgUrl)}
+									srcset={urlFor(tile.imgUrl)}
+									maxView={maxViewPort}
+									alt={item.altText}
+								/>
+								<PortfolioOverlayContainer>
+									<PortfolioOverlayLink
+										to={tile.projectLink}
+										target="_blank"
+										rel="noreferrer"
+									>
+										<PortfolioOverlayLinkDiv
+											whileInView={{ scale: [0, 1] }}
+											whileHover={{ scale: [1, 0.9] }}
+											transition={{ duration: 0.25 }}
+										>
+											<AiFillEye />
+										</PortfolioOverlayLinkDiv>
+									</PortfolioOverlayLink>
+									<PortfolioOverlayLink
+										to={tile.codeLink}
+										target="_blank"
+										rel="noreferrer"
+									>
+										<PortfolioOverlayLinkDiv
+											whileInView={{ scale: [0, 1] }}
+											whileHover={{ scale: [1, 0.9] }}
+											transition={{ duration: 0.25 }}
+										>
+											<AiFillGithub />
+										</PortfolioOverlayLinkDiv>
+									</PortfolioOverlayLink>
+								</PortfolioOverlayContainer>
+							</PortfolioPictureContainer>
 						</PortfolioTileInner>
 					))}
 				</PortfolioTileContainer>
