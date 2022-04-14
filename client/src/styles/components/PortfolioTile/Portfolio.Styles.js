@@ -100,6 +100,10 @@ export const PortfolioOverlayContainer = styled(motion.div)`
 
 	background-color: rgba(0, 0, 0, 0.5);
 	transition: all 0.3s ease;
+
+	&:hover {
+		opacity: 1;
+	}
 `;
 
 export const PortfolioOverlayLink = styled(Link)``;
@@ -114,9 +118,9 @@ export const PortfolioOverlayLinkDiv = styled(motion.div)`
 	cursor: pointer;
 	font-family: 'DM Sans', sans-serif;
 	font-weight: 800;
-	height: 50px;
+	height: 55px;
 	margin: 1rem;
-	width: 50px;
+	width: 55px;
 
 	background-color: rgba(0, 0, 0, 0.5);
 	transition: all 0.3s ease;
@@ -153,7 +157,7 @@ export const ApplicationInfoTag = styled.div`
 	display: flex;
 	justify-content: center;
 
-	background-color: #fff;
+	background-color: ${white};
 	border-radius: 10px;
 	padding: 0.5rem 1rem;
 	position: absolute;
@@ -165,4 +169,15 @@ export const ApplicationInfoTag = styled.div`
 		line-height: 1.5;
 		text-align: left;
 	}
+`;
+
+export const OverlayHelpText = styled.h3`
+	line-height: 1.5;
+	margin-top: 1rem;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: ${white};
+	font-size: 1rem;
+	font-weight: 800;
+	text-align: center;
+	position: absolute;
 `;

@@ -12,9 +12,10 @@ import {
 	PortfolioOverlayLinkDiv,
 	ApplicationInfo,
 	ApplicationInfoTag,
+	OverlayHelpText,
 } from '../../styles/components/PortfolioTile/Portfolio.Styles';
 import { SectionWrapper } from '../../styles/globalstyles/container.styles';
-import { AiFillEye, AiFillGithub } from 'react-icons/ai';
+import { AiFillEye, AiFillInfoCircle } from 'react-icons/ai';
 import { urlFor, client } from '../../client';
 import { maxView } from '../../styles/globalstyles/mediaQueries.styles';
 
@@ -67,6 +68,7 @@ const Portfolio = () => {
 									alt={item.altText}
 								/>
 								<PortfolioOverlayContainer className="app__work-hover">
+									<OverlayHelpText>More Info</OverlayHelpText>
 									<PortfolioOverlayLink
 										to={tile.projectLink}
 										target="_blank"
@@ -77,7 +79,7 @@ const Portfolio = () => {
 											whileHover={{ scale: [1, 0.9] }}
 											transition={{ duration: 0.25 }}
 										>
-											<AiFillEye />
+											<AiFillInfoCircle />
 										</PortfolioOverlayLinkDiv>
 									</PortfolioOverlayLink>
 									<PortfolioOverlayLink
@@ -90,7 +92,7 @@ const Portfolio = () => {
 											whileHover={{ scale: [1, 0.9] }}
 											transition={{ duration: 0.25 }}
 										>
-											<AiFillGithub />
+											<AiFillEye />
 										</PortfolioOverlayLinkDiv>
 									</PortfolioOverlayLink>
 								</PortfolioOverlayContainer>
