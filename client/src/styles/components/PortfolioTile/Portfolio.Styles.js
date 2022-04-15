@@ -165,7 +165,7 @@ export const ApplicationInfoTag = styled.div`
 
 	p {
 		color: ${gray};
-		font-size: 0.8rem;
+		font-size: 1rem;
 		line-height: 1.5;
 		text-align: left;
 	}
@@ -176,8 +176,11 @@ export const OverlayHelpText = styled.h3`
 	margin-top: 1rem;
 	background-color: rgba(0, 0, 0, 0.5);
 	color: ${white};
+	display: none;
 	font-size: 1rem;
 	font-weight: 800;
 	text-align: center;
+	padding: 0.5rem;
 	position: absolute;
+	top: 10px;
 `;

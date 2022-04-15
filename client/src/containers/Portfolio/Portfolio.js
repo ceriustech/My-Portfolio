@@ -24,6 +24,7 @@ const Portfolio = () => {
 	const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 	const [portfolioTIle, setPortfolioTile] = useState([]);
 	const [filterPortfolio, setFilterPortfolio] = useState([]);
+	const [hovered, setHovered] = useState(false);
 
 	const maxViewPort = maxView?.desktopM;
 
@@ -43,6 +44,16 @@ const Portfolio = () => {
 
 	let item = '';
 
+	const onMouseEnter = (e) => {
+		setHovered(true);
+	};
+
+	const onMouseLeave = (e) => {
+		setHovered(false);
+	};
+
+	const hoverStyle = hovered ? { display: 'block' } : {};
+
 	return (
 		<PortfolioContainer id="portfolio-section">
 			<PortfolioHeader />
@@ -57,8 +68,8 @@ const Portfolio = () => {
 					transition={{ duration: 0.5, delayChildren: 0.5 }}
 				>
 					{filterPortfolio.map((tile, index) => (
-						<PortfolioTileInner key={index} className="app__work-item ">
-							<PortfolioPictureContainer className="app__work-img">
+						<PortfolioTileInner key={index}>
+							<PortfolioPictureContainer>
 								<PortfolioImage
 									key={index}
 									className="img"
@@ -67,8 +78,17 @@ const Portfolio = () => {
 									maxView={maxViewPort}
 									alt={item.altText}
 								/>
-								<PortfolioOverlayContainer className="app__work-hover">
-									<OverlayHelpText>More Info</OverlayHelpText>
+								<PortfolioOverlayContainer>
+									{(hovered && (
+										<OverlayHelpText id="portfolio__overlay-info-text">
+											More Info
+										</OverlayHelpText>
+									)) ||
+										(hovered && (
+											<OverlayHelpText id="portfolio__overlay-app-text">
+												See the app
+											</OverlayHelpText>
+										))}
 									<PortfolioOverlayLink
 										to={tile.projectLink}
 										target="_blank"
@@ -78,8 +98,10 @@ const Portfolio = () => {
 											whileInView={{ scale: [0, 1] }}
 											whileHover={{ scale: [1, 0.9] }}
 											transition={{ duration: 0.25 }}
+											onMouseEnter={onMouseEnter}
+											onMouseLeave={onMouseLeave}
 										>
-											<AiFillInfoCircle />
+											<AiFillInfoCircle style={hoverStyle} />
 										</PortfolioOverlayLinkDiv>
 									</PortfolioOverlayLink>
 									<PortfolioOverlayLink
@@ -91,8 +113,10 @@ const Portfolio = () => {
 											whileInView={{ scale: [0, 1] }}
 											whileHover={{ scale: [1, 0.9] }}
 											transition={{ duration: 0.25 }}
+											onMouseEnter={onMouseEnter}
+											onMouseLeave={onMouseLeave}
 										>
-											<AiFillEye />
+											<AiFillEye style={hoverStyle} />
 										</PortfolioOverlayLinkDiv>
 									</PortfolioOverlayLink>
 								</PortfolioOverlayContainer>
