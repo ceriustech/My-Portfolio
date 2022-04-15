@@ -4,9 +4,6 @@ import { PortfolioHeader } from '../../components/globalcomponents/SectionHeader
 import PortfolioButtonFilter from '../../components/PortfolioButtonFilter/PortfolioButtonFilter';
 import { SectionWrapper } from '../../styles/globalstyles/container.styles';
 import PortfolioTile from '../../components/Portfolio/PortfolioTiles';
-import { AiFillEye, AiFillInfoCircle } from 'react-icons/ai';
-import { urlFor, client } from '../../client';
-import { maxView } from '../../styles/globalstyles/mediaQueries.styles';
 
 const Portfolio = () => {
 	const [activeFilter, setActiveFilter] = useState('All');
