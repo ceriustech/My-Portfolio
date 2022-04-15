@@ -25,6 +25,7 @@ const Portfolio = () => {
 	const [portfolioTIle, setPortfolioTile] = useState([]);
 	const [filterPortfolio, setFilterPortfolio] = useState([]);
 	const [hovered, setHovered] = useState(false);
+	const [overlayText, setOverlayText] = useState(false);
 
 	const maxViewPort = maxView?.desktopM;
 
@@ -44,12 +45,16 @@ const Portfolio = () => {
 
 	let item = '';
 
-	const onMouseEnter = (e) => {
+	const handleMouseEnter = (e) => {
 		setHovered(true);
 	};
 
-	const onMouseLeave = (e) => {
+	const handleMouseLeave = (e) => {
 		setHovered(false);
+	};
+
+	const handleOverlayText = (e) => {
+		setOverlayText(true);
 	};
 
 	const hoverStyle = hovered ? { display: 'block' } : {};
@@ -79,16 +84,15 @@ const Portfolio = () => {
 									alt={item.altText}
 								/>
 								<PortfolioOverlayContainer>
-									{(hovered && (
-										<OverlayHelpText id="portfolio__overlay-info-text">
-											More Info
+									{hovered && (
+										<OverlayHelpText
+											id="portfolio__overlay-text"
+											style={hoverStyle}
+										>
+											{(hovered && 'More Info') ||
+												(hovered && overlayText ? 'See The App' : '')}
 										</OverlayHelpText>
-									)) ||
-										(hovered && (
-											<OverlayHelpText id="portfolio__overlay-app-text">
-												See the app
-											</OverlayHelpText>
-										))}
+									)}
 									<PortfolioOverlayLink
 										to={tile.projectLink}
 										target="_blank"
@@ -98,10 +102,10 @@ const Portfolio = () => {
 											whileInView={{ scale: [0, 1] }}
 											whileHover={{ scale: [1, 0.9] }}
 											transition={{ duration: 0.25 }}
-											onMouseEnter={onMouseEnter}
-											onMouseLeave={onMouseLeave}
+											onMouseEnter={handleMouseEnter}
+											onMouseLeave={handleMouseLeave}
 										>
-											<AiFillInfoCircle style={hoverStyle} />
+											<AiFillInfoCircle />
 										</PortfolioOverlayLinkDiv>
 									</PortfolioOverlayLink>
 									<PortfolioOverlayLink
@@ -113,10 +117,10 @@ const Portfolio = () => {
 											whileInView={{ scale: [0, 1] }}
 											whileHover={{ scale: [1, 0.9] }}
 											transition={{ duration: 0.25 }}
-											onMouseEnter={onMouseEnter}
-											onMouseLeave={onMouseLeave}
+											onMouseEnter={handleMouseEnter && handleOverlayText}
+											onMouseLeave={handleMouseLeave}
 										>
-											<AiFillEye style={hoverStyle} />
+											<AiFillEye />
 										</PortfolioOverlayLinkDiv>
 									</PortfolioOverlayLink>
 								</PortfolioOverlayContainer>
