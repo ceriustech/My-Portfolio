@@ -45,8 +45,12 @@ const PortfolioTile = () => {
 		setHovered(false);
 	};
 
-	const handleOverlayText = (e) => {
+	const handleOverlayTextStart = (e) => {
 		setOverlayText(true);
+	};
+
+	const handleOverlayTextEnd = (e) => {
+		setOverlayText(false);
 	};
 
 	const hoverStyle = hovered ? { display: 'block' } : {};
@@ -75,11 +79,11 @@ const PortfolioTile = () => {
 									style={hoverStyle}
 								>
 									{(hovered && 'More Info') ||
-										(hovered && overlayText ? 'See The App' : '')}
+										(overlayText ? 'See The App' : '')}
 								</OverlayHelpText>
 							)}
 							<PortfolioOverlayLink
-								to={tile.projectLink}
+								href={tile.projectLink}
 								target="_blank"
 								rel="noreferrer"
 							>
@@ -94,7 +98,7 @@ const PortfolioTile = () => {
 								</PortfolioOverlayLinkDiv>
 							</PortfolioOverlayLink>
 							<PortfolioOverlayLink
-								to={tile.codeLink}
+								href={tile.codeLink}
 								target="_blank"
 								rel="noreferrer"
 							>
@@ -102,8 +106,10 @@ const PortfolioTile = () => {
 									whileInView={{ scale: [0, 1] }}
 									whileHover={{ scale: [1, 0.9] }}
 									transition={{ duration: 0.25 }}
-									onMouseEnter={handleMouseEnter && handleOverlayText}
+									onMouseEnter={handleMouseEnter}
 									onMouseLeave={handleMouseLeave}
+									onHoverStart={handleOverlayTextStart}
+									onHoverEnd={handleOverlayTextEnd}
 								>
 									<AiFillEye />
 								</PortfolioOverlayLinkDiv>

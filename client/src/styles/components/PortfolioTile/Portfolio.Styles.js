@@ -28,6 +28,7 @@ export const PortfolioTileContainer = styled(motion.div)`
 
 export const PortfolioTileInner = styled.div`
 	align-items: center;
+	border-bottom: 1px solid ${black};
 	display: flex;
 	justify-content: center;
 
@@ -106,7 +107,7 @@ export const PortfolioOverlayContainer = styled(motion.div)`
 	}
 `;
 
-export const PortfolioOverlayLink = styled(Link)``;
+export const PortfolioOverlayLink = styled.a``;
 
 export const PortfolioOverlayLinkDiv = styled(motion.div)`
 	align-items: center;
@@ -146,7 +147,7 @@ export const ApplicationInfo = styled.div`
 		margin-top: 1rem;
 
 		color: ${black};
-		font-size: 1rem;
+		font-size: 1.15rem;
 		font-weight: 800;
 		text-align: left;
 	}
