@@ -7,7 +7,6 @@ import {
 	miscMinView,
 } from '../../globalstyles/mediaQueries.styles';
 import Picture from '../../../components/Picture';
-import { Link } from 'react-router-dom';
 
 const miscXLarge = miscMinView?.miscXLarge;
 const dtMediumMin = minView?.desktopM;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
 	PortfolioTileContainer,
 	PortfolioTileInner,
@@ -92,7 +93,7 @@ const PortfolioTile = () => {
 								</OverlayHelpText>
 							)}
 							<PortfolioOverlayLink
-								href={tile.projectLink}
+								to="/portfolio"
 								target="_blank"
 								rel="noreferrer"
 							>
@@ -109,7 +110,7 @@ const PortfolioTile = () => {
 								</PortfolioOverlayLinkDiv>
 							</PortfolioOverlayLink>
 							<PortfolioOverlayLink
-								href={tile.codeLink}
+								href={tile.projectLink}
 								target="_blank"
 								rel="noreferrer"
 							>
