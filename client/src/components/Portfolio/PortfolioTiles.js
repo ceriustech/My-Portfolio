@@ -22,6 +22,7 @@ const PortfolioTile = () => {
 	const [filterPortfolio, setFilterPortfolio] = useState([]);
 	const [hovered, setHovered] = useState(false);
 	const [overlayText, setOverlayText] = useState(false);
+	const [overlayAppText, setOverlayAppText] = useState(false);
 
 	const maxViewPort = maxView?.desktopM;
 
@@ -53,6 +54,14 @@ const PortfolioTile = () => {
 		setOverlayText(false);
 	};
 
+	const handleOverlayAppTextStart = (e) => {
+		setOverlayAppText(true);
+	};
+
+	const handleOverlayAppTextEnd = (e) => {
+		setOverlayAppText(false);
+	};
+
 	const hoverStyle = hovered ? { display: 'block' } : {};
 
 	return (
@@ -78,8 +87,8 @@ const PortfolioTile = () => {
 									id="portfolio__overlay-text"
 									style={hoverStyle}
 								>
-									{(hovered && 'More Info') ||
-										(overlayText ? 'See The App' : '')}
+									{(overlayText && 'More Info') ||
+										(overlayAppText ? 'See The App' : '')}
 								</OverlayHelpText>
 							)}
 							<PortfolioOverlayLink
@@ -93,6 +102,8 @@ const PortfolioTile = () => {
 									transition={{ duration: 0.25 }}
 									onMouseEnter={handleMouseEnter}
 									onMouseLeave={handleMouseLeave}
+									onHoverStart={handleOverlayTextStart}
+									onHoverEnd={handleOverlayTextEnd}
 								>
 									<AiFillInfoCircle />
 								</PortfolioOverlayLinkDiv>
@@ -108,8 +119,8 @@ const PortfolioTile = () => {
 									transition={{ duration: 0.25 }}
 									onMouseEnter={handleMouseEnter}
 									onMouseLeave={handleMouseLeave}
-									onHoverStart={handleOverlayTextStart}
-									onHoverEnd={handleOverlayTextEnd}
+									onHoverStart={handleOverlayAppTextStart}
+									onHoverEnd={handleOverlayAppTextEnd}
 								>
 									<AiFillEye />
 								</PortfolioOverlayLinkDiv>
