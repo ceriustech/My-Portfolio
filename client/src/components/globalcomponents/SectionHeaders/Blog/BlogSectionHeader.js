@@ -9,7 +9,7 @@ const BlogSectionHeader = () => {
 	return (
 		<BlogHeaderContainer>
 			<BlogHeaderShape />
-			<BlogHeaderTitle>My Blog</BlogHeaderTitle>
+			<BlogHeaderTitle>Blog</BlogHeaderTitle>
 		</BlogHeaderContainer>
 	);
 };

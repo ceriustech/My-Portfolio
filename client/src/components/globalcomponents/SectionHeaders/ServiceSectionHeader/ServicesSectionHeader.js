@@ -9,7 +9,7 @@ const ServicesSectionHeader = () => {
 	return (
 		<ServiceHeaderContainer>
 			<ServiceHeaderShape />
-			<ServiceHeaderTitle>what I do</ServiceHeaderTitle>
+			<ServiceHeaderTitle>About Me</ServiceHeaderTitle>
 		</ServiceHeaderContainer>
 	);
 };

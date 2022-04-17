@@ -9,7 +9,7 @@ const SkillsSectionHeader = () => {
 	return (
 		<SkillsHeaderContainer>
 			<SkillsHeaderShape />
-			<SkillsHeaderTitle>Tech I use</SkillsHeaderTitle>
+			<SkillsHeaderTitle>Skills</SkillsHeaderTitle>
 		</SkillsHeaderContainer>
 	);
 };

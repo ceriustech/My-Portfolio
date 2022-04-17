@@ -48,10 +48,15 @@ export const PortfolioTileInner = styled.div`
 	}
 
   @media screen and ${miscXLarge} {
-    width: 470px;
     padding: 1.25rem;
     border-radius: 0.75rem;
   }
+
+	@media scren and (min-width: 2000px){
+		padding: 1.25rem;
+    border-radius: 0.75rem;
+
+	}
 
   @media screen and ${mobileSmalleMax} {
     width: 100%;

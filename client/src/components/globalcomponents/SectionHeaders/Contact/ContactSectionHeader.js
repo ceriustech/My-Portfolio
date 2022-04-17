@@ -9,7 +9,7 @@ const ContactSectionHeader = () => {
 	return (
 		<ContactHeaderContainer>
 			<ContactHeaderShape />
-			<ContactHeaderTitle>Get in touch</ContactHeaderTitle>
+			<ContactHeaderTitle>Contact</ContactHeaderTitle>
 		</ContactHeaderContainer>
 	);
 };
