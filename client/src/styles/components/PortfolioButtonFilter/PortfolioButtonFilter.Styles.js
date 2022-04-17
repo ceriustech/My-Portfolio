@@ -22,7 +22,7 @@ export const PortfolioButtonFilterContainer = styled.div`
 	justify-content: center;
 	flex-flow: wrap;
 	align-items: center;
-	margin: 1rem 0;
+	margin: 1rem 0 3rem;
 `;
 
 export const PortfolioButton = styled.button`
