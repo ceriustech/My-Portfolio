@@ -36,10 +36,10 @@ export const PortfolioTileInner = styled.div`
 	color: ${black};
 	cursor: pointer;
 	flex-direction: column;
-	margin: 2rem;
+	margin: 1rem;
 	padding: 1rem;
 	transition: all 0.3s ease;
-	width: 270px;
+	width: 350px;
 
   opacity: 1;
 
@@ -67,7 +67,7 @@ export const PortfolioTileInner = styled.div`
 `;
 
 export const PortfolioPictureContainer = styled.div`
-	height: 230px;
+	height: 270px;
 	position: relative;
 	width: 100%;
 
