@@ -19,7 +19,7 @@ const App = () => {
 	));
 
 	return (
-		<Layout component={pageComponents} className="app">
+		<Layout className="app">
 			<SkipNavigation />
 			{HeaderComponents}
 			<Routes>{Pages}</Routes>

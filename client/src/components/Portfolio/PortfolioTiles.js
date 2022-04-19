@@ -17,13 +17,13 @@ import { urlFor, client } from '../../client';
 import { maxView } from '../../styles/globalstyles/mediaQueries.styles';
 
 const PortfolioTile = () => {
-	const [activeFilter, setActiveFilter] = useState('All');
-	const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 	const [portfolioTIle, setPortfolioTile] = useState([]);
 	const [filterPortfolio, setFilterPortfolio] = useState([]);
+	const [activeFilter, setActiveFilter] = useState('All');
 	const [hovered, setHovered] = useState(false);
 	const [overlayText, setOverlayText] = useState(false);
 	const [overlayAppText, setOverlayAppText] = useState(false);
+	const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
 	const maxViewPort = maxView?.desktopM;
 
@@ -37,7 +37,22 @@ const PortfolioTile = () => {
 		});
 	}, []);
 
-	let item = '';
+	const handlePortfoliofilter = (item) => {
+		setActiveFilter(item);
+		setAnimateCard([{ y: 100, opacity: 0 }]);
+
+		setTimeout(() => {
+			setAnimateCard([{ y: 0, opacity: 1 }]);
+
+			if (item === 'All') {
+				setFilterPortfolio(portfolioTIle);
+			} else {
+				setFilterPortfolio(
+					portfolioTIle.filter((work) => work.tags.includes(item))
+				);
+			}
+		}, 500);
+	};
 
 	const handleMouseEnter = (e) => {
 		setHovered(true);
@@ -80,7 +95,7 @@ const PortfolioTile = () => {
 							image={urlFor(tile.imgUrl)}
 							srcset={urlFor(tile.imgUrl)}
 							maxView={maxViewPort}
-							alt={item.altText}
+							alt={tile.altText}
 						/>
 						<PortfolioOverlayContainer>
 							{hovered && (
