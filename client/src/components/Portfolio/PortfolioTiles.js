@@ -92,8 +92,8 @@ const PortfolioTile = () => {
 					'Frontend',
 					'Fullstack',
 					'Web3',
-					'React.js',
-					'Next.js',
+					'React JS',
+					'Next JS',
 					'Node',
 					'Go',
 				].map((item, index) => (
@@ -136,11 +136,7 @@ const PortfolioTile = () => {
 											(overlayAppText ? 'See The App' : '')}
 									</OverlayHelpText>
 								)}
-								<PortfolioOverlayLink
-									to="/portfolio"
-									target="_blank"
-									rel="noreferrer"
-								>
+								<Link to="/portfolio" rel="noreferrer">
 									<PortfolioOverlayLinkDiv
 										whileHover={{ scale: [1, 0.9] }}
 										transition={{ duration: 0.25 }}
@@ -151,7 +147,7 @@ const PortfolioTile = () => {
 									>
 										<AiFillInfoCircle />
 									</PortfolioOverlayLinkDiv>
-								</PortfolioOverlayLink>
+								</Link>
 								<PortfolioOverlayLink
 									href={tile.projectLink}
 									target="_blank"
