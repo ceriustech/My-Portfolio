@@ -12,17 +12,20 @@ const NavigationItems = ({ data }) => {
 
 	const viewportWidth = Number(size.tablet.replace('px', ''));
 
+	const link =
+		data?.inPageLink !== '' ? `${data?.inPageLink}` : data?.routedLink;
+
 	return (
 		<>
 			{windowSize.width > viewportWidth && (
 				<NavigationItem>
 					<NavDot />
-					<ListLink to={`path${data.inPageLink}`}>{data.name}</ListLink>
+					<ListLink to={link}>{data.name}</ListLink>
 				</NavigationItem>
 			)}
 			{windowSize.width <= viewportWidth && (
 				<NavigationItem>
-					<ListLink to={`path${data.inPageLink}`}>{data.name}</ListLink>
+					<ListLink to={link}>{data.name}</ListLink>
 				</NavigationItem>
 			)}
 		</>

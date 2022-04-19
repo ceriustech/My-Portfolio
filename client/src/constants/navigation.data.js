@@ -2,7 +2,7 @@ export const navigationItem = [
 	{
 		id: 'home',
 		name: 'Home',
-		inPageLink: '#home',
+		inPageLink: '',
 		routedLink: '/',
 	},
 	{
