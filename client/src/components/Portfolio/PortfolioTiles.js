@@ -12,6 +12,10 @@ import {
 	ApplicationInfoTag,
 	OverlayHelpText,
 } from '../../styles/components/PortfolioTile/Portfolio.Styles';
+import {
+	PortfolioButtonFilterContainer,
+	PortfolioButton,
+} from '../../styles/components/PortfolioButtonFilter/PortfolioButtonFilter.Styles';
 import { AiFillEye, AiFillInfoCircle } from 'react-icons/ai';
 import { urlFor, client } from '../../client';
 import { maxView } from '../../styles/globalstyles/mediaQueries.styles';
@@ -20,10 +24,10 @@ const PortfolioTile = () => {
 	const [portfolioTIle, setPortfolioTile] = useState([]);
 	const [filterPortfolio, setFilterPortfolio] = useState([]);
 	const [activeFilter, setActiveFilter] = useState('All');
+	const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 	const [hovered, setHovered] = useState(false);
 	const [overlayText, setOverlayText] = useState(false);
 	const [overlayAppText, setOverlayAppText] = useState(false);
-	const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
 	const maxViewPort = maxView?.desktopM;
 
@@ -81,75 +85,101 @@ const PortfolioTile = () => {
 	const hoverStyle = hovered ? { display: 'block' } : {};
 
 	return (
-		<PortfolioTileContainer
-			className="app__work-portfolio"
-			animate={animateCard}
-			transition={{ duration: 0.5, delayChildren: 0.5 }}
-		>
-			{filterPortfolio.map((tile, index) => (
-				<PortfolioTileInner key={index}>
-					<PortfolioPictureContainer>
-						<PortfolioImage
-							key={index}
-							className="img"
-							image={urlFor(tile.imgUrl)}
-							srcset={urlFor(tile.imgUrl)}
-							maxView={maxViewPort}
-							alt={tile.altText}
-						/>
-						<PortfolioOverlayContainer>
-							{hovered && (
-								<OverlayHelpText
-									id="portfolio__overlay-text"
-									style={hoverStyle}
+		<React.Fragment>
+			<PortfolioButtonFilterContainer>
+				{[
+					'All',
+					'Frontend',
+					'Fullstack',
+					'Web3',
+					'React.js',
+					'Next.js',
+					'Node',
+					'Go',
+				].map((item, index) => (
+					<PortfolioButton
+						key={index}
+						className={activeFilter === item ? 'item-active' : ''}
+						onClick={() => handlePortfoliofilter(item)}
+					>
+						{item}
+					</PortfolioButton>
+				))}
+			</PortfolioButtonFilterContainer>
+			{/* <PortfolioButtonFilter
+				handleFilter={handlePortfoliofilter(item)}
+				activeButton={}
+			/> */}
+			<PortfolioTileContainer
+				className="app__work-portfolio"
+				animate={animateCard}
+				transition={{ duration: 0.5, delayChildren: 0.5 }}
+			>
+				{filterPortfolio.map((tile, index) => (
+					<PortfolioTileInner key={index}>
+						<PortfolioPictureContainer>
+							<PortfolioImage
+								key={index}
+								className="img"
+								image={urlFor(tile.imgUrl)}
+								srcset={urlFor(tile.imgUrl)}
+								maxView={maxViewPort}
+								alt={tile.altText}
+							/>
+							<PortfolioOverlayContainer>
+								{hovered && (
+									<OverlayHelpText
+										id="portfolio__overlay-text"
+										style={hoverStyle}
+									>
+										{(overlayText && 'More Info') ||
+											(overlayAppText ? 'See The App' : '')}
+									</OverlayHelpText>
+								)}
+								<PortfolioOverlayLink
+									to="/portfolio"
+									target="_blank"
+									rel="noreferrer"
 								>
-									{(overlayText && 'More Info') ||
-										(overlayAppText ? 'See The App' : '')}
-								</OverlayHelpText>
-							)}
-							<PortfolioOverlayLink
-								to="/portfolio"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<PortfolioOverlayLinkDiv
-									whileHover={{ scale: [1, 0.9] }}
-									transition={{ duration: 0.25 }}
-									onMouseEnter={handleMouseEnter}
-									onMouseLeave={handleMouseLeave}
-									onHoverStart={handleOverlayTextStart}
-									onHoverEnd={handleOverlayTextEnd}
+									<PortfolioOverlayLinkDiv
+										whileHover={{ scale: [1, 0.9] }}
+										transition={{ duration: 0.25 }}
+										onMouseEnter={handleMouseEnter}
+										onMouseLeave={handleMouseLeave}
+										onHoverStart={handleOverlayTextStart}
+										onHoverEnd={handleOverlayTextEnd}
+									>
+										<AiFillInfoCircle />
+									</PortfolioOverlayLinkDiv>
+								</PortfolioOverlayLink>
+								<PortfolioOverlayLink
+									href={tile.projectLink}
+									target="_blank"
+									rel="noreferrer"
 								>
-									<AiFillInfoCircle />
-								</PortfolioOverlayLinkDiv>
-							</PortfolioOverlayLink>
-							<PortfolioOverlayLink
-								href={tile.projectLink}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<PortfolioOverlayLinkDiv
-									whileHover={{ scale: [1, 0.9] }}
-									transition={{ duration: 0.25 }}
-									onMouseEnter={handleMouseEnter}
-									onMouseLeave={handleMouseLeave}
-									onHoverStart={handleOverlayAppTextStart}
-									onHoverEnd={handleOverlayAppTextEnd}
-								>
-									<AiFillEye />
-								</PortfolioOverlayLinkDiv>
-							</PortfolioOverlayLink>
-						</PortfolioOverlayContainer>
-					</PortfolioPictureContainer>
-					<ApplicationInfo>
-						<h3>{tile.title}</h3>
-						<ApplicationInfoTag>
-							<p>{tile.tags[0]}</p>
-						</ApplicationInfoTag>
-					</ApplicationInfo>
-				</PortfolioTileInner>
-			))}
-		</PortfolioTileContainer>
+									<PortfolioOverlayLinkDiv
+										whileHover={{ scale: [1, 0.9] }}
+										transition={{ duration: 0.25 }}
+										onMouseEnter={handleMouseEnter}
+										onMouseLeave={handleMouseLeave}
+										onHoverStart={handleOverlayAppTextStart}
+										onHoverEnd={handleOverlayAppTextEnd}
+									>
+										<AiFillEye />
+									</PortfolioOverlayLinkDiv>
+								</PortfolioOverlayLink>
+							</PortfolioOverlayContainer>
+						</PortfolioPictureContainer>
+						<ApplicationInfo>
+							<h3>{tile.title}</h3>
+							<ApplicationInfoTag>
+								<p>{tile.tags[0]}</p>
+							</ApplicationInfoTag>
+						</ApplicationInfo>
+					</PortfolioTileInner>
+				))}
+			</PortfolioTileContainer>
+		</React.Fragment>
 	);
 };
 
