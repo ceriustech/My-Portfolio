@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import Picture from '../../../../components/Picture';
 import { defaultColors } from '../../../globalstyles/colors.styles';
 import { maxView, minView } from '../../../globalstyles/mediaQueries.styles';
 
@@ -23,7 +24,7 @@ export const BackToHomeLink = styled(Link)`
 	padding: 0.375rem 0.75rem;
 	letter-spacing: 0.1rem;
 	display: inline-block;
-	font-weight: 400;
+	font-weight: 600;
 	transition: all 0.3s linear;
 	font-size: 0.875rem;
 	cursor: pointer;
@@ -46,5 +47,12 @@ export const AppInfoContainer = styled.div`
 `;
 
 export const AppImageContainer = styled.div``;
+
+export const StyledPicture = styled(Picture)`
+	width: 100%;
+	display: block;
+	border-radius: 0.25rem;
+	object-fit: cover;
+`;
 
 export const AppContentContainer = styled.div``;

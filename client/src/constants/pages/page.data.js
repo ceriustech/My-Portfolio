@@ -11,7 +11,7 @@ export const pagesData = [
 	{
 		id: 2,
 		page: <PortfolioPage />,
-		path: '/portfolio',
+		path: '/portfolio/:id',
 	},
 	{
 		id: 3,

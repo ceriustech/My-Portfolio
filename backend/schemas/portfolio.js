@@ -25,6 +25,11 @@ export default {
 			type: 'string',
 		},
 		{
+			name: 'routeID',
+			title: 'Route ID',
+			type: 'string',
+		},
+		{
 			name: 'imgUrl',
 			title: 'ImageUrl',
 			type: 'image',

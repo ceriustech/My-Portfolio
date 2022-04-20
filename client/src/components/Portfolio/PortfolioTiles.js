@@ -35,7 +35,6 @@ const PortfolioTile = () => {
 		const query = '*[_type == "portfolio"]';
 
 		client.fetch(query).then((data) => {
-			console.log(data);
 			setPortfolioTile(data);
 			setFilterPortfolio(data);
 		});
@@ -136,7 +135,7 @@ const PortfolioTile = () => {
 											(overlayAppText ? 'See The App' : '')}
 									</OverlayHelpText>
 								)}
-								<Link to="/portfolio" rel="noreferrer">
+								<Link to={`/portfolio/:${tile.routeID}`} rel="noreferrer">
 									<PortfolioOverlayLinkDiv
 										whileHover={{ scale: [1, 0.9] }}
 										transition={{ duration: 0.25 }}
