@@ -8,11 +8,21 @@ export default {
 			title: 'Title',
 			type: 'string',
 		},
-
 		{
 			name: 'description',
 			title: 'Description',
 			type: 'string',
+		},
+		{
+			name: 'releaseDate',
+			title: 'Release Date',
+			type: 'string',
+		},
+		{
+			name: 'released',
+			title: 'Released',
+			type: 'boolean',
+			initialValue: false,
 		},
 		{
 			name: 'projectLink',
