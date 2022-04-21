@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { PortfolioContainer } from '../../styles/containers/Portfolio.Styles';
 import { PortfolioHeader } from '../../components/globalcomponents/SectionHeaders';
 import { SectionWrapper } from '../../styles/globalstyles/container.styles';

@@ -66,7 +66,6 @@ export const AboutTileContainer = styled(motion.div)`
 
 	@media screen and ${mobileLargeMax} {
 		width: 370px;
-		margin: 1rem 2.5rem;
 		padding: 15px;
 
 		&:hover {

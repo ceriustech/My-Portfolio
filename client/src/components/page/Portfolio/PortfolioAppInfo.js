@@ -8,6 +8,8 @@ import {
 	AppContentContainer,
 	AppContentHeader,
 	AppContentDescText,
+	StyledLink,
+	AppLink,
 } from '../../../styles/components/page/Portfolio/PortflolioAppInfo.Styles';
 import { urlFor, client } from '../../../client';
 import { useParams } from 'react-router-dom';
@@ -37,7 +39,7 @@ const PortfolioAppInfo = () => {
 
 	const maxViewPort = maxView?.desktopM;
 
-	console.log(appData);
+	console.log(appData.projectLink);
 
 	return (
 		<PortfolioAppContainer>
@@ -66,7 +68,19 @@ const PortfolioAppInfo = () => {
 							</AppContentDescText>
 							<AppContentDescText>
 								<span>See The Site:</span>
-								{item.projectLink}
+								{item.projectLink == undefined ? (
+									<StyledLink to="/countdown" rel="noreferrer">
+										Click Here
+									</StyledLink>
+								) : (
+									<AppLink
+										href={item.projectLink}
+										target="_blank"
+										rel="noreferrer"
+									>
+										Click Here
+									</AppLink>
+								)}
 							</AppContentDescText>
 							<hr></hr>
 						</AppContentContainer>

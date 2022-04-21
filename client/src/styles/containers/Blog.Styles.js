@@ -1,6 +1,12 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+import { maxView } from '../globalstyles/mediaQueries.styles';
+
+const maxViewPort = maxView?.mobileL;
 
 export const BlogContainer = styled.section`
 	padding: 80px 0;
+
+	@media screen and ${maxViewPort} {
+		padding: 40px 0;
+	}
 `;

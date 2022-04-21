@@ -3,8 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import { Layout } from './styles/containers/Layout.Styles';
 import { pageComponents } from './constants/pageComponents.data';
 import SkipNavigation from './components/utility/SkipNavigation/SkipNavigation';
-import HomePage from './pages/HomePage/Home.Page';
-import PortfolioPage from './pages/PortfolioPage/Portfolio.Page';
 import Footer from './containers/Footer/Footer';
 import { pagesData } from './constants/pages/page.data';
 

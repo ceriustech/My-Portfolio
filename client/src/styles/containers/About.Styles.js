@@ -1,8 +1,12 @@
-import styled, { css } from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from 'styled-components';
+import { maxView } from '../globalstyles/mediaQueries.styles';
+
+const maxViewPort = maxView?.mobileL;
 
 export const AboutContainer = styled.section`
-  padding: 80px 0; 
+	padding: 80px 0;
+
+	@media screen and ${maxViewPort} {
+		padding: 40px 0;
+	}
 `;
-
-

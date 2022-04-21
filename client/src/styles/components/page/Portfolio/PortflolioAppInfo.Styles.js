@@ -10,6 +10,7 @@ const black = defaultColors?.root.blackColor;
 const grey = defaultColors?.root.grayColor;
 
 const maxViewPort = maxView?.tablet;
+const maxViewMobileS = maxView?.mobileS;
 
 export const PortfolioAppContainer = styled.section`
 	display: flex;
@@ -50,20 +51,32 @@ export const AppInfoContainer = styled.div`
 	margin-top: 2rem;
 
 	@media screen and ${maxViewPort} {
+		gap: 2rem;
 		grid-template-columns: unset;
 	}
 `;
 
-export const AppImageContainer = styled.div``;
+export const AppImageContainer = styled.div`
+	img {
+		width: 100%;
+		display: block;
+		border-radius: 0.25rem;
+		object-fit: cover;
+	}
 
-export const StyledPicture = styled(Picture)`
-	width: 100%;
-	display: block;
-	border-radius: 0.25rem;
-	object-fit: cover;
+	@media screen and ${maxViewMobileS} {
+		width: 288px;
+	}
 `;
 
-export const AppContentContainer = styled.div``;
+export const StyledPicture = styled(Picture)``;
+
+export const AppContentContainer = styled.div`
+	align-self: self-start;
+	@media screen and ${maxViewMobileS} {
+		width: 288px;
+	}
+`;
 
 export const AppContentHeader = styled.h2`
 	color: ${black};
@@ -108,4 +121,10 @@ export const AppContentDescText = styled.p`
 	}
 `;
 
-export const AppLink = styled.a``;
+export const StyledLink = styled(Link)`
+	color: ${blue};
+`;
+
+export const AppLink = styled.a`
+	color: ${blue};
+`;
