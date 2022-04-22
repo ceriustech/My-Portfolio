@@ -10,6 +10,9 @@ import {
 	AppContentDescText,
 	StyledLink,
 	AppLink,
+	TechListContainer,
+	TechListHeader,
+	TechListText,
 } from '../../../styles/components/page/Portfolio/PortflolioAppInfo.Styles';
 import { urlFor, client } from '../../../client';
 import { useParams } from 'react-router-dom';
@@ -38,8 +41,6 @@ const PortfolioAppInfo = () => {
 	});
 
 	const maxViewPort = maxView?.desktopM;
-
-	console.log(appData.projectLink);
 
 	return (
 		<PortfolioAppContainer>
@@ -83,6 +84,12 @@ const PortfolioAppInfo = () => {
 								)}
 							</AppContentDescText>
 							<hr></hr>
+							<TechListContainer>
+								<TechListHeader>Tech Used</TechListHeader>
+								<ul>
+									<TechListText></TechListText>
+								</ul>
+							</TechListContainer>
 						</AppContentContainer>
 					</React.Fragment>
 				))}

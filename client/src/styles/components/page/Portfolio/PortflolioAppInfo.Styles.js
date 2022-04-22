@@ -128,3 +128,9 @@ export const StyledLink = styled(Link)`
 export const AppLink = styled.a`
 	color: ${blue};
 `;
+
+export const TechListContainer = styled.div``;
+
+export const TechListHeader = styled.h3``;
+
+export const TechListText = styled.li``;
