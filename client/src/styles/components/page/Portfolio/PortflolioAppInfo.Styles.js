@@ -8,6 +8,8 @@ const blue = defaultColors?.gradient.darkBlue;
 const white = defaultColors?.root.whiteColor;
 const black = defaultColors?.root.blackColor;
 const grey = defaultColors?.root.grayColor;
+const purple = defaultColors?.root.purpleColor;
+const red = defaultColors?.gradient.red;
 
 const maxViewPort = maxView?.tablet;
 const maxViewMobileS = maxView?.mobileS;
@@ -129,8 +131,25 @@ export const AppLink = styled.a`
 	color: ${blue};
 `;
 
-export const TechListContainer = styled.div``;
+export const TechListContainer = styled.div`
+	ul {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(108px, 135px));
+	}
+`;
 
-export const TechListHeader = styled.h3``;
+export const TechListHeader = styled.h3`
+	color: ${purple};
+	margin-top: 15px;
+`;
 
-export const TechListText = styled.li``;
+export const TechListText = styled.li`
+	border: 1px solid ${red};
+	color: ${red};
+	padding: 0.5rem 1rem;
+	border-radius: 0.85rem;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 1.15rem;
+	width: 108px;
+`;

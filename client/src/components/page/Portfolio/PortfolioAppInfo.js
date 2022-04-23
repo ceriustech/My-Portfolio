@@ -60,15 +60,15 @@ const PortfolioAppInfo = () => {
 							<AppContentHeader>{item.title}</AppContentHeader>
 							<AppContentDescText>{item.description}</AppContentDescText>
 							<AppContentDescText>
-								<span>Release Date:</span>
+								<span>Release Date :</span>
 								{item.releaseDate}
 							</AppContentDescText>
 							<AppContentDescText>
-								<span>Released:</span>
+								<span>Released :</span>
 								{item.released === true ? 'Yes' : 'No'}
 							</AppContentDescText>
 							<AppContentDescText>
-								<span>See The Site:</span>
+								<span>See The Site :</span>
 								{item.projectLink == undefined ? (
 									<StyledLink to="/countdown" rel="noreferrer">
 										Click Here
@@ -85,9 +85,13 @@ const PortfolioAppInfo = () => {
 							</AppContentDescText>
 							<hr></hr>
 							<TechListContainer>
-								<TechListHeader>Tech Used</TechListHeader>
+								<TechListHeader>Tech Used :</TechListHeader>
 								<ul>
-									<TechListText></TechListText>
+									{item.tags
+										.filter((tag) => tag !== 'Frontend' && tag !== 'Fullstack')
+										.map((tag, index) => (
+											<TechListText key={index}>{tag}</TechListText>
+										))}
 								</ul>
 							</TechListContainer>
 						</AppContentContainer>
