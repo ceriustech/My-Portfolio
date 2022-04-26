@@ -1,17 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { client } from '../../../client';
+import { appReleaseDates } from '../../../constants/appReleaseDates';
 
 const Countdown = () => {
 	const [appInfo, setAppInfo] = useState([]);
 
 	const { state } = useLocation();
 
-	console.log(state);
+	const prevPathAppName = state.previousPath.substring(
+		state.previousPath.indexOf(':') + 1
+	);
+
+	console.log('%cAPP NAME:', 'font-size: 2em; color: red');
+
+	useEffect(() => {
+		const query = '*[_type == "portfolio"]';
+
+		client.fetch(query).then((data) => {
+			setAppInfo(data);
+		});
+	}, []);
+
+	const appData = appInfo.filter((item) => {
+		return item.routeID === prevPathAppName;
+	});
+
+	console.log(appReleaseDates);
 
 	const calculateTimeLeft = () => {
 		const launchDate = new Date(
-			'July 15 2021 23:59:59 GMT-0500 (CST)'
+			`July/15/2021 23:59:59 GMT-0500 (CST)`
 		).getTime();
 
 		const now = new Date().getTime();
@@ -38,17 +57,9 @@ const Countdown = () => {
 		setTimeout(() => {
 			setTimeLeft(calculateTimeLeft());
 		}, 1000);
-	}, []);
+	}, [timeLeft]);
 
-	useEffect(() => {
-		const query = '*[_type == "portfolio"]';
-
-		client.fetch(query).then((data) => {
-			setAppInfo(data);
-		});
-	}, []);
-
-	console.log(appInfo);
+	console.log(appData);
 
 	return (
 		<div className="countdown-clock-container">
