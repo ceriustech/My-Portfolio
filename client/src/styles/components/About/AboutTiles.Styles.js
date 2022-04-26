@@ -59,8 +59,8 @@ export const AboutTileContainer = styled(motion.div)`
 	}
 
 	@media screen and ${laptopMax} {
-		width: 300px;
-		margin: 1rem 2rem;
+		width: 350px;
+		margin: 1rem 1rem;
 		padding: 20px;
 	}
 

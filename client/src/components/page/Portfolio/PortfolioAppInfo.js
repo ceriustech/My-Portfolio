@@ -17,6 +17,7 @@ import {
 import { urlFor, client } from '../../../client';
 import { useParams } from 'react-router-dom';
 import { maxView } from '../../../styles/globalstyles/mediaQueries.styles';
+import { useLocation } from 'react-router-dom';
 
 const PortfolioAppInfo = () => {
 	const [appInfo, setAppInfo] = useState([]);
@@ -28,6 +29,8 @@ const PortfolioAppInfo = () => {
 			setAppInfo(data);
 		});
 	}, []);
+
+	const { pathname } = useLocation();
 
 	const UrlID = () => {
 		const { id } = useParams();
@@ -68,9 +71,13 @@ const PortfolioAppInfo = () => {
 								{item.released === true ? 'Yes' : 'No'}
 							</AppContentDescText>
 							<AppContentDescText>
-								<span>See The Site :</span>
+								<span>See The Site:</span>
 								{item.projectLink == undefined ? (
-									<StyledLink to="/countdown" rel="noreferrer">
+									<StyledLink
+										to="/countdown"
+										state={{ previousPath: pathname }}
+										rel="noreferrer"
+									>
 										Click Here
 									</StyledLink>
 								) : (
