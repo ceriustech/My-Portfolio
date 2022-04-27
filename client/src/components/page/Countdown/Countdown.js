@@ -59,10 +59,7 @@ const Countdown = () => {
 
 	return (
 		<div className="countdown-clock-container">
-			{timeLeft.days > 0 &&
-			timeLeft.hours > 0 &&
-			timeLeft.minutes > 0 &&
-			timeLeft.seconds > 0 ? (
+			{calculateTimeLeft !== 0 ? (
 				<div className="countdown-clock">
 					<div className="countdown-clock-placement">
 						<h2>{appName}</h2>
