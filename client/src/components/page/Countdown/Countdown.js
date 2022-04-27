@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { client } from '../../../client';
-import { appReleaseDates } from '../../../constants/appReleaseDates';
 
 const Countdown = () => {
 	const [appInfo, setAppInfo] = useState([]);
@@ -11,8 +10,6 @@ const Countdown = () => {
 	const prevPathAppName = state.previousPath.substring(
 		state.previousPath.indexOf(':') + 1
 	);
-
-	console.log('%cAPP NAME:', 'font-size: 2em; color: red');
 
 	useEffect(() => {
 		const query = '*[_type == "portfolio"]';
@@ -26,11 +23,10 @@ const Countdown = () => {
 		return item.routeID === prevPathAppName;
 	});
 
-	console.log(appReleaseDates);
-
+	const appName = appData[0]?.title;
 	const calculateTimeLeft = () => {
 		const launchDate = new Date(
-			`July/15/2021 23:59:59 GMT-0500 (CST)`
+			`${appData[0]?.releaseDate} 23:59:59 GMT-0500 (CST)`
 		).getTime();
 
 		const now = new Date().getTime();
@@ -59,7 +55,7 @@ const Countdown = () => {
 		}, 1000);
 	}, [timeLeft]);
 
-	console.log(appData);
+	console.log(appData[0]?.releaseDate);
 
 	return (
 		<div className="countdown-clock-container">
@@ -69,6 +65,7 @@ const Countdown = () => {
 			timeLeft.seconds > 0 ? (
 				<div className="countdown-clock">
 					<div className="countdown-clock-placement">
+						<h2>{appName}</h2>
 						<p id="timer-days" className="countdown-lock-number">
 							{timeLeft.days}
 							<span>:</span>
