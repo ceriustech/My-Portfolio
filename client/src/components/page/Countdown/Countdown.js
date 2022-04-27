@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { client } from '../../../client';
+import {
+	CountdownClockContainer,
+	CountdownClockHeader,
+	CountdownClock,
+	CountdownClockPlacement,
+	CountdownTimer,
+	CountdownTimerLabel,
+	CountdownLaunchText,
+} from './Countdown.Styles';
 
 const Countdown = () => {
 	const [appInfo, setAppInfo] = useState([]);
@@ -58,46 +67,46 @@ const Countdown = () => {
 	console.log(appData[0]?.releaseDate);
 
 	return (
-		<div className="countdown-clock-container">
+		<CountdownClockContainer>
+			<CountdownClockHeader>{appName}</CountdownClockHeader>
 			{calculateTimeLeft !== 0 ? (
-				<div className="countdown-clock">
-					<div className="countdown-clock-placement">
-						<h2>{appName}</h2>
-						<p id="timer-days" className="countdown-lock-number">
+				<CountdownClock>
+					<CountdownClockPlacement>
+						<CountdownTimer>
 							{timeLeft.days}
 							<span>:</span>
-						</p>
-						<p className="countdown-clock-label">Day</p>
-					</div>
-					<div className="countdown-clock-placement">
-						<p id="timer-hours" className="countdown-lock-number">
+						</CountdownTimer>
+						<CountdownTimerLabel>Day</CountdownTimerLabel>
+					</CountdownClockPlacement>
+					<CountdownClockPlacement>
+						<CountdownTimer>
 							{timeLeft.hours < 10 ? '0' + timeLeft.hours : timeLeft.hours}
 							<span>:</span>
-						</p>
-						<p className="countdown-clock-label">HR</p>
-					</div>
-					<div className="countdown-clock-placement">
-						<p id="timer-hours" className="countdown-lock-number">
+						</CountdownTimer>
+						<CountdownTimerLabel>HR</CountdownTimerLabel>
+					</CountdownClockPlacement>
+					<CountdownClockPlacement>
+						<CountdownTimer>
 							{timeLeft.minutes < 10
 								? '0' + timeLeft.minutes
 								: timeLeft.minutes}
 							<span>:</span>
-						</p>
-						<p className="countdown-clock-label">MIN</p>
-					</div>
-					<div className="countdown-clock-placement">
-						<p id="timer-hours" className="countdown-lock-number">
+						</CountdownTimer>
+						<CountdownTimerLabel>MIN</CountdownTimerLabel>
+					</CountdownClockPlacement>
+					<CountdownClockPlacement>
+						<CountdownTimer>
 							{timeLeft.seconds < 10
 								? '0' + timeLeft.seconds
 								: timeLeft.seconds}
-						</p>
-						<p className="countdown-clock-label">SEC</p>
-					</div>
-				</div>
+						</CountdownTimer>
+						<CountdownTimerLabel>SEC</CountdownTimerLabel>
+					</CountdownClockPlacement>
+				</CountdownClock>
 			) : (
-				<p className="countdown-clock-launched">Launched</p>
+				<CountdownLaunchText>Launched</CountdownLaunchText>
 			)}
-		</div>
+		</CountdownClockContainer>
 	);
 };
 
