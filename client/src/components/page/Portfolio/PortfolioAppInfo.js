@@ -15,9 +15,8 @@ import {
 	TechListText,
 } from '../../../styles/components/page/Portfolio/PortflolioAppInfo.Styles';
 import { urlFor, client } from '../../../client';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { maxView } from '../../../styles/globalstyles/mediaQueries.styles';
-import { useLocation } from 'react-router-dom';
 
 const PortfolioAppInfo = () => {
 	const [appInfo, setAppInfo] = useState([]);

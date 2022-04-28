@@ -10,15 +10,17 @@ import {
 	CountdownTimer,
 	CountdownTimerLabel,
 	CountdownLaunchText,
+	BackToHomeLink,
 } from './CountdownClock.Styles';
 
 const CountdownClock = () => {
 	const [appInfo, setAppInfo] = useState([]);
 
 	const { state } = useLocation();
+	console.log(state);
 
 	const prevPathAppName = state.previousPath.substring(
-		state.previousPath.indexOf(':') + 1
+		state.previousPath.indexOf(':') + 1 || state.previousPath
 	);
 
 	useEffect(() => {
@@ -33,7 +35,9 @@ const CountdownClock = () => {
 		return item.routeID === prevPathAppName;
 	});
 
-	const appName = appData[0]?.title;
+	console.log(appData);
+
+	const appName = appData[0]?.title || prevPathAppName;
 	const calculateTimeLeft = () => {
 		const launchDate = new Date(
 			`${appData[0]?.releaseDate} 23:59:59 GMT-0500 (CST)`
@@ -67,6 +71,7 @@ const CountdownClock = () => {
 
 	return (
 		<CountdownClockContainer>
+			<BackToHomeLink to="/">Go to home</BackToHomeLink>
 			<CountdownClockHeader>{appName}</CountdownClockHeader>
 			<CountdownClockHeaderText>
 				Scheduled to release in :

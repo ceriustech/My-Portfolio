@@ -135,7 +135,11 @@ const PortfolioTile = () => {
 											(overlayAppText ? 'See The App' : '')}
 									</OverlayHelpText>
 								)}
-								<Link to={`/portfolio/:${tile.routeID}`} rel="noreferrer">
+								<Link
+									to={`/portfolio/:${tile.routeID}`}
+									state={{ previousPath: tile.title }}
+									rel="noreferrer"
+								>
 									<PortfolioOverlayLinkDiv
 										whileHover={{ scale: [1, 0.9] }}
 										transition={{ duration: 0.25 }}
@@ -147,22 +151,41 @@ const PortfolioTile = () => {
 										<AiFillInfoCircle />
 									</PortfolioOverlayLinkDiv>
 								</Link>
-								<PortfolioOverlayLink
-									href={tile.projectLink}
-									target="_blank"
-									rel="noreferrer"
-								>
-									<PortfolioOverlayLinkDiv
-										whileHover={{ scale: [1, 0.9] }}
-										transition={{ duration: 0.25 }}
-										onMouseEnter={handleMouseEnter}
-										onMouseLeave={handleMouseLeave}
-										onHoverStart={handleOverlayAppTextStart}
-										onHoverEnd={handleOverlayAppTextEnd}
+								{tile.projectLink === undefined ? (
+									<Link
+										to="/countdown"
+										state={{ previousPath: tile.title }}
+										rel="noreferrer"
 									>
-										<AiFillEye />
-									</PortfolioOverlayLinkDiv>
-								</PortfolioOverlayLink>
+										<PortfolioOverlayLinkDiv
+											whileHover={{ scale: [1, 0.9] }}
+											transition={{ duration: 0.25 }}
+											onMouseEnter={handleMouseEnter}
+											onMouseLeave={handleMouseLeave}
+											onHoverStart={handleOverlayAppTextStart}
+											onHoverEnd={handleOverlayAppTextEnd}
+										>
+											<AiFillEye />
+										</PortfolioOverlayLinkDiv>
+									</Link>
+								) : (
+									<PortfolioOverlayLink
+										href={tile.projectLink}
+										target="_blank"
+										rel="noreferrer"
+									>
+										<PortfolioOverlayLinkDiv
+											whileHover={{ scale: [1, 0.9] }}
+											transition={{ duration: 0.25 }}
+											onMouseEnter={handleMouseEnter}
+											onMouseLeave={handleMouseLeave}
+											onHoverStart={handleOverlayAppTextStart}
+											onHoverEnd={handleOverlayAppTextEnd}
+										>
+											<AiFillEye />
+										</PortfolioOverlayLinkDiv>
+									</PortfolioOverlayLink>
+								)}
 							</PortfolioOverlayContainer>
 						</PortfolioPictureContainer>
 						<ApplicationInfo>
