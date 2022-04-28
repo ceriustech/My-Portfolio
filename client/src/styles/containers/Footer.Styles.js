@@ -3,11 +3,13 @@ import { defaultColors } from '../globalstyles/colors.styles';
 import { maxView } from '../globalstyles/mediaQueries.styles';
 
 const grayColor = defaultColors.root.grayColor;
+const bgSectionColor = defaultColors?.root.primary;
 
 const mobileLargeMax = maxView?.mobileL;
 const mobileSmallMax = maxView?.mobileS;
 
-export const FooterContainer = styled.section`
+export const FooterContainer = styled.footer`
+	background: ${bgSectionColor};
 	padding: 100px 15px;
 `;
 
