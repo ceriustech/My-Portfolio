@@ -2,19 +2,26 @@ import styled from 'styled-components';
 import { defaultColors } from '../../styles/globalstyles/colors.styles';
 import { maxView } from '../../styles/globalstyles/mediaQueries.styles';
 
+const black = defaultColors.root.blackColor;
+const orange = defaultColors.root.orangeColor;
+const blue = defaultColors.gradient.darkBlue;
+
 export const CountdownClockHeader = styled.h2`
+	color: ${blue};
+
 	margin-bottom: 20px;
 	font-size: 3.25rem;
 `;
 
 export const CountdownClockHeaderText = styled.p`
+	color: ${black};
 	font-size: 1.5rem;
+	font-weight: 600;
 `;
 
 export const CountdownClockContainer = styled.div`
-	background-color: #fff;
 	margin: 0 auto;
-	width: calc(4 * 245px);
+	width: calc(4 * 260px);
 `;
 
 export const CountdownClockInner = styled.div`
@@ -25,9 +32,8 @@ export const CountdownClockInner = styled.div`
 
 export const CountdownClockPlacement = styled.div`
 	font-size: 12px;
-	width: 225px;
+	width: 235px;
 	height: 360px;
-	background: #ffffff;
 	float: left;
 	padding: 25px 0 0 0;
 	margin: 30px 15px 0 0;
@@ -51,7 +57,7 @@ export const CountdownTimerLabel = styled.p`
 	width: 100%;
 	height: auto;
 	padding: 30px 0;
-	background: #ff5722;
+	background: ${orange};
 	color: #ffffff;
 	display: inline-block;
 	text-align: center;
