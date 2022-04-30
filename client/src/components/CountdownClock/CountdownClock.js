@@ -17,11 +17,12 @@ const CountdownClock = () => {
 	const [appInfo, setAppInfo] = useState([]);
 
 	const { state } = useLocation();
-	console.log(state);
 
-	const prevPathAppName = state.previousPath.substring(
-		state.previousPath.indexOf(':') + 1 || state.previousPath
+	const prevPathAppName = state?.previousPath?.substring(
+		state.previousPath.indexOf(':') + 1
 	);
+
+	const appTitle = state.appTitle;
 
 	useEffect(() => {
 		const query = '*[_type == "portfolio"]';
@@ -32,12 +33,11 @@ const CountdownClock = () => {
 	}, []);
 
 	const appData = appInfo.filter((item) => {
-		return item.routeID === prevPathAppName;
+		return item.routeID === prevPathAppName || item.routeID === appTitle;
 	});
 
-	console.log(appData);
+	const appName = appData[0]?.title;
 
-	const appName = appData[0]?.title || prevPathAppName;
 	const calculateTimeLeft = () => {
 		const launchDate = new Date(
 			`${appData[0]?.releaseDate} 23:59:59 GMT-0500 (CST)`
