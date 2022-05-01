@@ -21,6 +21,8 @@ const Navigation = () => {
 
 	const viewportWidth = Number(size.tablet.replace('px', ''));
 
+	console.log(windowSize.width);
+
 	return (
 		<>
 			<NavigationHeader role="navigation" aria-label="Main">

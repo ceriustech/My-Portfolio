@@ -9,6 +9,9 @@ const blue = defaultColors?.gradient.darkBlue;
 const white = defaultColors?.root.whiteColor;
 const primary = defaultColors?.root.primary;
 
+const maxViewLaptop = maxView?.laptop;
+const maxViewVobileL = maxView?.mobileL;
+
 export const BackToHomeLink = styled(Link)`
 	text-transform: uppercase;
 	background: ${white};
@@ -24,7 +27,7 @@ export const BackToHomeLink = styled(Link)`
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 	border-radius: 0.25rem;
 	max-width: 200px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 
 	&:hover {
 		background: ${blue};
@@ -35,36 +38,54 @@ export const BackToHomeLink = styled(Link)`
 export const CountdownClockHeader = styled.h2`
 	color: ${blue};
 	margin-bottom: 15px;
-	font-size: calc(25px + (36 - 15) * ((100vw - 300px) / (1600 - 300)));
+	font-size: calc(35px + (36 - 15) * ((100vw - 300px) / (1600 - 300)));
 `;
 
 export const CountdownClockHeaderText = styled.p`
 	color: ${black};
-	font-size: 1.5rem;
+	font-size: calc(15px + (30 - 15) * ((100vw - 300px) / (1600 - 300)));
 	font-weight: 600;
 `;
 
 export const CountdownClockContainer = styled.div`
 	margin: 0 auto;
-	width: calc(4 * 260px);
+	padding: 0 20px;
+	max-width: 1200px;
+
+	// @media screen and ${maxViewLaptop} {
+	// 	padding: 0 115px;
+	// }
+
+	// @media screen and ${maxViewVobileL} {
+	// 	padding: 0 115px;
+	// }
 `;
 
 export const CountdownClockInner = styled.div`
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+	grid-gap: 20px;
+	justify-items: stretch;
 	position: relative;
+
+	@media screen and ${maxViewLaptop} {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	// @media screen and ${maxViewVobileL} {
+	// }
 `;
 
 export const CountdownClockPlacement = styled.div`
 	font-size: 12px;
-	width: 235px;
-	height: 360px;
-	float: left;
 	padding: 25px 0 0 0;
-	margin: 30px 15px 0 0;
+	margin: 30px 0 0 0;
 	-webkit-box-shadow: 5px 5px 7px 2px rgba(82, 80, 80, 0.54);
 	box-shadow: 5px 5px 7px 2px rgba(82, 80, 80, 0.54);
+
+	@media screen and ${maxViewVobileL} {
+		margin-bottom: 24px;
+	}
 `;
 
 export const CountdownTimer = styled.p`
@@ -76,6 +97,10 @@ export const CountdownTimer = styled.p`
 	padding-top: 100px;
 	display: inline-block;
 	text-align: center;
+
+	@media screen and ${maxViewLaptop} {
+		padding-top: 75px;
+	}
 `;
 
 export const CountdownTimerLabel = styled.p`
