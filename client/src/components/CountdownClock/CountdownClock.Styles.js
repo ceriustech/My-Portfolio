@@ -46,6 +46,7 @@ export const CountdownClockHeaderText = styled.p`
 	color: ${black};
 	font-size: 1.5rem;
 	font-weight: 600;
+	text-transform: uppercase;
 
 	@media screen and ${maxViewLaptop} {
 		font-size: 1.15rem;
