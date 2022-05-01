@@ -11,6 +11,7 @@ const primary = defaultColors?.root.primary;
 
 const maxViewLaptop = maxView?.laptop;
 const maxViewVobileL = maxView?.mobileL;
+const maxViewMobileS = maxView?.mobileS;
 
 export const BackToHomeLink = styled(Link)`
 	text-transform: uppercase;
@@ -43,28 +44,32 @@ export const CountdownClockHeader = styled.h2`
 
 export const CountdownClockHeaderText = styled.p`
 	color: ${black};
-	font-size: calc(15px + (30 - 15) * ((100vw - 300px) / (1600 - 300)));
+	font-size: 1.5rem;
 	font-weight: 600;
+
+	@media screen and ${maxViewLaptop} {
+		font-size: 1.15rem;
+	}
+
+	@media screen and ${maxViewVobileL} {
+		font-size: 1rem;
+	}
 `;
 
 export const CountdownClockContainer = styled.div`
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 50px;
 	max-width: 1200px;
 
-	// @media screen and ${maxViewLaptop} {
-	// 	padding: 0 115px;
-	// }
-
-	// @media screen and ${maxViewVobileL} {
-	// 	padding: 0 115px;
-	// }
+	@media screen and ${maxViewVobileL} {
+		padding: 0 30px;
+	}
 `;
 
 export const CountdownClockInner = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-	grid-gap: 20px;
+	grid-gap: 30px;
 	justify-items: stretch;
 	position: relative;
 
@@ -82,10 +87,6 @@ export const CountdownClockPlacement = styled.div`
 	margin: 30px 0 0 0;
 	-webkit-box-shadow: 5px 5px 7px 2px rgba(82, 80, 80, 0.54);
 	box-shadow: 5px 5px 7px 2px rgba(82, 80, 80, 0.54);
-
-	@media screen and ${maxViewVobileL} {
-		margin-bottom: 24px;
-	}
 `;
 
 export const CountdownTimer = styled.p`
@@ -99,7 +100,17 @@ export const CountdownTimer = styled.p`
 	text-align: center;
 
 	@media screen and ${maxViewLaptop} {
+		font-size: 4rem;
 		padding-top: 75px;
+	}
+
+	@media screen and ${maxViewVobileL} {
+		font-size: 3rem;
+		padding-top: 50px;
+	}
+
+	@media screen and ${maxViewMobileS} {
+		font-size: 2.5rem;
 	}
 `;
 
@@ -107,11 +118,15 @@ export const CountdownTimerLabel = styled.p`
 	font-size: 1.5rem;
 	width: 100%;
 	height: auto;
-	padding: 30px 0;
+	padding: 16px 0;
 	background: ${orange};
 	color: #ffffff;
 	display: inline-block;
 	text-align: center;
+
+	@media screen and ${maxViewVobileL} {
+		font-size: 1.15rem;
+	}
 `;
 
 export const CountdownLaunchText = styled.h3`
