@@ -7,9 +7,6 @@ import {
 	miscMinView,
 } from '../../globalstyles/mediaQueries.styles';
 
-const miscLarge = miscMinView?.miscLarge;
-const dtMediumMin = minView?.desktopM;
-const laptopMin = minView?.laptop;
 const laptopMax = maxView?.laptop;
 const mobileLargeMax = maxView?.mobileL;
 
@@ -51,7 +48,7 @@ export const AboutTileContainer = styled(motion.div)`
 	}
 
 	&:hover {
-		background: rgba(255, 255, 255, 1);
+		background: ${white};
 		-webkit-transform: scale(1.1);
 		transform: scale(1.1);
 		-webkit-box-shadow: 0px 9px 41px -2px rgba(153, 153, 153, 1);

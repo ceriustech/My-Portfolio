@@ -1,18 +1,12 @@
 import styled from 'styled-components';
 import { defaultColors } from '../../globalstyles/colors.styles';
 import { motion } from 'framer-motion';
-import {
-	maxView,
-	minView,
-	miscMinView,
-} from '../../globalstyles/mediaQueries.styles';
+import { maxView, miscMinView } from '../../globalstyles/mediaQueries.styles';
 import Picture from '../../../components/Picture';
 
 const miscXLarge = miscMinView?.miscXLarge;
-const dtMediumMin = minView?.desktopM;
-const laptopMin = minView?.laptop;
-const laptopMax = maxView?.laptop;
-const mobileSmalleMax = maxView?.mobileS;
+const maxViewMobileL = maxView?.mobileL;
+const maxViewMobileS = maxView?.mobileS;
 
 const white = defaultColors?.root.whiteColor;
 const black = defaultColors?.root.blackColor;
@@ -41,29 +35,24 @@ export const PortfolioTileInner = styled.div`
 	transition: all 0.3s ease;
 	width: 350px;
 
-  opacity: 1;
+	opacity: 1;
 
 	&:hover {
 		box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 	}
 
-  @media screen and ${miscXLarge} {
-    padding: 1.25rem;
-    border-radius: 0.75rem;
-  }
-
-	@media scren and (min-width: 2000px){
+	@media screen and ${miscXLarge} {
 		padding: 1.25rem;
-    border-radius: 0.75rem;
-
+		border-radius: 0.75rem;
 	}
 
-  @media screen and ${mobileSmalleMax} {
-    width: 100%;
-    margin: 1rem;
-  }
+	@media screen and ${maxViewMobileL} {
+		margin: 0.75rem;
+	}
 
-}
+	@media screen and ${maxViewMobileS} {
+		width: 100%;
+	}
 `;
 
 export const PortfolioPictureContainer = styled.div`
