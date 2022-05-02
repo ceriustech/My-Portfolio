@@ -12,7 +12,6 @@ export const defaultColors = {
 		redColor: '#D91666',
 		orangeColor: '#F26247',
 	},
-
 	gradient: {
 		blue: '#2794D3',
 		darkBlue: '#415EAD',
@@ -24,6 +23,14 @@ export const defaultColors = {
 		orange: '#F26247',
 		lightOrange: '#FBB040',
 	},
+	lightBackground: {
+		lightGrayishRed: '#FCE8E3',
+		lightGrayishBlue: '#dde8ee',
+		lightGrayishYellow: '#fdf7d1',
+		paleCyan: '#ECFCFF',
+		lightGrayishViolet: '#efe8fa',
+		lightGrayishlimeGreen: '#e7fdf3',
+		lightGrayishPink: '#f3dde4',
+		lightGrayishRed01: '#fcece7',
+	},
 };
-
-

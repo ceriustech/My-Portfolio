@@ -12,11 +12,14 @@ export const PictureContainer = styled.picture`
 			justify-content: flex-start;
 			align-items: ${alignItems};
 			width: ${width};
+			height: ${height};
 		`;
 	}}
 `;
 
-export const Source = styled.source``;
+export const Source = styled.source`
+	width: 100%;
+`;
 
 export const Image = styled.img`
 	width: 100%;
