@@ -9,6 +9,7 @@ const lightGrayishViolet = defaultColors?.lightBackground.lightGrayishViolet;
 const lightGrayLimeGreen = defaultColors?.lightBackground.lightGrayishlimeGreen;
 const lightGrayPink = defaultColors?.lightBackground.lightGrayishPink;
 const lightGrayRed01 = defaultColors?.lightBackground.lightGrayishRed01;
+const lightGray = defaultColors?.lightBackground.lightGray;
 
 export const skillsData = [
 	{
@@ -42,6 +43,12 @@ export const skillsData = [
 		color: lightGrayishViolet,
 	},
 	{
+		id: 'next',
+		title: 'Next JS',
+		image: images.next,
+		color: lightGray,
+	},
+	{
 		id: 'nodejs',
 		title: 'Node JS',
 		image: images.node,
@@ -63,6 +70,6 @@ export const skillsData = [
 		id: 'figma',
 		title: 'Figma',
 		image: images.figma,
-		color: lightGrayRed,
+		color: lightGrayRed01,
 	},
 ];

@@ -34,6 +34,7 @@ const Navigation = () => {
 						image={images.logo}
 						altText="logo"
 						displayFlexValue={'flex'}
+						justifyContentValue={'flex-start'}
 						alignItemValue={'center'}
 						widthValue={'70px'}
 					/>

@@ -48,10 +48,11 @@ export const PortfolioTileInner = styled.div`
 
 	@media screen and ${maxViewMobileL} {
 		margin: 0.75rem;
+		width: 325px;
 	}
 
 	@media screen and ${maxViewMobileS} {
-		width: 100%;
+		width: 300px;
 	}
 `;
 

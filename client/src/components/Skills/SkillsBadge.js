@@ -20,6 +20,7 @@ const SkillsBadge = () => {
 								image={item.image}
 								altText={item.title}
 								displayFlexValue={'flex'}
+								justifyContentValue={'center'}
 								alignItemValue={'center'}
 								widthValue={'50%'}
 							/>
