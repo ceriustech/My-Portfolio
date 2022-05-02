@@ -84,19 +84,19 @@ export const CountdownClockInner = styled.div`
 
 export const CountdownClockPlacement = styled.div`
 	font-size: 12px;
-	padding: 25px 0 0 0;
+	padding: 18px 0 0 0;
 	margin: 30px 0 0 0;
 	-webkit-box-shadow: 5px 5px 7px 2px rgba(82, 80, 80, 0.54);
 	box-shadow: 5px 5px 7px 2px rgba(82, 80, 80, 0.54);
 `;
 
 export const CountdownTimer = styled.p`
-	font-size: 6rem;
+	font-size: 5rem;
 	width: 100%;
 	height: 85%;
 	background: ${primary};
-	margin-top: -25px;
-	padding-top: 100px;
+	margin-top: -19px;
+	padding: 100px 0 50px;
 	display: inline-block;
 	text-align: center;
 
@@ -107,11 +107,12 @@ export const CountdownTimer = styled.p`
 
 	@media screen and ${maxViewVobileL} {
 		font-size: 3rem;
-		padding-top: 50px;
+		padding: 50px 0 25px;
 	}
 
 	@media screen and ${maxViewMobileS} {
 		font-size: 2.5rem;
+		padding: 25px 0 0;
 	}
 `;
 
