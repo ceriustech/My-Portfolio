@@ -1,5 +1,5 @@
 import React from 'react';
-import Picture from '../../components/Picture';
+import Picture from '../../components/utility/Picture';
 import {
 	NavigationHeader,
 	NavigationContainer,

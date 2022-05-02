@@ -3,7 +3,7 @@ import {
 	PictureContainer,
 	Source,
 	Image,
-} from '../styles/globalstyles/images.styles';
+} from '../../styles/globalstyles/images.styles';
 
 const Picture = ({ srcset, maxView, image, altText, ...props }) => {
 	return (

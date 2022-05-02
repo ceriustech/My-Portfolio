@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { defaultColors } from '../../globalstyles/colors.styles';
 import { motion } from 'framer-motion';
 import { maxView, miscMinView } from '../../globalstyles/mediaQueries.styles';
-import Picture from '../../../components/Picture';
+import Picture from '../../../components/utility/Picture';
 
 const miscXLarge = miscMinView?.miscXLarge;
 const maxViewMobileL = maxView?.mobileL;
