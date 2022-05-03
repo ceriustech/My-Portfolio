@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
 	SkillsBadgeContainer,
 	SkillsBadgeContentContainer,
@@ -7,25 +7,38 @@ import {
 	SkillsBadgeDescription,
 } from '../../styles/components/SkillsBadge/SkillsBadge.Styles';
 import { skillsData } from '../../constants/skills.data';
+import { urlFor, client } from '../../client';
 
 const SkillsBadge = () => {
+	const [skills, setSkill] = useState([]);
+
+	useEffect(() => {
+		const query = '*[_type == "skills"]';
+
+		client.fetch(query).then((data) => {
+			setSkill(data);
+		});
+	}, []);
+
+	console.log(skills);
+
 	return (
 		<SkillsBadgeContainer>
-			{skillsData.map((item) => {
+			{skills.map((item, index) => {
 				return (
-					<SkillsBadgeContentContainer>
-						<SilssBadgeImgContainer backgroundColor={item.color}>
+					<SkillsBadgeContentContainer key={index}>
+						<SilssBadgeImgContainer backgroundColor={item.bgColor}>
 							<StyledPicture
-								srcset={item.image}
-								image={item.image}
-								altText={item.title}
+								srcset={urlFor(item.icon)}
+								image={urlFor(item.icon)}
+								altText={item.name}
 								displayFlexValue={'flex'}
 								justifyContentValue={'center'}
 								alignItemValue={'center'}
 								widthValue={'50%'}
 							/>
 						</SilssBadgeImgContainer>
-						<SkillsBadgeDescription>{item.title}</SkillsBadgeDescription>
+						<SkillsBadgeDescription>{item.name}</SkillsBadgeDescription>
 					</SkillsBadgeContentContainer>
 				);
 			})}

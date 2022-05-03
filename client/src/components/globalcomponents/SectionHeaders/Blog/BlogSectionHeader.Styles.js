@@ -2,7 +2,8 @@ import styled, { css } from 'styled-components';
 import { defaultColors } from '../../../../styles/globalstyles/colors.styles';
 import { maxView } from '../../../../styles/globalstyles/mediaQueries.styles';
 
-const black = defaultColors.root.blackColor;
+const black = defaultColors?.root.blackColor;
+const bgSectionColor = defaultColors?.root.primary;
 
 const mobileLargeMax = maxView?.mobileL;
 
@@ -29,7 +30,12 @@ export const BlogHeaderContainer = styled.div`
 `;
 
 export const BlogHeaderShape = styled.div`
-	background: linear-gradient(90deg, #abff98 0%, #ffffff 100%, #ffffff 100%);
+	background: linear-gradient(
+		90deg,
+		#abff98 0%,
+		${bgSectionColor} 100%,
+		${bgSectionColor} 100%
+	);
 	width: 35px;
 	height: 30px;
 	position: relative;
