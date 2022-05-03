@@ -123,7 +123,7 @@ const PortfolioTile = () => {
 								image={urlFor(tile.imgUrl)}
 								srcset={urlFor(tile.imgUrl)}
 								maxView={maxViewPort}
-								alt={tile.altText}
+								altText={tile.altText}
 							/>
 							<PortfolioOverlayContainer>
 								{hovered && (

@@ -8,7 +8,7 @@ import {
 const Picture = ({ srcset, maxView, image, altText, ...props }) => {
 	return (
 		<PictureContainer styles={props}>
-			<Source srcSet={srcset} media={maxView} />
+			<Source srcSet={srcset} media={maxView} alt={altText} />
 			<Image src={image} alt={altText} />
 		</PictureContainer>
 	);

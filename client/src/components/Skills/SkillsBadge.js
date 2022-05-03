@@ -6,7 +6,6 @@ import {
 	StyledPicture,
 	SkillsBadgeDescription,
 } from '../../styles/components/SkillsBadge/SkillsBadge.Styles';
-import { skillsData } from '../../constants/skills.data';
 import { urlFor, client } from '../../client';
 
 const SkillsBadge = () => {
