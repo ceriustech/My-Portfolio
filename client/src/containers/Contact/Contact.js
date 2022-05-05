@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactContainer } from '../../styles/containers/Contact.Styles';
+import { ContactContainer } from './Contact.Styles';
 import { ContactHeader } from '../../components/globalcomponents/SectionHeaders';
 
 const Contact = () => {

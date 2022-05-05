@@ -3,17 +3,17 @@ import {
 	HeroContainer,
 	HeroContainerInnerWrapper,
 	HeroHeaderInfo,
-} from '../../styles/containers/Hero.Styles';
+} from './Hero.Styles';
 import {
 	HeroMainContainer,
 	Title,
 	HeroImageContainer,
 	HeroImage,
-} from '../../styles/components/Hero/HeroMain.Styles';
+} from './HeroMain.Styles';
 import {
 	HeroCircleImageWrapper,
 	HeroCircleContainer,
-} from '../../styles/components/Hero/HeroVariantImages.Styles';
+} from './HeroVariantImages.Styles';
 import HeroBadge from '../../components/Hero/HeroBadge';
 import { images } from '../../constants/Images';
 

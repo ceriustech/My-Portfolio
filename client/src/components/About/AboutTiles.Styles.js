@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { defaultColors } from '../../globalstyles/colors.styles';
+import { defaultColors } from '../../styles/globalstyles/colors.styles';
 import { motion } from 'framer-motion';
-import { maxView } from '../../globalstyles/mediaQueries.styles';
+import { maxView } from '../../styles/globalstyles/mediaQueries.styles';
 
 const laptopMax = maxView?.laptop;
 const mobileLargeMax = maxView?.mobileL;

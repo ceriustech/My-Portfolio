@@ -1,5 +1,5 @@
 import React from 'react';
-import { BlogContainer } from '../../styles/containers/Blog.Styles';
+import { BlogContainer } from './Blog.Styles';
 import { BlogHeader } from '../../components/globalcomponents/SectionHeaders';
 
 const Blog = () => {

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { defaultColors } from '../../globalstyles/colors.styles';
-import { maxView } from '../../globalstyles/mediaQueries.styles';
-import Picture from '../../../components/utility/Picture';
+import { maxView } from '../../styles/globalstyles/mediaQueries.styles';
+import Picture from '../utility/Picture';
 
 const maxViewVobileL = maxView?.mobileL;
 const maxViewMobileS = maxView?.mobileS;

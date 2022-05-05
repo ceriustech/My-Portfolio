@@ -1,6 +1,9 @@
-import styled, { css } from 'styled-components';
-import { defaultColors } from '../../globalstyles/colors.styles';
-import { maxView, minView } from '../../globalstyles/mediaQueries.styles';
+import styled from 'styled-components';
+import { defaultColors } from '../../styles/globalstyles/colors.styles';
+import {
+	maxView,
+	minView,
+} from '../../styles/globalstyles/mediaQueries.styles';
 
 const white = defaultColors.root.whiteColor;
 

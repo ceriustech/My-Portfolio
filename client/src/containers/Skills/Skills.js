@@ -1,5 +1,5 @@
 import React from 'react';
-import { SkillsContainer } from '../../styles/containers/Skills.Styles';
+import { SkillsContainer } from './Skills.Styles';
 import { SkillsHeader } from '../../components/globalcomponents/SectionHeaders';
 import SkillsBadge from '../../components/Skills/SkillsBadge';
 

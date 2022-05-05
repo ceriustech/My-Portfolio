@@ -1,12 +1,11 @@
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
-import { defaultColors } from '../../globalstyles/colors.styles';
-import { maxView, minView } from '../../globalstyles/mediaQueries.styles';
+import { defaultColors } from '../../styles/globalstyles/colors.styles';
+import { maxView } from '../../styles/globalstyles/mediaQueries.styles';
 
 const white = defaultColors.root.whiteColor;
 
-const dtMediumMin = minView?.desktopM;
-const laptopMax = maxView?.laptop;
+const maxViewLaptop = maxView?.laptop;
 
 export const HeroCircleImageWrapper = styled(motion.div)`
 	flex: 0.75;
@@ -17,7 +16,7 @@ export const HeroCircleImageWrapper = styled(motion.div)`
 	height: 100%;
 	margin-left: 1rem;
 
-  @media screen and ${laptopMax} {
+  @media screen and ${maxViewLaptop} {
 		width: 100%;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -55,7 +54,7 @@ export const HeroCircleContainer = styled(motion.div)`
 		height: 70px;
 	}
 
-	@media screen and ${laptopMax} {
+	@media screen and ${maxViewLaptop} {
 		margin: 1rem;
 	}
 

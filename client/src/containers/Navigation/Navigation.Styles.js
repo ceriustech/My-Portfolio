@@ -1,6 +1,4 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { maxView } from '../globalstyles/mediaQueries.styles';
+import styled from 'styled-components';
 
 export const NavigationHeader = styled.header``;
 

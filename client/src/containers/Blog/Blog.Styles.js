@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { maxView } from '../globalstyles/mediaQueries.styles';
+import { maxView } from '../../styles/globalstyles/mediaQueries.styles';
 
 const maxViewPort = maxView?.mobileL;
 
-export const ContactContainer = styled.section`
+export const BlogContainer = styled.section`
 	padding: 80px 0;
 
 	@media screen and ${maxViewPort} {

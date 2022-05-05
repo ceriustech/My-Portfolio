@@ -4,7 +4,7 @@ import {
 	NavigationHeader,
 	NavigationContainer,
 	NavItems,
-} from '../../styles/containers/Navigation.Styles';
+} from './Navigation.Styles';
 import { navigationItem } from '../../constants/navigation.data';
 import NavigationItems from '../../components/Navigation/NavigationItems';
 import MobileNavigation from './MobileNavigation/MobileNavigation';

@@ -3,7 +3,7 @@ import {
 	NavigationItem,
 	NavDot,
 	ListLink,
-} from '../../styles/components/globalcomponents/NavigationItem.Styles';
+} from './NavigationItem.Styles';
 import { size } from '../../styles/globalstyles/mediaQueries.styles';
 import useWindowSize from '../../custom_hooks/useWindowSize';
 

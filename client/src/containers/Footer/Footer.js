@@ -3,7 +3,7 @@ import {
 	FooterContainer,
 	CaptionText,
 	CaptionTextContainer,
-} from '../../styles/containers/Footer.Styles';
+} from './Footer.Styles';
 import SocialMedia from '../../components/globalcomponents/SocialMedia';
 
 const Footer = () => (

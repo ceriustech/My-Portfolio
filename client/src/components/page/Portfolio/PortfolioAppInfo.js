@@ -13,7 +13,7 @@ import {
 	TechListContainer,
 	TechListHeader,
 	TechListText,
-} from '../../../styles/components/page/Portfolio/PortflolioAppInfo.Styles';
+} from './PortflolioAppInfo.Styles';
 import { urlFor, client } from '../../../client';
 import { useParams, useLocation } from 'react-router-dom';
 import { maxView } from '../../../styles/globalstyles/mediaQueries.styles';

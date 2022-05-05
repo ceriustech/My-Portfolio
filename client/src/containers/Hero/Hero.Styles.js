@@ -1,17 +1,11 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { images } from '../../constants/Images';
-import {
-	maxView,
-	minView,
-	miscMaxView,
-} from '../globalstyles/mediaQueries.styles';
+import { maxView, minView } from '../../styles/globalstyles/mediaQueries.styles';
 
 const dtMediumMin = minView?.desktopM;
 const laptopMax = maxView?.laptop;
 const mobileLargeMax = maxView?.mobileL;
-const miscSmall = miscMaxView?.miscSmall;
 
 export const HeroContainer = styled.section`
 	position: relative;

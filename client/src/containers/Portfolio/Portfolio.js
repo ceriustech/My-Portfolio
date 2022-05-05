@@ -1,5 +1,5 @@
 import React from 'react';
-import { PortfolioContainer } from '../../styles/containers/Portfolio.Styles';
+import { PortfolioContainer } from './Portfolio.Styles';
 import { PortfolioHeader } from '../../components/globalcomponents/SectionHeaders';
 import { SectionWrapper } from '../../styles/globalstyles/container.styles';
 import PortfolioTile from '../../components/Portfolio/PortfolioTiles';

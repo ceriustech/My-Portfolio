@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { defaultColors } from '../globalstyles/colors.styles';
-import { maxView } from '../globalstyles/mediaQueries.styles';
+import { defaultColors } from '../../styles/globalstyles/colors.styles';
+import { maxView } from '../../styles/globalstyles/mediaQueries.styles';
 
 const grayColor = defaultColors.root.grayColor;
 const bgSectionColor = defaultColors?.root.primary;

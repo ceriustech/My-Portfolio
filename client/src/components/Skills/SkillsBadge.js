@@ -5,7 +5,7 @@ import {
 	SilssBadgeImgContainer,
 	StyledPicture,
 	SkillsBadgeDescription,
-} from '../../styles/components/SkillsBadge/SkillsBadge.Styles';
+} from './SkillsBadge.Styles';
 import { urlFor, client } from '../../client';
 
 const SkillsBadge = () => {

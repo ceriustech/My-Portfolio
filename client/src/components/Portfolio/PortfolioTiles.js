@@ -11,11 +11,11 @@ import {
 	ApplicationInfo,
 	ApplicationInfoTag,
 	OverlayHelpText,
-} from '../../styles/components/PortfolioTile/Portfolio.Styles';
+} from './PortfolioTile.Styles';
 import {
 	PortfolioButtonFilterContainer,
 	PortfolioButton,
-} from '../../styles/components/PortfolioButtonFilter/PortfolioButtonFilter.Styles';
+} from './PortfolioButtonFilter.Styles';
 import { AiFillEye, AiFillInfoCircle } from 'react-icons/ai';
 import { urlFor, client } from '../../client';
 import { maxView } from '../../styles/globalstyles/mediaQueries.styles';

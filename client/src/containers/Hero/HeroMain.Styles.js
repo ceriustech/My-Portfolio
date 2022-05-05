@@ -1,11 +1,11 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { defaultColors } from '../../globalstyles/colors.styles';
+import { defaultColors } from '../../styles/globalstyles/colors.styles';
 import {
 	maxView,
 	minView,
 	miscMinView,
-} from '../../globalstyles/mediaQueries.styles';
+} from '../../styles/globalstyles/mediaQueries.styles';
 
 const miscLarge = miscMinView?.miscLarge;
 const dtMediumMin = minView?.desktopM;

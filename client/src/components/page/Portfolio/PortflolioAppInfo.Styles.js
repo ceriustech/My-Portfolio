@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import Picture from '../../../../components/utility/Picture';
-import { defaultColors } from '../../../globalstyles/colors.styles';
-import { maxView } from '../../../globalstyles/mediaQueries.styles';
+import Picture from '../../utility/Picture';
+import { defaultColors } from '../../../styles/globalstyles/colors.styles';
+import { maxView } from '../../../styles/globalstyles/mediaQueries.styles';
 
 const blue = defaultColors?.gradient.darkBlue;
 const white = defaultColors?.root.whiteColor;

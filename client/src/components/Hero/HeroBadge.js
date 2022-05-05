@@ -4,7 +4,7 @@ import {
 	HeroBadgeInnerDiv,
 	HeroBadgeCmp,
 	HeroBadgeTag,
-} from '../../styles/components/Hero/HeroBadge.Styles';
+} from './HeroBadge.Styles';
 
 const HeroBadge = () => {
 	return (

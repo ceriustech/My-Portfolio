@@ -5,7 +5,7 @@ import {
 	MobileNavContainer,
 	MobileMenuToggleContainer,
 	MobileListContainer,
-} from '../../../styles/containers/MobileNavigation.Styles';
+} from './MobileNavigation.Styles';
 import { images } from '../../../constants/Images';
 import useIntersection from '../../../custom_hooks/intersectionObserver';
 
