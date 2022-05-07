@@ -35,7 +35,7 @@ const BlogTile = () => {
 								className="img"
 								image={urlFor(tile.imgUrl)}
 								srcset={urlFor(tile.imgUrl)}
-								altText="blog image"
+								altText={tile.altText}
 							/>
 						</BlogTileImgContainer>
 						<BlogTileDetailsContainer>

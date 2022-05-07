@@ -27,6 +27,11 @@ export default {
 			},
 		},
 		{
+			name: 'altText',
+			title: 'Alt Text',
+			type: 'string',
+		},
+		{
 			name: 'tags',
 			title: 'Tags',
 			type: 'array',
