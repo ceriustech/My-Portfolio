@@ -7,6 +7,7 @@ import {
 	BlogTileFigcaption,
 	BlogTileHeader,
 	BlogTileSpan,
+	BlogTileDescription,
 	BlogCountdownLink,
 	BlogLink,
 } from './BlogTile.Styles';
@@ -24,23 +25,36 @@ const BlogTile = () => {
 		});
 	}, []);
 
-	console.log(blogTile.blogLink);
+	console.log(blogTile);
 
 	return (
 		<BlogTileContainer>
 			<SectionWrapper flexDirection="row">
-				<BlogTileFigure>
-					<BlogImgContainer>
-						<BlogTilePicture src="Img/LimbleMedia.png" alt="flat-design" />
-					</BlogImgContainer>
-					<BlogTileFigcaption>
-						<BlogTileHeader>LimbleMedia</BlogTileHeader>
-						<BlogTileSpan>by author</BlogTileSpan>
-						<BlogCountdownLink to="/countdown">
-							<p>Take a look</p>
-						</BlogCountdownLink>
-					</BlogTileFigcaption>
-				</BlogTileFigure>
+				{blogTile.map((tile, index) => (
+					<BlogTileFigure key={index}>
+						<BlogImgContainer>
+							<BlogTilePicture
+								src={urlFor(tile.imgUrl)}
+								image={urlFor(tile.imgUrl)}
+								alt={tile.altText}
+							/>
+						</BlogImgContainer>
+						<BlogTileFigcaption>
+							<BlogTileHeader>{tile.title}</BlogTileHeader>
+							<BlogTileSpan>by {tile.author}</BlogTileSpan>
+							<BlogTileDescription>{tile.description}</BlogTileDescription>
+							{tile.blogLink === undefined ? (
+								<BlogCountdownLink to="/countdown">
+									Take a look
+								</BlogCountdownLink>
+							) : (
+								<BlogLink href={tile.blogLink} rel="noreferrer">
+									Take a look
+								</BlogLink>
+							)}
+						</BlogTileFigcaption>
+					</BlogTileFigure>
+				))}
 			</SectionWrapper>
 		</BlogTileContainer>
 	);

@@ -24,6 +24,8 @@ export const BlogTileHeader = styled.h2``;
 
 export const BlogTileSpan = styled.span``;
 
+export const BlogTileDescription = styled.p``;
+
 export const BlogCountdownLink = styled(Link)``;
 
 export const BlogLink = styled.a``;
