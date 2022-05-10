@@ -12,13 +12,17 @@ const black = defaultColors?.root.blackColor;
 
 export const BlogTileContainer = styled.div``;
 
-export const BlogTileInner = styled.div``;
+export const BlogTileFigure = styled.figure``;
+
+export const BlogImgContainer = styled.div``;
 
 export const BlogTilePicture = styled(Picture)``;
 
-export const BlogTileOverlay = styled.div``;
+export const BlogTileFigcaption = styled.figcaption``;
 
 export const BlogTileHeader = styled.h2``;
+
+export const BlogTileSpan = styled.span``;
 
 export const BlogCountdownLink = styled(Link)``;
 

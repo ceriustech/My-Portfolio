@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import {
 	BlogTileContainer,
-	BlogTileInner,
+	BlogTileFigure,
+	BlogImgContainer,
 	BlogTilePicture,
-	BlogTileOverlay,
+	BlogTileFigcaption,
 	BlogTileHeader,
+	BlogTileSpan,
 	BlogCountdownLink,
 	BlogLink,
 } from './BlogTile.Styles';
@@ -27,20 +29,18 @@ const BlogTile = () => {
 	return (
 		<BlogTileContainer>
 			<SectionWrapper flexDirection="row">
-				<BlogTileInner class="hovereffect panel image-1 .hovereffect .overlay">
-					<BlogTilePicture
-						class="center portfolio_img "
-						src="Img/LimbleMedia.png"
-						alt="flat-design"
-					/>
-					<BlogTileOverlay class="overlay">
-						<BlogTileHeader class="portfolio_h2">LimbleMedia</BlogTileHeader>
-
+				<BlogTileFigure>
+					<BlogImgContainer>
+						<BlogTilePicture src="Img/LimbleMedia.png" alt="flat-design" />
+					</BlogImgContainer>
+					<BlogTileFigcaption>
+						<BlogTileHeader>LimbleMedia</BlogTileHeader>
+						<BlogTileSpan>by author</BlogTileSpan>
 						<BlogCountdownLink to="/countdown">
-							<p class="portfolio-link icon-links">Take a look</p>
+							<p>Take a look</p>
 						</BlogCountdownLink>
-					</BlogTileOverlay>
-				</BlogTileInner>
+					</BlogTileFigcaption>
+				</BlogTileFigure>
 			</SectionWrapper>
 		</BlogTileContainer>
 	);
