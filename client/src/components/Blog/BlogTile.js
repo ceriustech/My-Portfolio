@@ -34,9 +34,10 @@ const BlogTile = () => {
 					<BlogTileFigure key={index}>
 						<BlogImgContainer>
 							<BlogTilePicture
-								src={urlFor(tile.imgUrl)}
+								srcset={urlFor(tile.imgUrl)}
 								image={urlFor(tile.imgUrl)}
 								alt={tile.altText}
+								styles={{ height: '330px' }}
 							/>
 						</BlogImgContainer>
 						<BlogTileFigcaption>
