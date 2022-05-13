@@ -6,7 +6,7 @@ import ServicesTile from '../../components/Services/ServicesTile';
 
 const Services = () => {
 	return (
-		<ServicesContainer id="Services-section">
+		<ServicesContainer id="services-section">
 			<ServiceTitle />
 			<SectionWrapper flexDirection="row">
 				<ServicesTile />

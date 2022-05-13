@@ -77,8 +77,8 @@ export const BlogImgContainer = styled.div`
 	}
 
 	@media screen and ${maxViewMobileS} {
-		width: 300px;
-		height: 300px;
+		width: 280px;
+		height: 280px;
 	}
 `;
 

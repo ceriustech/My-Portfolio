@@ -33,6 +33,7 @@ export const SilssBadgeImgContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	height: 180px;
+	margin-bottom: 15px;
 	width: 180px;
 
 	@media screen and ${maxViewVobileL} {
@@ -49,7 +50,7 @@ export const SilssBadgeImgContainer = styled.div`
 export const StyledPicture = styled(Picture)``;
 
 export const SkillsBadgeDescription = styled.p`
-	font-size: 1.25em;
+	font-size: 1.25rem;
 	font-weight: 600;
 	margin-top: 10px;
 `;

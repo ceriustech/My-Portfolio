@@ -4,7 +4,7 @@ import { AboutHeader } from '../../components/globalcomponents/SectionHeaders';
 
 const About = () => {
 	return (
-		<AboutContainer id="About-section">
+		<AboutContainer id="about-section">
 			<AboutHeader />
 		</AboutContainer>
 	);

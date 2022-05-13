@@ -19,11 +19,13 @@ const SkillsBadge = () => {
 		});
 	}, []);
 
-	console.log(skills);
+	console.log(skills.sort((a, b) => a.id - b.id));
+
+	const skillsSorted = skills.sort((a, b) => a.id - b.id);
 
 	return (
 		<SkillsBadgeContainer>
-			{skills.map((item, index) => {
+			{skillsSorted.map((item, index) => {
 				return (
 					<SkillsBadgeContentContainer key={index}>
 						<SilssBadgeImgContainer backgroundColor={item.bgColor}>
