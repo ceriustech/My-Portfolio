@@ -4,11 +4,11 @@ import { maxView } from '../../styles/globalstyles/mediaQueries.styles';
 import { Link } from 'react-router-dom';
 import Picture from '../utility/Picture';
 
-const laptopMax = maxView?.laptop;
-const mobileLargeMax = maxView?.mobileL;
+const maxViewMobileL = maxView?.mobileL;
+const maxViewMobileS = maxView?.mobileS;
 
 const white = defaultColors?.root.whiteColor;
-const black = defaultColors?.root.blackColor;
+const lightPink = defaultColors?.lightBackground.lightPink;
 
 export const BlogTileContainer = styled.div`
 	-webkit-perspective: 1700px;
@@ -24,13 +24,19 @@ export const BlogTileFigure = styled.figure`
 	margin: 0;
 	padding: 20px;
 	text-align: left;
-	position: relative;
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	height: 400px;
 
 	&:hover {
+		img {
+			-webkit-transform: translateX(25%);
+			-moz-transform: translateX(25%);
+			-ms-transform: translateX(25%);
+			transform: translateX(25%);
+		}
+
 		figcaption {
 			opacity: 1;
 			-webkit-transform: rotateY(0deg);
@@ -41,6 +47,15 @@ export const BlogTileFigure = styled.figure`
 			transition: transform 0.4s, opacity 0.1s;
 		}
 	}
+
+	@media screen and ${maxViewMobileL} {
+		height: 330px;
+		padding: 10px 20px;
+	}
+`;
+
+export const BlogOverlayWrapper = styled.div`
+	position: relative;
 `;
 
 export const BlogImgContainer = styled.div`
@@ -54,13 +69,16 @@ export const BlogImgContainer = styled.div`
 		transition: transform 0.4s;
 		width: 100%;
 		height: 330px;
+	}
 
-		&:hover {
-			-webkit-transform: translateX(25%);
-			-moz-transform: translateX(25%);
-			-ms-transform: translateX(25%);
-			transform: translateX(25%);
-		}
+	@media screen and ${maxViewMobileL} {
+		width: 320px;
+		height: 300px;
+	}
+
+	@media screen and ${maxViewMobileS} {
+		width: 300px;
+		height: 300px;
 	}
 `;
 
@@ -87,25 +105,37 @@ export const BlogTileFigcaption = styled.figcaption`
 	left: 0;
 	padding: 20px;
 	background: #2c3f52;
-	color: #ed4e6e;
+	color: ${lightPink};
 `;
 
-export const BlogTileHeader = styled.h2``;
+export const BlogTileHeader = styled.h2`
+	color: ${white};
+	margin-bottom: 5px;
+`;
 
 export const BlogTileSpan = styled.span``;
 
-export const BlogTileDescription = styled.p``;
+export const BlogTileDescription = styled.p`
+	color: ${white};
+	margin-top: 10px;
+`;
 
 export const BlogCountdownLink = styled(Link)`
 	text-align: center;
 	padding: 5px 10px;
 	border-radius: 2px;
 	display: inline-block;
-	background: #ed4e6e;
-	color: #fff;
+	background: ${lightPink};
+	color: ${white};
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background: ${white};
+		color: ${lightPink};
+	}
 `;
 
 export const BlogLink = styled.a`
@@ -113,9 +143,15 @@ export const BlogLink = styled.a`
 	padding: 5px 10px;
 	border-radius: 2px;
 	display: inline-block;
-	background: #ed4e6e;
-	color: #fff;
+	background: ${lightPink};
+	color: ${white};
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background: ${white};
+		color: ${lightPink};
+	}
 `;

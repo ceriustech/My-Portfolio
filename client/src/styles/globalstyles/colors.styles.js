@@ -33,5 +33,6 @@ export const defaultColors = {
 		lightGrayishPink: '#f3dde4',
 		lightGrayishRed01: '#fcece7',
 		lightGray: '#EAEAEA',
+		lightPink: '#ed4e6e',
 	},
 };

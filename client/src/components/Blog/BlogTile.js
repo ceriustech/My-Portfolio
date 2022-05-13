@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
 	BlogTileContainer,
 	BlogTileFigure,
+	BlogOverlayWrapper,
 	BlogImgContainer,
 	BlogTilePicture,
 	BlogTileFigcaption,
@@ -32,28 +33,30 @@ const BlogTile = () => {
 			<SectionWrapper flexDirection="row">
 				{blogTile.map((tile, index) => (
 					<BlogTileFigure key={index}>
-						<BlogImgContainer>
-							<BlogTilePicture
-								srcset={urlFor(tile.imgUrl)}
-								image={urlFor(tile.imgUrl)}
-								alt={tile.altText}
-								styles={{ height: '330px' }}
-							/>
-						</BlogImgContainer>
-						<BlogTileFigcaption>
-							<BlogTileHeader>{tile.title}</BlogTileHeader>
-							<BlogTileSpan>by {tile.author}</BlogTileSpan>
-							<BlogTileDescription>{tile.description}</BlogTileDescription>
-							{tile.blogLink === undefined ? (
-								<BlogCountdownLink to="/countdown">
-									Take a look
-								</BlogCountdownLink>
-							) : (
-								<BlogLink href={tile.blogLink} rel="noreferrer">
-									Take a look
-								</BlogLink>
-							)}
-						</BlogTileFigcaption>
+						<BlogOverlayWrapper>
+							<BlogImgContainer>
+								<BlogTilePicture
+									srcset={urlFor(tile.imgUrl)}
+									image={urlFor(tile.imgUrl)}
+									alt={tile.altText}
+									styles={{ height: '330px' }}
+								/>
+							</BlogImgContainer>
+							<BlogTileFigcaption>
+								<BlogTileHeader>{tile.title}</BlogTileHeader>
+								<BlogTileSpan>By {tile.author}</BlogTileSpan>
+								<BlogTileDescription>{tile.description}</BlogTileDescription>
+								{tile.blogLink === undefined ? (
+									<BlogCountdownLink to="/countdown">
+										Take a look
+									</BlogCountdownLink>
+								) : (
+									<BlogLink href={tile.blogLink} rel="noreferrer">
+										Take a look
+									</BlogLink>
+								)}
+							</BlogTileFigcaption>
+						</BlogOverlayWrapper>
 					</BlogTileFigure>
 				))}
 			</SectionWrapper>
