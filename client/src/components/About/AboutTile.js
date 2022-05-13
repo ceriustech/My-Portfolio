@@ -1,40 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { AboutTileContainer } from './AboutTiles.Styles';
-import { urlFor, client } from '../../client';
+import React from 'react';
 
 const AboutTile = () => {
-	const [abouts, setAbouts] = useState([]);
-
-	useEffect(() => {
-		const query = '*[_type == "abouts"]';
-
-		try {
-			client.fetch(query).then((data) => {
-				const tileData = data.splice(3).concat(data.splice(0));
-				return setAbouts(tileData);
-			});
-		} catch (err) {
-			console.error(err);
-			return [];
-		}
-	}, []);
-
-	return (
-		<>
-			{abouts.map((item, index) => (
-				<AboutTileContainer
-					whileInView={{ opacity: 1 }}
-					transition={{ duration: 0.5, type: 'tween' }}
-					bordercolor={'#' + item?.color}
-					key={index}
-				>
-					<img src={urlFor(item?.imgUrl)} alt={item.altText} />
-					<h2 color={item?.color}>{item?.title}</h2>
-					<p>{item?.description}</p>
-				</AboutTileContainer>
-			))}
-		</>
-	);
+	return <div>About Section</div>;
 };
 
 export default AboutTile;

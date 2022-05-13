@@ -1,7 +1,7 @@
 import {
 	About,
 	Blog,
-	Contact,
+	Services,
 	Footer,
 	Hero,
 	Navigation,
@@ -21,9 +21,9 @@ export const pageComponents = [
 		component: Hero,
 	},
 	{
-		id: 'about',
-		name: 'About',
-		component: About,
+		id: 'services',
+		name: 'Services',
+		component: Services,
 	},
 	{
 		id: 'portfolio',
@@ -41,9 +41,9 @@ export const pageComponents = [
 		component: Blog,
 	},
 	{
-		id: 'contact',
-		name: 'Contact',
-		component: Contact,
+		id: 'about',
+		name: 'About',
+		component: About,
 	},
 	{
 		id: 'footer',

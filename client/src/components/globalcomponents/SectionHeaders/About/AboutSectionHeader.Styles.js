@@ -6,7 +6,7 @@ const black = defaultColors.root.blackColor;
 
 const mobileLargeMax = maxView?.mobileL;
 
-export const ContactHeaderContainer = styled.div`
+export const AboutHeaderContainer = styled.div`
 	position: relative;
 	width: 375px;
 	height: 150px;
@@ -28,7 +28,7 @@ export const ContactHeaderContainer = styled.div`
 	}
 `;
 
-export const ContactHeaderShape = styled.div`
+export const AboutHeaderShape = styled.div`
 	background: linear-gradient(90deg, #6a7cff 0%, #ffffff 100%, #ffffff 100%);
 	width: 35px;
 	height: 30px;
@@ -36,7 +36,7 @@ export const ContactHeaderShape = styled.div`
 	margin-right: 10px;
 `;
 
-export const ContactHeaderTitle = styled.h1`
+export const AboutHeaderTitle = styled.h1`
 	color: ${black};
 	position: relative;
 	font-size: calc(25px + (26 - 15) * ((100vw - 300px) / (1600 - 300)));

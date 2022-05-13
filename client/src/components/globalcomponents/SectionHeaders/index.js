@@ -2,4 +2,4 @@ export { default as ServiceTitle } from './ServiceSectionHeader/ServicesSectionH
 export { default as PortfolioHeader } from './Portfolio/PortfolioSectionHeader';
 export { default as SkillsHeader } from './Skills/SkillsSectionHeader';
 export { default as BlogHeader } from './Blog/BlogSectionHeader';
-export { default as ContactHeader } from './Contact/ContactSectionHeader';
+export { default as AboutHeader } from './About/AboutSectionHeader';

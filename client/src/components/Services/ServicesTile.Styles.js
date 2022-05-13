@@ -10,7 +10,7 @@ const white = defaultColors?.root.whiteColor;
 const primary = defaultColors?.root.primary;
 const gray = defaultColors?.root.grayColor;
 
-export const AboutTileContainer = styled(motion.div)`
+export const ServicesTileContainer = styled(motion.div)`
 	background-color: ${primary};
 	border-bottom: 3px solid ${(props) => props.bordercolor};
 	border-radius: 0.5rem;

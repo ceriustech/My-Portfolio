@@ -3,7 +3,7 @@ import { maxView } from '../../styles/globalstyles/mediaQueries.styles';
 
 const maxViewPort = maxView?.mobileL;
 
-export const ContactContainer = styled.section`
+export const ServicesContainer = styled.section`
 	padding: 80px 0;
 
 	@media screen and ${maxViewPort} {

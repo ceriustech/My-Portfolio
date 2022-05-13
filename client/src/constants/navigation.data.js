@@ -6,10 +6,10 @@ export const navigationItem = [
 		routedLink: '/',
 	},
 	{
-		id: 'about',
-		name: 'About',
-		inPageLink: '#about-section',
-		routedLink: '/about',
+		id: 'services',
+		name: 'Services',
+		inPageLink: '#services-section',
+		routedLink: '/services',
 	},
 	{
 		id: 'portfolio',
@@ -30,9 +30,9 @@ export const navigationItem = [
 		routedLink: '/blog',
 	},
 	{
-		id: 'contact',
-		name: 'Contact',
-		inPageLink: '#contact-section',
-		routedLink: '/contact',
+		id: 'about',
+		name: 'About',
+		inPageLink: '#about-section',
+		routedLink: '/about',
 	},
 ];
