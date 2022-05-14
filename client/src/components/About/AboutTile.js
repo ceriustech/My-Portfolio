@@ -11,16 +11,30 @@ import { client } from '../../client';
 const AboutTile = () => {
 	const [aboutTile, setAboutTile] = useState([]);
 
-	// useEffect(() => {
+	useEffect(() => {
+		const query = '*[_type == "about"]';
 
-	// }, []);
+		try {
+			client.fetch(query).then((data) => {
+				const tileData = data;
+				return setAboutTile(tileData);
+			});
+		} catch (err) {
+			console.error(err);
+			return [];
+		}
+	}, []);
+
+	console.log('ABOUT DATA:', aboutTile[0]?.title);
 
 	return (
 		<AboutTileContainer>
 			<SectionWrapper>
 				<AboutTileInner>
-					<AboutTileHeader></AboutTileHeader>
-					<AboutTileDescription></AboutTileDescription>
+					<AboutTileHeader>{aboutTile[0]?.title}</AboutTileHeader>
+					<AboutTileDescription>
+						{aboutTile[0]?.description}
+					</AboutTileDescription>
 				</AboutTileInner>
 			</SectionWrapper>
 		</AboutTileContainer>
