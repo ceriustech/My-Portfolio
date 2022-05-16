@@ -34,6 +34,7 @@ export const AboutTileInner = styled.div`
 
 export const AboutTileHeader = styled.h2`
 	font-size: 2rem;
+	margin-bottom: 15px;
 	text-transform: capitalize;
 `;
 
