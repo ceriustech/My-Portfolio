@@ -74,6 +74,7 @@ export const PortfolioPictureContainer = styled.div`
 
 	img {
 		border-radius: 0.5rem;
+		object-fit: cover;
 		height: 100%;
 		width: 100%;
 	}
