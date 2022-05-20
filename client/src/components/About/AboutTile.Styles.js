@@ -1,13 +1,8 @@
 import styled from 'styled-components';
 import { defaultColors } from '../../styles/globalstyles/colors.styles';
-import { maxView } from '../../styles/globalstyles/mediaQueries.styles';
-
-const laptopMax = maxView?.laptop;
-const mobileLargeMax = maxView?.mobileL;
 
 const white = defaultColors?.root.whiteColor;
 const primary = defaultColors?.root.primary;
-const gray = defaultColors?.root.grayColor;
 
 export const AboutTileContainer = styled.div`
 	margin: 0 auto;

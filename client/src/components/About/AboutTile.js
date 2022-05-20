@@ -25,8 +25,6 @@ const AboutTile = () => {
 		}
 	}, []);
 
-	console.log('ABOUT DATA:', aboutTile[0]?.title);
-
 	return (
 		<AboutTileContainer>
 			<SectionWrapper>

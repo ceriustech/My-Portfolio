@@ -32,7 +32,7 @@ const PortfolioTile = () => {
 	const maxViewPort = maxView?.desktopM;
 
 	useEffect(() => {
-		const query = '*[_type == "portfolio"]';
+		const query = `*[_type == "portfolio" && !(_id in path("drafts.**"))]`;
 
 		client.fetch(query).then((data) => {
 			setPortfolioTile(data);
