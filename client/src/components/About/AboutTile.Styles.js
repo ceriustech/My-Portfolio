@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 import { defaultColors } from '../../styles/globalstyles/colors.styles';
+import { maxView } from '../../../src/styles/globalstyles/mediaQueries.styles';
 
 const white = defaultColors?.root.whiteColor;
 const primary = defaultColors?.root.primary;
+
+const maxViewMobileL = maxView?.mobileL;
 
 export const AboutTileContainer = styled.div`
 	margin: 0 auto;
@@ -24,6 +27,10 @@ export const AboutTileInner = styled.div`
 		transform: scale(1.01);
 		-webkit-box-shadow: 0px 9px 41px -2px rgba(153, 153, 153, 1);
 		box-shadow: 0px 9px 41px -2px rgba(153, 153, 153, 1);
+	}
+
+	@media screen and ${maxViewMobileL} {
+		padding: 20px;
 	}
 `;
 
