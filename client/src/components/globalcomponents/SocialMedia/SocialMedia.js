@@ -11,19 +11,19 @@ const socialIcons = [
 	{
 		id: 'linkedin',
 		icon: <FaLinkedinIn />,
-		url: '/',
+		url: 'https://www.linkedin.com/in/bilalmasters/',
 		color: '#007bb5',
 	},
 	{
 		id: 'twitter',
 		icon: <BsTwitter />,
-		url: '/',
+		url: 'https://twitter.com/billmasters66',
 		color: '#1da1f2',
 	},
 	{
 		id: 'instagram',
 		icon: <BsInstagram />,
-		url: '/',
+		url: 'https://www.instagram.com/bill_cmasters/',
 		color:
 			'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);',
 	},
@@ -32,7 +32,12 @@ const socialIcons = [
 const SocialMedia = () => (
 	<SocialMediaContainer>
 		{socialIcons.map((item) => (
-			<IconLink key={item.id} to={item.url} color={item.color}>
+			<IconLink
+				key={item.id}
+				href={item.url}
+				color={item.color}
+				target="_blank"
+			>
 				<SocialMediaIcon>{item.icon}</SocialMediaIcon>
 			</IconLink>
 		))}

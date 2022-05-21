@@ -1,5 +1,4 @@
-import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import { defaultColors } from '../../../styles/globalstyles/colors.styles';
 
 const grayColor = defaultColors.root.grayColor;
@@ -16,10 +15,11 @@ export const SocialMediaContainer = styled.div`
 	margin: 0 auto;
 `;
 
-export const IconLink = styled(Link)`
+export const IconLink = styled.a`
 	background-color: ${whiteColor};
 	border-radius: 50%;
 	border: 1px solid ${grayColor};
+	cursor: pointer;
 	height: 60px;
 	width: 60px;
 	display: flex;
