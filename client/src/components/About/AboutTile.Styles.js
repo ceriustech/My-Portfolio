@@ -31,6 +31,7 @@ export const AboutTileInner = styled.div`
 
 	@media screen and ${maxViewMobileL} {
 		padding: 20px;
+		width: 85%;
 	}
 `;
 
