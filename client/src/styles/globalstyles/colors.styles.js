@@ -11,6 +11,7 @@ export const defaultColors = {
 		purpleColor: '#553A9B',
 		redColor: '#D91666',
 		orangeColor: '#F26247',
+		mediumPurple: '#a838b5',
 	},
 	gradient: {
 		blue: '#2794D3',

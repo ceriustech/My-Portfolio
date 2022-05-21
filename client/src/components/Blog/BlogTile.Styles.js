@@ -8,7 +8,7 @@ const maxViewMobileL = maxView?.mobileL;
 const maxViewMobileS = maxView?.mobileS;
 
 const white = defaultColors?.root.whiteColor;
-const lightPink = defaultColors?.lightBackground.lightPink;
+const mediumPurple = defaultColors?.root.mediumPurple;
 
 export const BlogTileContainer = styled.div`
 	-webkit-perspective: 1700px;
@@ -61,6 +61,7 @@ export const BlogOverlayWrapper = styled.div`
 export const BlogImgContainer = styled.div`
 	overflow: hidden;
 	width: 440px;
+	position: relative;
 
 	img {
 		object-fit: cover;
@@ -80,6 +81,24 @@ export const BlogImgContainer = styled.div`
 		width: 280px;
 		height: 280px;
 	}
+`;
+
+export const BlogTagContainer = styled.div`
+	background: #a838b5;
+	width: 30%;
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+`;
+
+export const BlogTag = styled.h3`
+	color: #fff;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	margin: 0;
+	padding: 7px;
+	text-align: center;
+	text-transform: capitalize;
 `;
 
 export const BlogTilePicture = styled(Picture)``;
@@ -105,7 +124,7 @@ export const BlogTileFigcaption = styled.figcaption`
 	left: 0;
 	padding: 20px;
 	background: #2c3f52;
-	color: ${lightPink};
+	color: ${mediumPurple};
 `;
 
 export const BlogTileHeader = styled.h2`
@@ -125,7 +144,7 @@ export const BlogCountdownLink = styled(Link)`
 	padding: 5px 10px;
 	border-radius: 2px;
 	display: inline-block;
-	background: ${lightPink};
+	background: ${mediumPurple};
 	color: ${white};
 	position: absolute;
 	bottom: 20px;
@@ -134,7 +153,7 @@ export const BlogCountdownLink = styled(Link)`
 
 	&:hover {
 		background: ${white};
-		color: ${lightPink};
+		color: ${mediumPurple};
 	}
 `;
 
@@ -143,7 +162,7 @@ export const BlogLink = styled.a`
 	padding: 5px 10px;
 	border-radius: 2px;
 	display: inline-block;
-	background: ${lightPink};
+	background: ${mediumPurple};
 	color: ${white};
 	position: absolute;
 	bottom: 20px;
@@ -152,6 +171,6 @@ export const BlogLink = styled.a`
 
 	&:hover {
 		background: ${white};
-		color: ${lightPink};
+		color: ${mediumPurple};
 	}
 `;

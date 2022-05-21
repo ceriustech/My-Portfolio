@@ -4,6 +4,8 @@ import {
 	BlogTileFigure,
 	BlogOverlayWrapper,
 	BlogImgContainer,
+	BlogTagContainer,
+	BlogTag,
 	BlogTilePicture,
 	BlogTileFigcaption,
 	BlogTileHeader,
@@ -41,6 +43,9 @@ const BlogTile = () => {
 									alt={tile.altText}
 									styles={{ height: '330px' }}
 								/>
+								<BlogTagContainer>
+									<BlogTag>{tile.tags[0]}</BlogTag>
+								</BlogTagContainer>
 							</BlogImgContainer>
 							<BlogTileFigcaption>
 								<BlogTileHeader>{tile.title}</BlogTileHeader>
