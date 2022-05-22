@@ -56,6 +56,7 @@ const BlogTile = () => {
 								{tile.blogLink === undefined ? (
 									<BlogCountdownLink
 										to={`/countdown/:${routeID.Lifengineered}`}
+										state={{ previousPath: routeID.Lifengineered }}
 									>
 										Take a look
 									</BlogCountdownLink>
