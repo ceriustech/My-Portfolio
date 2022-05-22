@@ -55,7 +55,7 @@ const PortfolioAppInfo = () => {
 								image={urlFor(item.imgUrl)}
 								srcset={urlFor(item.imgUrl)}
 								maxView={maxViewPort}
-								alt={item.altText}
+								altText={item.altText}
 							/>
 						</AppImageContainer>
 						<AppContentContainer>

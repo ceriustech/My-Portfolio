@@ -13,12 +13,14 @@ const socialIcons = [
 		icon: <FaLinkedinIn />,
 		url: 'https://www.linkedin.com/in/bilalmasters/',
 		color: '#007bb5',
+		ariaText: 'linkedin',
 	},
 	{
 		id: 'twitter',
 		icon: <BsTwitter />,
 		url: 'https://twitter.com/billmasters66',
 		color: '#1da1f2',
+		ariaText: 'twitter',
 	},
 	{
 		id: 'instagram',
@@ -26,6 +28,7 @@ const socialIcons = [
 		url: 'https://www.instagram.com/bill_cmasters/',
 		color:
 			'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);',
+		ariaText: 'instagram',
 	},
 ];
 
@@ -35,6 +38,7 @@ const SocialMedia = () => (
 			<IconLink
 				key={item.id}
 				href={item.url}
+				aria-label={item.ariaText}
 				color={item.color}
 				target="_blank"
 			>
