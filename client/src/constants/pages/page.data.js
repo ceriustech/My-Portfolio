@@ -1,6 +1,6 @@
 import HomePage from '../../pages/HomePage/Home.Page';
 import PortfolioPage from '../../pages/PortfolioPage/Portfolio.Page';
-import Countdown from '../../components/page/Countdown/Countdown';
+import CountdownPage from '../../pages/CountdownPage/Countdown.Page';
 
 export const pagesData = [
 	{
@@ -15,7 +15,7 @@ export const pagesData = [
 	},
 	{
 		id: 3,
-		page: <Countdown />,
-		path: '/countdown',
+		page: <CountdownPage />,
+		path: '/countdown/:id',
 	},
 ];

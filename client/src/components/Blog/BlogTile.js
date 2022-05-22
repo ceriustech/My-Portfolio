@@ -28,7 +28,9 @@ const BlogTile = () => {
 		});
 	}, []);
 
-	console.log(blogTile);
+	const routeID = {
+		Lifengineered: 'lifengineered',
+	};
 
 	return (
 		<BlogTileContainer>
@@ -52,7 +54,9 @@ const BlogTile = () => {
 								<BlogTileSpan>By {tile.author}</BlogTileSpan>
 								<BlogTileDescription>{tile.description}</BlogTileDescription>
 								{tile.blogLink === undefined ? (
-									<BlogCountdownLink to="/countdown">
+									<BlogCountdownLink
+										to={`/countdown/:${routeID.Lifengineered}`}
+									>
 										Take a look
 									</BlogCountdownLink>
 								) : (

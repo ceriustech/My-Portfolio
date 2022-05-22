@@ -149,7 +149,7 @@ const PortfolioTile = () => {
 								</Link>
 								{tile.projectLink === undefined ? (
 									<Link
-										to="/countdown"
+										to={`/countdown/:${tile.routeID}`}
 										state={{ appTitle: tile.routeID }}
 										rel="noreferrer"
 									>

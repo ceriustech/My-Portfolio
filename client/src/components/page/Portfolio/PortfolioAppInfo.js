@@ -73,7 +73,7 @@ const PortfolioAppInfo = () => {
 								<span>See The Site:</span>
 								{item.projectLink == undefined ? (
 									<StyledLink
-										to="/countdown"
+										to={`/countdown/:${urlID}`}
 										state={{ previousPath: pathname }}
 										rel="noreferrer"
 									>
