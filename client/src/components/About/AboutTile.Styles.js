@@ -42,5 +42,6 @@ export const AboutTileHeader = styled.h2`
 `;
 
 export const AboutTileDescription = styled.p`
+
 	font-size: 1.25rem;
 `;

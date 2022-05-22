@@ -6,8 +6,6 @@ import {
 	MobileMenuToggleContainer,
 	MobileListContainer,
 } from './MobileNavigation.Styles';
-import { images } from '../../../constants/Images';
-import useIntersection from '../../../custom_hooks/intersectionObserver';
 
 const menuVariants = {
 	open: {
@@ -31,17 +29,6 @@ const MobileNavigation = ({ children }) => {
 	const toggleMenu = () => {
 		setOpen(!isOpen);
 	};
-
-	const mobileListContainer = (
-		<MobileListContainer>{children}</MobileListContainer>
-	);
-
-	const ref = useRef();
-	// const inVew = useIntersection(ref, '0px');
-
-	// if (inVew) {
-	// 	console.log('%cIN VIEW', 'font-size: 2em; color: red');
-	// }
 
 	return (
 		<MobileNavContainer className="mobile-nav-container">

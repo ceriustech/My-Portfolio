@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { defaultColors } from '../../styles/globalstyles/colors.styles';
 import { maxView } from '../../styles/globalstyles/mediaQueries.styles';

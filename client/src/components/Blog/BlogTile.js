@@ -42,7 +42,7 @@ const BlogTile = () => {
 								<BlogTilePicture
 									srcset={urlFor(tile.imgUrl)}
 									image={urlFor(tile.imgUrl)}
-									alt={tile.altText}
+									altText={tile.altText}
 									styles={{ height: '330px' }}
 								/>
 								<BlogTagContainer>

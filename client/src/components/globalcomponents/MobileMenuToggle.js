@@ -3,7 +3,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { defaultColors } from '../../styles/globalstyles/colors.styles';
 
-const gray = defaultColors.root.grayColor;
 const blue = defaultColors.gradient.blue;
 const darkBlue = defaultColors.gradient.darkBlue;
 const purple = defaultColors.gradient.purple;

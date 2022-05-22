@@ -135,7 +135,11 @@ const PortfolioTile = () => {
 											(overlayAppText ? 'See The App' : '')}
 									</OverlayHelpText>
 								)}
-								<Link to={`/portfolio/:${tile.routeID}`} rel="noreferrer">
+								<Link
+									to={`/portfolio/:${tile.routeID}`}
+									rel="noreferrer"
+									aria-label="more info"
+								>
 									<PortfolioOverlayLinkDiv
 										whileHover={{ scale: [1, 0.9] }}
 										transition={{ duration: 0.25 }}
@@ -152,6 +156,7 @@ const PortfolioTile = () => {
 										to={`/countdown/:${tile.routeID}`}
 										state={{ appTitle: tile.routeID }}
 										rel="noreferrer"
+										aria-label="see the app"
 									>
 										<PortfolioOverlayLinkDiv
 											whileHover={{ scale: [1, 0.9] }}
@@ -169,6 +174,7 @@ const PortfolioTile = () => {
 										href={tile.projectLink}
 										target="_blank"
 										rel="noreferrer"
+										aria-label="see the app"
 									>
 										<PortfolioOverlayLinkDiv
 											whileHover={{ scale: [1, 0.9] }}

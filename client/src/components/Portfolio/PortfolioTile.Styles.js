@@ -170,7 +170,7 @@ export const ApplicationInfoTag = styled.div`
 	}
 `;
 
-export const OverlayHelpText = styled.h3`
+export const OverlayHelpText = styled.h2`
 	line-height: 1.5;
 	margin-top: 1rem;
 	background-color: rgba(0, 0, 0, 0.5);

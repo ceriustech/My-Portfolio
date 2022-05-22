@@ -5,7 +5,7 @@ export const defaultColors = {
 		secondaryColor: '#313bac',
 		blackColor: '#030303',
 		lightGrayColor: '#e4e4e4',
-		grayColor: '#6b7688',
+		grayColor: '#505865',
 		brownColor: '#46364a',
 		whiteColor: '#ffffff',
 		purpleColor: '#553A9B',

@@ -1,17 +1,8 @@
 import styled from 'styled-components';
 import { defaultColors } from '../../styles/globalstyles/colors.styles';
-import { motion } from 'framer-motion';
-import {
-	maxView,
-	minView,
-	miscMinView,
-} from '../../styles/globalstyles/mediaQueries.styles';
+import { minView } from '../../styles/globalstyles/mediaQueries.styles';
 
-const miscLarge = miscMinView?.miscLarge;
 const dtMediumMin = minView?.desktopM;
-const laptopMin = minView?.laptop;
-const laptopMax = maxView?.laptop;
-const mobileLargeMax = maxView?.mobileL;
 
 const white = defaultColors?.root.whiteColor;
 const darkBlue = defaultColors?.gradient.darkBlue;

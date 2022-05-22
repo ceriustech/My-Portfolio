@@ -91,7 +91,7 @@ export const BlogTagContainer = styled.div`
 	left: 1em;
 `;
 
-export const BlogTag = styled.h3`
+export const BlogTag = styled.h2`
 	color: #fff;
 	font-size: 1rem;
 	letter-spacing: 1px;

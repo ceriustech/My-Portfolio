@@ -15,7 +15,6 @@ const laptopMax = maxView?.laptop;
 const mobileLargeMax = maxView?.mobileL;
 const mobileSmallMax = maxView?.mobileS;
 
-const white = defaultColors.root.whiteColor;
 const blue = defaultColors.gradient.blue;
 const darkBlue = defaultColors.gradient.darkBlue;
 const purple = defaultColors.gradient.purple;
