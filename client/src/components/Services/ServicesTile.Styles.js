@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { defaultColors } from '../../styles/globalstyles/colors.styles';
-import { motion } from 'framer-motion';
 import { maxView } from '../../styles/globalstyles/mediaQueries.styles';
 
 const laptopMax = maxView?.laptop;
@@ -10,7 +9,7 @@ const white = defaultColors?.root.whiteColor;
 const primary = defaultColors?.root.primary;
 const gray = defaultColors?.root.grayColor;
 
-export const ServicesTileContainer = styled(motion.div)`
+export const ServicesTileContainer = styled.div`
 	background-color: ${primary};
 	border-bottom: 3px solid ${(props) => props.bordercolor};
 	border-radius: 0.5rem;

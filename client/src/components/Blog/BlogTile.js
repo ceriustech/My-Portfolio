@@ -57,6 +57,7 @@ const BlogTile = () => {
 									<BlogCountdownLink
 										to={`/countdown/:${routeID.Lifengineered}`}
 										state={{ previousPath: routeID.Lifengineered }}
+										rel="noreferrer"
 									>
 										Take a look
 									</BlogCountdownLink>

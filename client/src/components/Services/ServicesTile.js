@@ -22,12 +22,7 @@ const ServicesTile = () => {
 	return (
 		<>
 			{services.map((item, index) => (
-				<ServicesTileContainer
-					whileInView={{ opacity: 1 }}
-					transition={{ duration: 0.5, type: 'tween' }}
-					bordercolor={`#${item?.color}`}
-					key={index}
-				>
+				<ServicesTileContainer bordercolor={`#${item?.color}`} key={index}>
 					<img src={urlFor(item?.imgUrl)} alt={item.altText} />
 					<h2 color={item?.color}>{item?.title}</h2>
 					<p>{item?.description}</p>

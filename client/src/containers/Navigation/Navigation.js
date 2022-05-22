@@ -1,5 +1,6 @@
 import React from 'react';
 import Picture from '../../components/utility/Picture';
+import { Link } from 'react-router-dom';
 import {
 	NavigationHeader,
 	NavigationContainer,
@@ -27,17 +28,19 @@ const Navigation = () => {
 		<>
 			<NavigationHeader role="navigation" aria-label="Main">
 				<NavigationContainer>
-					<Picture
-						srcset={images.logo}
-						maxView={maxView.mobileL}
-						minView={minView.desktopM}
-						image={images.logo}
-						altText="logo"
-						displayFlexValue={'flex'}
-						justifyContentValue={'flex-start'}
-						alignItemValue={'center'}
-						widthValue={'70px'}
-					/>
+					<Link to="/" rel="noreferrer">
+						<Picture
+							srcset={images.logo}
+							maxView={maxView.mobileL}
+							minView={minView.desktopM}
+							image={images.logo}
+							altText="logo"
+							displayFlexValue={'flex'}
+							justifyContentValue={'flex-start'}
+							alignItemValue={'center'}
+							widthValue={'70px'}
+						/>
+					</Link>
 					{windowSize.width > viewportWidth && (
 						<NavItems>
 							{navigationItem.map((item) => (
