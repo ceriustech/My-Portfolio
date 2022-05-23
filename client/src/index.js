@@ -9,7 +9,9 @@ import ScollToTop from './components/utility/ScrollToTop';
 ReactDOM.render(
 	<React.StrictMode>
 		<Router>
-			<App />
+			<ScollToTop>
+				<App />
+			</ScollToTop>
 		</Router>
 	</React.StrictMode>,
 	document.getElementById('root')
