@@ -19,8 +19,6 @@ const SkillsBadge = () => {
 		});
 	}, []);
 
-	console.log(skills.sort((a, b) => a.id - b.id));
-
 	const skillsSorted = skills.sort((a, b) => a.id - b.id);
 
 	return (
