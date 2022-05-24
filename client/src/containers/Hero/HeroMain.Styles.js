@@ -80,7 +80,7 @@ export const Title = styled.h1`
 		}
 
 		@media screen and ${miscLarge} {
-			line-height: 5rem;
+			line-height: 6rem;
 		}
 
 		@media screen and ${laptopMax} {
