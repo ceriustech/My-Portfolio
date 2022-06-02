@@ -169,7 +169,7 @@ export const BlogLink = styled.a`
 	right: 20px;
 	transition: all 0.3s ease;
 
-	&:hover {
+	&: {
 		background: ${white};
 		color: ${mediumPurple};
 	}
