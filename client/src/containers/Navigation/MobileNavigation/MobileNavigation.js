@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import MobileMenuToggle from '../../../components/globalcomponents/MobileMenuToggle.js';
 import {

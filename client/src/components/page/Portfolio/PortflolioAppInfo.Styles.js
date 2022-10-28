@@ -37,7 +37,7 @@ export const BackToHomeLink = styled(Link)`
 	cursor: pointer;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 	border-radius: 0.25rem;
-	max-width: 200px;
+	max-width: 152px;
 
 	&:hover {
 		background: ${blue};
@@ -59,6 +59,8 @@ export const AppInfoContainer = styled.div`
 `;
 
 export const AppImageContainer = styled.div`
+	height: 100%;
+
 	img {
 		width: 100%;
 		display: block;
@@ -71,7 +73,9 @@ export const AppImageContainer = styled.div`
 	}
 `;
 
-export const StyledPicture = styled(Picture)``;
+export const StyledPicture = styled(Picture)`
+	height: 100%;
+`;
 
 export const AppContentContainer = styled.div`
 	align-self: self-start;
