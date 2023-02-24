@@ -73,9 +73,7 @@ export const AppImageContainer = styled.div`
 	}
 `;
 
-export const StyledPicture = styled(Picture)`
-	height: 100%;
-`;
+export const StyledPicture = styled(Picture)``;
 
 export const AppContentContainer = styled.div`
 	align-self: self-start;

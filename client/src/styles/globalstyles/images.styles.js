@@ -22,5 +22,12 @@ export const Source = styled.source`
 `;
 
 export const Image = styled.img`
-	width: 100%;
+	${(props) => {
+		const height = props.styles?.heightValue;
+
+		return css`
+			width: 100%;
+			height: ${height};
+		`;
+	}}
 `;

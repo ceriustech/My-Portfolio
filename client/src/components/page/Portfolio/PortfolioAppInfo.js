@@ -14,6 +14,7 @@ import {
 	TechListHeader,
 	TechListText,
 } from './PortflolioAppInfo.Styles';
+import Picture from '../../utility/Picture';
 import { urlFor, client } from '../../../client';
 import { useParams, useLocation } from 'react-router-dom';
 import { maxView } from '../../../styles/globalstyles/mediaQueries.styles';
@@ -51,11 +52,12 @@ const PortfolioAppInfo = () => {
 				{appData.map((item, index) => (
 					<React.Fragment key={index}>
 						<AppImageContainer>
-							<StyledPicture
+							<Picture
 								image={urlFor(item.imgUrl)}
 								srcset={urlFor(item.imgUrl)}
 								maxView={maxViewPort}
 								altText={item.altText}
+								heightValue="100%"
 							/>
 						</AppImageContainer>
 						<AppContentContainer>

@@ -35,8 +35,14 @@ const PortfolioTile = () => {
 		const query = `*[_type == "portfolio" && !(_id in path("drafts.**"))]`;
 
 		client.fetch(query).then((data) => {
-			setPortfolioTile(data);
-			setFilterPortfolio(data);
+			const sortedData = data.sort((a, b) => {
+				const aDate = new Date(a.releaseDate);
+				const bDate = new Date(b.releaseDate);
+				return aDate - bDate;
+			});
+
+			setPortfolioTile(sortedData);
+			setFilterPortfolio(sortedData);
 		});
 	}, []);
 
