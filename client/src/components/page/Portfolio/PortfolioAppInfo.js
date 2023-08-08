@@ -4,7 +4,6 @@ import {
 	BackToHomeLink,
 	AppInfoContainer,
 	AppImageContainer,
-	StyledPicture,
 	AppContentContainer,
 	AppContentHeader,
 	AppContentDescText,

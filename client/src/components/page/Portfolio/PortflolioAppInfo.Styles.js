@@ -37,7 +37,7 @@ export const BackToHomeLink = styled(Link)`
 	cursor: pointer;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 	border-radius: 0.25rem;
-	max-width: 152px;
+	max-width: 154px;
 
 	&:hover {
 		background: ${blue};
@@ -137,6 +137,7 @@ export const TechListContainer = styled.div`
 	ul {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(108px, 135px));
+		gap: 10px;
 	}
 `;
 
@@ -153,5 +154,4 @@ export const TechListText = styled.li`
 	margin-top: 10px;
 	text-align: center;
 	font-size: 1.15rem;
-	width: 108px;
 `;
