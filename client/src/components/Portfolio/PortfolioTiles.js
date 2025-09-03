@@ -92,24 +92,17 @@ const PortfolioTile = () => {
 	return (
 		<React.Fragment>
 			<PortfolioButtonFilterContainer>
-				{[
-					'All',
-					'Frontend',
-					'Fullstack',
-					'Web3',
-					'React JS',
-					'Next JS',
-					'Node',
-					'Go',
-				].map((item, index) => (
-					<PortfolioButton
-						key={index}
-						className={activeFilter === item ? 'item-active' : ''}
-						onClick={() => handlePortfoliofilter(item)}
-					>
-						{item}
-					</PortfolioButton>
-				))}
+				{['All', 'Frontend', 'Fullstack', 'React JS', 'Next JS', 'Node'].map(
+					(item, index) => (
+						<PortfolioButton
+							key={index}
+							className={activeFilter === item ? 'item-active' : ''}
+							onClick={() => handlePortfoliofilter(item)}
+						>
+							{item}
+						</PortfolioButton>
+					)
+				)}
 			</PortfolioButtonFilterContainer>
 			{/* <PortfolioButtonFilter
 				handleFilter={handlePortfoliofilter(item)}
