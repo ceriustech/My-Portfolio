@@ -1,4 +1,3 @@
-import React from 'react';
 import Picture from '../../components/utility/Picture';
 import { Link } from 'react-router-dom';
 import {
@@ -9,7 +8,7 @@ import {
 import { navigationItem } from '../../constants/navigation.data';
 import NavigationItems from '../../components/Navigation/NavigationItems';
 import MobileNavigation from './MobileNavigation/MobileNavigation';
-import { images } from '../../constants/Images';
+import images from '../../constants/Images';
 import {
 	size,
 	maxView,

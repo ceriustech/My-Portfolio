@@ -1,4 +1,3 @@
-import React from 'react';
 import {
 	HeroContainer,
 	HeroContainerInnerWrapper,
@@ -15,7 +14,7 @@ import {
 	HeroCircleContainer,
 } from './HeroVariantImages.Styles';
 import HeroBadge from '../../components/Hero/HeroBadge';
-import { images } from '../../constants/Images';
+import images from '../../constants/Images';
 
 const Hero = () => {
 	const scaleVariants = {

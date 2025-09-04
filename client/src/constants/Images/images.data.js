@@ -39,7 +39,7 @@ import mobileWeb from '../../assets/mobile-web-development.svg';
 import frontendWeb from '../../assets/frontend-development.png';
 import accessiblity from '../../assets/accessiblity.svg';
 
-export default {
+const images = {
 	email,
 	mobile,
 	api,
@@ -79,3 +79,5 @@ export default {
 	frontendWeb,
 	accessiblity,
 };
+
+export default images;

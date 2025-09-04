@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { images } from '../../constants/Images';
+import  images  from '../../constants/Images';
 import { maxView, minView } from '../../styles/globalstyles/mediaQueries.styles';
 
 const dtMediumMin = minView?.desktopM;

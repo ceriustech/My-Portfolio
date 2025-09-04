@@ -68,11 +68,11 @@ const PortfolioAppInfo = () => {
 							</AppContentDescText>
 							<AppContentDescText>
 								<span>Released :</span>
-								{item.released === true ? 'Yes' : 'No'}
+								{item.released ? 'Yes' : 'No'}
 							</AppContentDescText>
 							<AppContentDescText>
 								<span>See The Site:</span>
-								{item.projectLink == undefined ? (
+								{!item.projectLink ? (
 									<StyledLink
 										to={`/countdown/:${urlID}`}
 										state={{ previousPath: pathname }}

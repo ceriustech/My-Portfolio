@@ -1,1 +1,3 @@
-export { default as images } from './images.data';
+import images from './images.data';
+
+export default images;

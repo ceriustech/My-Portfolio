@@ -67,7 +67,7 @@ const CountdownClock = () => {
 		setTimeout(() => {
 			setTimeLeft(calculateTimeLeft());
 		}, 1000);
-	}, [timeLeft]);
+	});
 
 	return (
 		<CountdownClockContainer>
