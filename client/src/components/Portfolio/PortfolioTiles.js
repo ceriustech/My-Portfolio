@@ -30,6 +30,14 @@ const PortfolioTile = () => {
 	const [overlayAppText, setOverlayAppText] = useState(false);
 
 	const maxViewPort = maxView?.desktopM;
+	const buttons = [
+		'All',
+		'Frontend',
+		'Fullstack',
+		'React JS',
+		'Next JS',
+		'Node',
+	];
 
 	useEffect(() => {
 		const query = `*[_type == "portfolio" && !(_id in path("drafts.**"))]`;
@@ -92,17 +100,15 @@ const PortfolioTile = () => {
 	return (
 		<React.Fragment>
 			<PortfolioButtonFilterContainer>
-				{['All', 'Frontend', 'Fullstack', 'React JS', 'Next JS', 'Node'].map(
-					(item, index) => (
-						<PortfolioButton
-							key={index}
-							className={activeFilter === item ? 'item-active' : ''}
-							onClick={() => handlePortfoliofilter(item)}
-						>
-							{item}
-						</PortfolioButton>
-					)
-				)}
+				{buttons.map((item, index) => (
+					<PortfolioButton
+						key={index}
+						className={activeFilter === item ? 'item-active' : ''}
+						onClick={() => handlePortfoliofilter(item)}
+					>
+						{item}
+					</PortfolioButton>
+				))}
 			</PortfolioButtonFilterContainer>
 			{/* <PortfolioButtonFilter
 				handleFilter={handlePortfoliofilter(item)}
