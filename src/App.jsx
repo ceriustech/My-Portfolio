@@ -1,10 +1,10 @@
+import HeroSection from './page_sections/hero_section';
+
 const App = () => {
 	return (
-		<main>
-			<div>
-				<h1>My portfolio</h1>
-			</div>
-		</main>
+		<>
+			<HeroSection />
+		</>
 	);
 };
 
