@@ -1,5 +1,6 @@
 import Button from '../../components/button';
 import HeroExperience from '../../components/models/hero_experience';
+import AnimatedCounter from '../../components/animated_counter';
 
 import { HERO_TEXT_TITLE_WORDS } from '../../constants';
 
@@ -60,6 +61,7 @@ const HeroSection = () => {
 					</div>
 				</figure>
 			</div>
+			<AnimatedCounter />
 		</section>
 	);
 };

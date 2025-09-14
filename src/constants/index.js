@@ -49,10 +49,10 @@ const NAVIGATION_LINKS = [
 ];
 
 const COUNTER_ITEMS = [
-	{ value: 15, suffix: '+', label: 'Years of Experience' },
-	{ value: 200, suffix: '+', label: 'Satisfied Clients' },
-	{ value: 108, suffix: '+', label: 'Completed Projects' },
-	{ value: 90, suffix: '%', label: 'Client Retention Rate' },
+	{ value: 7, suffix: '+', label: 'Years of Experience' },
+	{ value: 4, suffix: '+', label: 'Companies' },
+	{ value: 60, suffix: '%', label: 'Avg. Performance Increase' },
+	{ value: 80, suffix: '%', label: 'Avg. Increase In Code Quality' },
 ];
 
 const LOGO_ICONS = [
