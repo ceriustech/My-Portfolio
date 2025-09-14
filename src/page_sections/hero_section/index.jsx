@@ -1,4 +1,5 @@
 import Button from '../../components/button';
+import HeroExperience from '../../components/models/hero_experience';
 
 import { HERO_TEXT_TITLE_WORDS } from '../../constants';
 
@@ -53,6 +54,11 @@ const HeroSection = () => {
 					</div>
 				</header>
 				{/* RIGHT: 3D Model or Visual */}
+				<figure>
+					<div className="hero-3d-layout">
+						<HeroExperience />
+					</div>
+				</figure>
 			</div>
 		</section>
 	);

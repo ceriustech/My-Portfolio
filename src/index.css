@@ -363,50 +363,30 @@ section {
 } */
 
 @keyframes wordSlider {
-	/* Forward journey: 0→6 (takes 95% of animation time) */
+	/* Forward journey: 0→6 (takes 96.5% of animation time) */
 	0% {
 		transform: translateY(0%); /* Planning */
 	}
-	13.57% {
+	13.79% {
 		transform: translateY(-14.29%); /* Analysis */
 	}
-	27.14% {
+	27.57% {
 		transform: translateY(-28.57%); /* Design */
 	}
-	40.71% {
+	41.36% {
 		transform: translateY(-42.86%); /* Implementation */
 	}
-	54.29% {
+	55.14% {
 		transform: translateY(-57.14%); /* Testing */
 	}
-	67.86% {
+	68.93% {
 		transform: translateY(-71.43%); /* Integration */
 	}
-	81.43% {
+	82.71% {
 		transform: translateY(-85.71%); /* Software */
 	}
-	95% {
+	96.5% {
 		transform: translateY(-85.71%); /* Hold on Software */
-	}
-
-	/* Return journey: 6→0 (compressed into final 5%) */
-	95.83% {
-		transform: translateY(-71.43%); /* Integration */
-	}
-	96.67% {
-		transform: translateY(-57.14%); /* Testing */
-	}
-	97.5% {
-		transform: translateY(-42.86%); /* Implementation */
-	}
-	98.33% {
-		transform: translateY(-28.57%); /* Design */
-	}
-	99.17% {
-		transform: translateY(-14.29%); /* Analysis */
-	}
-	100% {
-		transform: translateY(0%); /* Planning */
 	}
 }
 
