@@ -11,7 +11,7 @@ const HeroExperience = () => {
 	const isMobile = useMediaQuery({ query: QUERIES.isMobileOnly });
 
 	return (
-		<Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+		<Canvas camera={{ position: [0, 0, 12], fov: 45 }}>
 			<OrbitControls
 				enablePan={false} // Prevents panning of the scene
 				enableZoom={!isTablet} // Disables zoom on tablets
