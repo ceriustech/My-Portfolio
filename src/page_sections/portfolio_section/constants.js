@@ -2,9 +2,10 @@
 export const PROJECT_CARDS = [
 	{
 		id: 'ryde',
+		title: 'ChatExt',
 		description:
-			'On-Demand Rides Made Simple with a Powerful, User-Friendly App called Ryde',
-		image: '/images/project1.png',
+			'A chrome extension that enables files to be uploaded into ChatGPT',
+		image: '/images/chatext-cover.png',
 		alt: 'Ryde App Interface',
 		backgroundColor: null, // Featured projects might not need background colors
 		className: 'featured-project-wrapper',
@@ -12,7 +13,7 @@ export const PROJECT_CARDS = [
 	{
 		id: 'library',
 		title: 'Library Management Platform with Advanced Search',
-		image: '/images/project2.png',
+		image: '/images/qrgen.png',
 		alt: 'Library Management Platform',
 		backgroundColor: '#FFEFDB',
 		className: 'project-list-wrapper',
@@ -25,6 +26,59 @@ export const PROJECT_CARDS = [
 		backgroundColor: '#FFE7EB',
 		className: 'project-list-wrapper',
 	},
-
+	{
+		id: 'yc-directory',
+		title: 'YC Directory App for Startup Discovery',
+		image:
+			'https://images.unsplash.com/photo-1493770348161-369560ae357d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxmb29kfGVufDB8MHx8fDE3MjEwNDI2MTR8MA&ixlib=rb-4.0.3&q=80&w=1080',
+		alt: 'YC Directory App',
+		backgroundColor: '#FFE7EB',
+		className: 'project-list-wrapper',
+	},
+	{
+		id: 'yc-directory',
+		title: 'YC Directory App for Startup Discovery',
+		image:
+			'https://images.unsplash.com/photo-1493770348161-369560ae357d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxmb29kfGVufDB8MHx8fDE3MjEwNDI2MTR8MA&ixlib=rb-4.0.3&q=80&w=1080',
+		alt: 'YC Directory App',
+		backgroundColor: '#FFE7EB',
+		className: 'project-list-wrapper',
+	},
+	{
+		id: 'yc-directory',
+		title: 'YC Directory App for Startup Discovery',
+		image:
+			'https://images.unsplash.com/photo-1493770348161-369560ae357d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxmb29kfGVufDB8MHx8fDE3MjEwNDI2MTR8MA&ixlib=rb-4.0.3&q=80&w=1080',
+		alt: 'YC Directory App',
+		backgroundColor: '#FFE7EB',
+		className: 'project-list-wrapper',
+	},
+	{
+		id: 'yc-directory',
+		title: 'YC Directory App for Startup Discovery',
+		image:
+			'https://images.unsplash.com/photo-1493770348161-369560ae357d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxmb29kfGVufDB8MHx8fDE3MjEwNDI2MTR8MA&ixlib=rb-4.0.3&q=80&w=1080',
+		alt: 'YC Directory App',
+		backgroundColor: '#FFE7EB',
+		className: 'project-list-wrapper',
+	},
+	{
+		id: 'yc-directory',
+		title: 'YC Directory App for Startup Discovery',
+		image:
+			'https://images.unsplash.com/photo-1493770348161-369560ae357d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxmb29kfGVufDB8MHx8fDE3MjEwNDI2MTR8MA&ixlib=rb-4.0.3&q=80&w=1080',
+		alt: 'YC Directory App',
+		backgroundColor: '#FFE7EB',
+		className: 'project-list-wrapper',
+	},
+	{
+		id: 'yc-directory',
+		title: 'YC Directory App for Startup Discovery',
+		image:
+			'https://images.unsplash.com/photo-1493770348161-369560ae357d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxmb29kfGVufDB8MHx8fDE3MjEwNDI2MTR8MA&ixlib=rb-4.0.3&q=80&w=1080',
+		alt: 'YC Directory App',
+		backgroundColor: '#FFE7EB',
+		className: 'project-list-wrapper',
+	},
 	// Add more projects easily
 ];
