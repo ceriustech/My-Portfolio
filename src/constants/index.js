@@ -42,10 +42,6 @@ const NAVIGATION_LINKS = [
 		name: 'Skills',
 		link: '#skills',
 	},
-	{
-		name: 'Testimonials',
-		link: '#testimonials',
-	},
 ];
 
 const COUNTER_ITEMS = [

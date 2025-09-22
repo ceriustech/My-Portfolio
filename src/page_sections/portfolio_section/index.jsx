@@ -42,7 +42,7 @@ const PortfolioSection = () => {
 	}, []);
 
 	return (
-		<section className="app-showcase">
+		<section id="work" className="app-showcase">
 			<div className="w-full">
 				<h1 className="text-4xl font-bold text-center mb-8">App Showcase</h1>
 				<div className="showcaselayout">
