@@ -14,11 +14,7 @@ const PortfolioSection = () => {
 
 	useGSAP(() => {
 		// Animation for the main section
-		gsap.fromTo(
-			sectionRef.current,
-			{ opacity: 0 },
-			{ opacity: 1, duration: 1.5 }
-		);
+		gsap.set(sectionRef.current, { opacity: 1 });
 
 		cardRefs.current.forEach((card, index) => {
 			gsap.fromTo(
@@ -30,8 +26,8 @@ const PortfolioSection = () => {
 				{
 					y: 0,
 					opacity: 1,
-					duration: 1,
-					delay: 0.3 * (index + 1),
+					duration: 2,
+					delay: 0.1 * index,
 					scrollTrigger: {
 						trigger: card,
 						start: 'top bottom-=100',

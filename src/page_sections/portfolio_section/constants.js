@@ -24,8 +24,7 @@ export const PROJECT_CARDS = [
 	{
 		id: 'apply-wiser',
 		title: 'ApplyWiser',
-		description:
-			'A platform that uses AI to auto modify resumes to fit job descriptions',
+		description: 'A platform that uses AI to auto modify resumes',
 		image: '/images/apply-wiser-logo.png',
 		alt: 'YC Directory App',
 		backgroundColor: '#FFE7EB',
