@@ -2,8 +2,9 @@ import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import ProjectCard from './components/project_card';
 
+import ProjectCard from './components/project_card';
+import TitleHeader from '../../components/title_header';
 import { PROJECT_CARDS } from './constants';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -40,7 +41,7 @@ const PortfolioSection = () => {
 	return (
 		<section id="work" className="app-showcase">
 			<div className="w-full">
-				<h1 className="text-4xl font-bold text-center mb-8">App Showcase</h1>
+				<TitleHeader title="💼 App Showcase" />
 				<div className="showcaselayout">
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[260px]">
 						{PROJECT_CARDS.map((project, index) => (
