@@ -53,37 +53,40 @@ const COUNTER_ITEMS = [
 
 const LOGO_ICONS = [
 	{
-		imgPath: '/images/logos/company-logo-1.png',
+		imgPath: '/images/logos/charity-pixel-logo.png',
+		name: 'charity pixel',
 	},
 	{
-		imgPath: '/images/logos/company-logo-2.png',
+		imgPath: '/images/logos/polilense-logo-3.png',
+		name: 'polilense',
 	},
 	{
-		imgPath: '/images/logos/company-logo-3.png',
+		imgPath: '/images/logos/webb-globe-logo-2.png',
+		name: 'webb globe',
 	},
 	{
-		imgPath: '/images/logos/company-logo-4.png',
+		imgPath: '/images/logos/datamind-logo-2.png',
+		name: 'datamind',
 	},
 	{
-		imgPath: '/images/logos/company-logo-5.png',
+		imgPath: '/images/logos/grantme-logo-2.png',
+		name: 'grant me',
 	},
 	{
-		imgPath: '/images/logos/company-logo-6.png',
+		imgPath: '/images/logos/honyst-logo-3.png',
+		name: 'honyst',
 	},
 	{
-		imgPath: '/images/logos/company-logo-7.png',
+		imgPath: '/images/logos/simple-ui-logo-3.png',
+		name: 'simple ui',
 	},
 	{
-		imgPath: '/images/logos/company-logo-8.png',
+		imgPath: '/images/logos/apply-wiser-logo-2.png',
+		name: 'apply wiser',
 	},
 	{
-		imgPath: '/images/logos/company-logo-9.png',
-	},
-	{
-		imgPath: '/images/logos/company-logo-10.png',
-	},
-	{
-		imgPath: '/images/logos/company-logo-11.png',
+		imgPath: '/images/logos/signalvu-logo-2.png',
+		name: 'signalvu',
 	},
 ];
 

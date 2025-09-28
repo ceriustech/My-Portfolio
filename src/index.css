@@ -5,6 +5,10 @@
 	--gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
 }
 
+html {
+	scroll-padding-top: 80px;
+}
+
 html,
 body {
 	width: 100dvw;
@@ -48,7 +52,7 @@ section {
 	}
 
 	.section-padding {
-		@apply px-5 md:px-10 md:mt-40 mt-20;
+		@apply px-5 md:py-5 md:px-10 md:mt-40 mt-20;
 	}
 
 	.mt-responsive {
@@ -155,7 +159,7 @@ section {
 	}
 
 	.app-showcase {
-		@apply w-full px-5 md:px-20 py-10 md:py-20 items-center justify-center;
+		@apply w-full px-5 md:px-20 py-10 md:py-10 items-center justify-center;
 
 		h3 {
 			@apply text-xl font-bold text-white;
@@ -211,7 +215,7 @@ section {
 	}
 
 	.marquee-item {
-		@apply md:w-40 w-32;
+		@apply md:w-60 w-32;
 	}
 
 	.timeline-wrapper {

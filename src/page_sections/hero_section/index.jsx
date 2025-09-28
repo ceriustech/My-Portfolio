@@ -53,13 +53,13 @@ const HeroSection = () => {
 							text="See my work"
 						/>
 					</div>
+					{/* RIGHT: 3D Model or Visual */}
+					<figure>
+						<div className="hero-3d-layout">
+							<HeroExperience />
+						</div>
+					</figure>
 				</header>
-				{/* RIGHT: 3D Model or Visual */}
-				<figure>
-					<div className="hero-3d-layout">
-						<HeroExperience />
-					</div>
-				</figure>
 			</div>
 			<AnimatedCounter />
 		</section>

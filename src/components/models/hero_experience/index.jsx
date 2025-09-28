@@ -2,6 +2,7 @@ import Room from '../room';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import HeroLights from '../hero_lights';
+import { Suspense } from 'react';
 
 import { useMediaQuery } from '../../../hooks/media_queries/utils';
 import { QUERIES } from '../../../hooks/media_queries/constants';
@@ -20,14 +21,16 @@ const HeroExperience = () => {
 				minPolarAngle={Math.PI / 5} // Minimum angle for vertical rotation
 				maxPolarAngle={Math.PI / 2} // Maximum angle for vertical rotation
 			/>
-			<HeroLights />
-			<group
-				scale={isMobile ? 0.7 : 1}
-				position={[0, -3.5, 0]}
-				rotation={[0, -Math.PI / 4, 0]}
-			>
-				<Room />
-			</group>
+			<Suspense fallback={null}>
+				<HeroLights />
+				<group
+					scale={isMobile ? 0.7 : 1}
+					position={[0, -3.5, 0]}
+					rotation={[0, -Math.PI / 4, 0]}
+				>
+					<Room />
+				</group>
+			</Suspense>
 		</Canvas>
 	);
 };
