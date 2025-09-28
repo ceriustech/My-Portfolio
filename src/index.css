@@ -255,7 +255,7 @@ section {
 	}
 
 	.tech-icon-wrapper {
-		@apply flex justify-center items-center w-52 h-60 relative;
+		@apply rounded-full flex justify-center items-center h-[150px] mb-[15px] w-[150px];
 	}
 
 	form {

@@ -8,7 +8,7 @@ const PortfolioSection = () => {
 	const cardRefs = useRef([]);
 
 	return (
-		<section id="work" className="app-showcase">
+		<section id="work" className="app-showcase section-padding">
 			<div className="w-full">
 				<TitleHeader title="💼 App Showcase" />
 				<div className="showcaselayout">

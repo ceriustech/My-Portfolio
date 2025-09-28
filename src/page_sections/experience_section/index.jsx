@@ -13,7 +13,7 @@ const ExperienceSection = () => {
 				<div className="mt-20 relative">
 					<div className="relative z-50 xl:space-y-32 space-y-10">
 						{EXPERIENCE_CARDS_DATA.map((card) => (
-							<div key={card.title} className="exp-card-wrapper">
+							<div key={card.id} className="exp-card-wrapper">
 								<div className="xl:w-2/6">
 									<GlowCard card={card}>
 										<div>

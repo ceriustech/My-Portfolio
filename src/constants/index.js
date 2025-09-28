@@ -133,39 +133,61 @@ const TECH_STACK_IMAGES = [
 
 const TECH_STACK_ICONS = [
 	{
-		name: 'React Developer',
-		modelPath: '/models/react_logo-transformed.glb',
-		scale: 1,
-		rotation: [0, 0, 0],
+		name: 'Javascript',
+		imgPath: '/images/logos/javascript-logo-480.png',
+		background: '#FDF7D1',
 	},
 	{
-		name: 'Python Developer',
-		modelPath: '/models/python-transformed.glb',
+		name: 'React',
+		imgPath: '/images/logos/react-logo-512.png',
 		scale: 0.8,
-		rotation: [0, 0, 0],
+		background: '#DDE8EE',
 	},
 	{
-		name: 'Backend Developer',
-		modelPath: '/models/node-transformed.glb',
-		scale: 5,
-		rotation: [0, -Math.PI / 2, 0],
+		name: 'Next Js',
+		imgPath: '/images/logos/nextjs-logo-480.png',
+		background: '#EAEAEA',
 	},
 	{
-		name: 'Interactive Developer',
-		modelPath: '/models/three.js-transformed.glb',
-		scale: 0.05,
-		rotation: [0, 0, 0],
+		name: 'Node Js',
+		imgPath: '/images/logos/nodejs-logo-512.png',
+		background: '#E7FDF3',
 	},
 	{
-		name: 'Project Manager',
-		modelPath: '/models/git-svg-transformed.glb',
-		scale: 0.05,
-		rotation: [0, -Math.PI / 4, 0],
+		name: 'Java',
+		imgPath: '/images/logos/java-logo-512.png',
+		background: '#ffead3',
+	},
+	{
+		name: 'GraphQl',
+		imgPath: '/images/logos/graphql-logo-480.png',
+		background: '#FCE8E3',
+	},
+	{
+		name: 'RestAPI',
+		imgPath: '/images/logos/rest-api-logo-512.png',
+		background: '#D9ECFF',
+	},
+	{
+		name: 'AWS',
+		imgPath: '/images/logos/aws-logo-480.png',
+		background: '#FFFFFF',
+	},
+	{
+		name: 'PostgresSQL',
+		imgPath: '/images/logos/postgres-logo-480.png',
+		background: '#D9ECFF',
+	},
+	{
+		name: 'TailwindCSS',
+		imgPath: '/images/logos/tailwind-css-logo-480.png',
+		background: '#FFFFFF',
 	},
 ];
 
 const EXPERIENCE_CARDS_DATA = [
 	{
+		id: 1,
 		companyName: 'NorthWestern Mutual',
 		review:
 			'Delivered full-stack wealth management tools using React/Kotlin/Java. Increased code stability, scalability, and reduced technical debt.',
@@ -180,6 +202,7 @@ const EXPERIENCE_CARDS_DATA = [
 		],
 	},
 	{
+		id: 2,
 		companyName: 'Northwestern Mutual (Apex Systems)',
 		review:
 			'Led UI/API development using Go, React, and AWS/Kubernetes. Boosted testing coverage from 0% to 80% and reduced downtime by 33%.',
@@ -194,6 +217,7 @@ const EXPERIENCE_CARDS_DATA = [
 		],
 	},
 	{
+		id: 3,
 		companyName: "Kohl's",
 		review:
 			'Drove a 20% conversion rate increase leading JavaScript A/B testing. Delivered key features while integrating APIs and ensuring SEO/accessibility.',
@@ -208,6 +232,7 @@ const EXPERIENCE_CARDS_DATA = [
 		],
 	},
 	{
+		id: 4,
 		companyName: 'MySureFit',
 		review:
 			'Optimized e-commerce APIs and built components for WordPress/Shopify. Mentored the team on Git-flow and resolved complex frontend issues.',
