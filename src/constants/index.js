@@ -42,6 +42,10 @@ const NAVIGATION_LINKS = [
 		name: 'Skills',
 		link: '#skills',
 	},
+	{
+		name: 'About',
+		link: '#about',
+	},
 ];
 
 const COUNTER_ITEMS = [
@@ -90,7 +94,7 @@ const LOGO_ICONS = [
 	},
 ];
 
-const abilities = [
+const ABOUT_SECTION_DATA = [
 	{
 		imgPath: '/images/seo.png',
 		title: 'Quality Focus',
@@ -104,7 +108,7 @@ const abilities = [
 	{
 		imgPath: '/images/time.png',
 		title: 'On-Time Delivery',
-		desc: 'Making sure projects are completed on schedule, with quality & attention to detail.',
+		desc: 'Making sure projects and tasks are completed on schedule, with quality & attention to detail.',
 	},
 ];
 
@@ -332,7 +336,7 @@ export {
 	NAVIGATION_LINKS,
 	COUNTER_ITEMS,
 	LOGO_ICONS,
-	abilities,
+	ABOUT_SECTION_DATA,
 	TECH_STACK_IMAGES,
 	TECH_STACK_ICONS,
 	EXPERIENCE_CARDS_DATA,
