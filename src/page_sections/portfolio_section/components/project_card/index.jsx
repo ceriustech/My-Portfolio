@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 
-const ProjectCard = forwardRef(({ project }, ref) => {
+const ProjectCard = forwardRef(({ project }) => {
 	const {
 		title,
 		description,
@@ -10,14 +10,13 @@ const ProjectCard = forwardRef(({ project }, ref) => {
 		url,
 	} = project;
 
-	const URL = url ? url : '';
 	const urlTarget = url.startsWith('http') ? '_blank' : undefined;
 	const noOpenRefer = url.startsWith('http')
 		? 'noopener noreferrer'
 		: undefined;
 
 	return (
-		<div ref={ref} className={`${projectClassName} group`}>
+		<div className={`${projectClassName} group`}>
 			<img src={image} alt={alt} />
 
 			<div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-75 transition-opacity duration-300">

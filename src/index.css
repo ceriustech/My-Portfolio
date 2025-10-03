@@ -169,7 +169,7 @@ section {
 			@apply w-full h-full object-cover;
 		}
 
-		.featured-project-wrapper {
+		/* .featured-project-wrapper {
 			@apply md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg;
 
 			img {
@@ -179,6 +179,20 @@ section {
 
 		.project-list-wrapper {
 			@apply relative overflow-hidden rounded-2xl shadow-lg;
+		} */
+
+		.featured-project-wrapper {
+			@apply md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg;
+			height: 260px;
+
+			@media (min-width: 768px) {
+				height: 536px; /* (260px * 2) + 16px gap */
+			}
+		}
+
+		.project-list-wrapper {
+			@apply relative overflow-hidden rounded-2xl shadow-lg;
+			height: 260px;
 		}
 	}
 
