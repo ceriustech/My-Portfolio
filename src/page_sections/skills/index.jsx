@@ -1,8 +1,13 @@
 import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Box, Points, PointMaterial } from '@react-three/drei';
-import { Html } from '@react-three/drei';
-import * as THREE from 'three';
+import {
+	Html,
+	OrbitControls,
+	Box,
+	Points,
+	PointMaterial,
+} from '@react-three/drei';
+import { NormalBlending } from 'three';
 
 import TitleHeader from '../../components/title_header';
 import { TECH_STACK_ICONS } from '../../constants';
@@ -99,7 +104,7 @@ const RotatingBoxWithHTML = ({ skills }) => {
 					transparent={true}
 					opacity={0.95}
 					depthWrite={false}
-					blending={THREE.NormalBlending}
+					blending={NormalBlending}
 				/>
 				{/* Lightened from #1a1a1a */}
 			</Box>

@@ -12,9 +12,9 @@ const App = () => {
 		<>
 			<NavBar />
 			<HeroSection />
-			<PortfolioSection />
-			<UpcomingAppsShowcase />
 			<ExperienceSection />
+			{/* <PortfolioSection /> */}
+			<UpcomingAppsShowcase />
 			<Skills />
 			<About />
 			<Footer />
