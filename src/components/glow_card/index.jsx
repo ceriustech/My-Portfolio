@@ -6,6 +6,7 @@ import { QUERIES } from '../../hooks/media_queries/constants';
 const GlowCard = ({ card, index, children }) => {
 	const isTablet = useMediaQuery({ query: QUERIES.isTablet });
 	const isMobile = useMediaQuery({ query: QUERIES.isMobileOnly });
+
 	const disableHandler = isTablet && isMobile;
 
 	// refs for all the cards
@@ -13,9 +14,6 @@ const GlowCard = ({ card, index, children }) => {
 
 	// when mouse moves over a card, rotate the glow effect
 	const handleMouseMove = (index) => (e) => {
-		if (disableHandler) {
-			console.log('disabled');
-		}
 		// get the current card
 		const card = cardRefs.current[index];
 		if (!card) return;
