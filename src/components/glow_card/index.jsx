@@ -6,14 +6,16 @@ import { QUERIES } from '../../hooks/media_queries/constants';
 const GlowCard = ({ card, index, children }) => {
 	const isTablet = useMediaQuery({ query: QUERIES.isTablet });
 	const isMobile = useMediaQuery({ query: QUERIES.isMobileOnly });
+	const disableHandler = isTablet && isMobile;
 
 	// refs for all the cards
 	const cardRefs = useRef([]);
 
 	// when mouse moves over a card, rotate the glow effect
 	const handleMouseMove = (index) => (e) => {
-		if (isMobile || isTablet) return;
-
+		if (disableHandler) {
+			console.log('disabled');
+		}
 		// get the current card
 		const card = cardRefs.current[index];
 		if (!card) return;
@@ -37,7 +39,7 @@ const GlowCard = ({ card, index, children }) => {
 	return (
 		<div
 			ref={(el) => (cardRefs.current[index] = el)}
-			onMouseMove={handleMouseMove(index)}
+			onMouseMove={disableHandler ? undefined : handleMouseMove(index)}
 			className="card card-border timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column"
 		>
 			<div className="glow"></div>
