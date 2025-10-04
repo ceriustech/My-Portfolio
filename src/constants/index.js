@@ -187,6 +187,21 @@ const TECH_STACK_ICONS = [
 		imgPath: '/images/logos/tailwind-css-logo-480.png',
 		background: '#FFFFFF',
 	},
+	{
+		name: 'HTML',
+		imgPath: '/images/logos/html-logo-480.png',
+		background: '#FFFFFF',
+	},
+	{
+		name: 'SASS',
+		imgPath: '/images/logos/sass-logo-512.png',
+		background: '#FFFFFF',
+	},
+	{
+		name: 'ThreeJs',
+		imgPath: '/images/logos/three-logo.png',
+		background: '#FFFFFF',
+	},
 ];
 
 const EXPERIENCE_CARDS_DATA = [
@@ -314,20 +329,9 @@ const testimonials = [
 
 const SOCIAL_MEDIA_ICONS = [
 	{
-		name: 'insta',
-		imgPath: '/images/insta.png',
-	},
-	{
-		name: 'fb',
-		imgPath: '/images/fb.png',
-	},
-	{
-		name: 'x',
-		imgPath: '/images/x.png',
-	},
-	{
 		name: 'linkedin',
 		imgPath: '/images/linkedin.png',
+		url: 'https://www.linkedin.com/in/bilalmasters/',
 	},
 ];
 
