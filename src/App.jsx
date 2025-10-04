@@ -13,9 +13,9 @@ const App = () => {
 			<NavBar />
 			<HeroSection />
 			<ExperienceSection />
-			{/* <PortfolioSection /> */}
+			<PortfolioSection />
 			<UpcomingAppsShowcase />
-			<Skills />
+			{/* <Skills /> */}
 			<About />
 			<Footer />
 		</>
