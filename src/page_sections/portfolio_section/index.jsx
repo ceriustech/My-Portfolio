@@ -7,7 +7,7 @@ const PortfolioSection = () => {
 		<section id="work" className="app-showcase section-padding">
 			<div className="w-full">
 				<TitleHeader title="💼 App Showcase" />
-				<div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[260px]">
+				<div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[260px]">
 					{PROJECT_CARDS.map((project) => (
 						<ProjectCard key={project.id} project={project} />
 					))}

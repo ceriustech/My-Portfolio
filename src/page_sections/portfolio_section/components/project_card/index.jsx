@@ -15,6 +15,29 @@ const ProjectCard = forwardRef(({ project }) => {
 		? 'noopener noreferrer'
 		: undefined;
 
+	const isMobile =
+		typeof window !== 'undefined' &&
+		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+			navigator.userAgent
+		);
+
+	if (isMobile) {
+		return (
+			<a
+				href={url}
+				target={urlTarget}
+				rel={noOpenRefer}
+				className={`${projectClassName} group block`}
+			>
+				<img src={image} alt={alt} />
+				<div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+					<h3>{title}</h3>
+					{description && <p className="text-sm">{description}</p>}
+				</div>
+			</a>
+		);
+	}
+
 	return (
 		<div className={`${projectClassName} group`}>
 			<img src={image} alt={alt} />
