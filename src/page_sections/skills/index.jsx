@@ -173,12 +173,12 @@ const Skills = () => {
 				<TitleHeader title="🤝 My skills" />
 
 				{/* 3D Box for larger screens, grid for mobile */}
-				<div className="w-full hover:cursor-grab">
+				<div className="hidden lg:block w-full hover:cursor-grab">
 					<SkillsBox3D skills={TECH_STACK_ICONS} />
 				</div>
 
 				{/* Your existing grid layout for mobile */}
-				{/* <div className="lg:hidden tech-grid">
+				<div className="lg:hidden tech-grid">
 					{TECH_STACK_ICONS.map((techStackIcon) => (
 						<div
 							key={techStackIcon.name}
@@ -203,7 +203,7 @@ const Skills = () => {
 							</div>
 						</div>
 					))}
-				</div> */}
+				</div>
 			</div>
 		</div>
 	);
