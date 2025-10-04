@@ -1,11 +1,19 @@
 import { useRef } from 'react';
 
+import { useMediaQuery } from '../../hooks/media_queries/utils';
+import { QUERIES } from '../../hooks/media_queries/constants';
+
 const GlowCard = ({ card, index, children }) => {
+	const isTablet = useMediaQuery({ query: QUERIES.isTablet });
+	const isMobile = useMediaQuery({ query: QUERIES.isMobileOnly });
+
 	// refs for all the cards
 	const cardRefs = useRef([]);
 
 	// when mouse moves over a card, rotate the glow effect
 	const handleMouseMove = (index) => (e) => {
+		if (isMobile || isTablet) return;
+
 		// get the current card
 		const card = cardRefs.current[index];
 		if (!card) return;
