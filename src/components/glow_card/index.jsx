@@ -33,12 +33,17 @@ const GlowCard = ({ card, index, children }) => {
 		card.style.setProperty('--start', angle + 60);
 	};
 
+	const cardClass =
+		isMobile || isTablet
+			? 'card-border timeline-card rounded-xl p-10 mb-5'
+			: 'card card-border timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column';
+
 	// return the card component with the mouse move event
 	return (
 		<div
 			ref={(el) => (cardRefs.current[index] = el)}
 			onMouseMove={disableHandler ? undefined : handleMouseMove(index)}
-			className="card card-border timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column"
+			className={cardClass}
 		>
 			<div className="glow"></div>
 			<div className="flex items-center gap-1 mb-5">{card.companyName}</div>
