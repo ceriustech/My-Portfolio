@@ -189,13 +189,7 @@ const Skills = () => {
 									className="tech-icon-wrapper"
 									style={{ backgroundColor: techStackIcon.background }}
 								>
-									<div>
-										<img
-											className="max-w-25"
-											src={techStackIcon.imgPath}
-											alt={techStackIcon.name}
-										/>
-									</div>
+									<img src={techStackIcon.imgPath} alt={techStackIcon.name} />
 								</div>
 								<div className="padding-x w-full">
 									<p>{techStackIcon.name}</p>

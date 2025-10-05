@@ -4,10 +4,7 @@ import { EXPERIENCE_CARDS_DATA } from '../../constants';
 
 const ExperienceSection = () => {
 	return (
-		<section
-			id="experience"
-			className="flex-center md:mt-10 mt-50 section-padding xl:px-0"
-		>
+		<section id="experience" className="flex-center section-padding xl:px-0">
 			<div className="w-full h-full md:px-20 px-5">
 				<TitleHeader title="💼 My Career Overview" />
 				<div className="mt-20 relative">
