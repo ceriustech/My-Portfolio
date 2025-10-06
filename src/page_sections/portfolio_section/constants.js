@@ -28,6 +28,6 @@ export const PROJECT_CARDS = [
 		alt: 'YC Directory App',
 		backgroundColor: '#FFE7EB',
 		className: 'project-list-wrapper',
-		url: '',
+		url: 'https://github.com/ceriustech/apply-wiser',
 	},
 ];
