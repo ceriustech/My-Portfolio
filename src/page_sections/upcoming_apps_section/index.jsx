@@ -17,15 +17,10 @@ const UpcomingAppsShowcase = () => {
 			<div className="marquee h-52">
 				<div className="marquee-box md:gap-12 gap-5">
 					{LOGO_ICONS.map((icon, index) => (
-						<LogoIcon key={index} icon={icon} />
+						<LogoIcon key={`first-${index}`} icon={icon} />
 					))}
-
 					{LOGO_ICONS.map((icon, index) => (
-						<LogoIcon key={index} icon={icon} />
-					))}
-
-					{LOGO_ICONS.map((icon, index) => (
-						<LogoIcon key={index} icon={icon} />
+						<LogoIcon key={`second-${index}`} icon={icon} />
 					))}
 				</div>
 			</div>
