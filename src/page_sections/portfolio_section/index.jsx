@@ -4,7 +4,7 @@ import { PROJECT_CARDS } from './constants';
 
 const PortfolioSection = () => {
 	return (
-		<section id="work" className="app-showcase section-padding">
+		<section id="app-showcase" className="app-showcase section-padding">
 			<div className="w-full">
 				<TitleHeader title="💼 App Showcase" />
 				<div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[260px]">

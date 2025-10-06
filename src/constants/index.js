@@ -31,12 +31,12 @@ const HERO_TEXT_TITLE_WORDS = [
 
 const NAVIGATION_LINKS = [
 	{
-		name: 'Work',
-		link: '#work',
-	},
-	{
 		name: 'Experience',
 		link: '#experience',
+	},
+	{
+		name: 'Showcase',
+		link: '#app-showcase',
 	},
 	{
 		name: 'Skills',

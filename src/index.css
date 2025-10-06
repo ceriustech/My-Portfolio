@@ -103,7 +103,7 @@ section {
 	}
 
 	.hero-3d-layout {
-		@apply xl:w-[60%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
+		@apply xl:w-[60%] w-full h-[65%] md:h-full min-h-[50vh] absolute xl:-top-20 top-64 md:top-24 xl:-right-20 right-0;
 	}
 
 	.navbar {
@@ -251,10 +251,10 @@ section {
 	}
 
 	.tech-icon-wrapper {
-		@apply rounded-full flex justify-center items-center md:h-[150px] mb-[15px] md:w-[150px];
+		@apply rounded-full flex justify-center items-center w-[110px] h-[110px] md:h-[150px] mb-[15px] md:w-[150px];
 
 		img {
-			@apply md:w-full;
+			@apply w-[80px] md:w-full;
 		}
 	}
 
@@ -415,7 +415,7 @@ section {
 	height: 100%;
 	position: absolute;
 	overflow: hidden;
-	animation: marquee 60s linear infinite;
+	animation: marquee 40s linear infinite;
 }
 .marquee-item {
 	float: left;

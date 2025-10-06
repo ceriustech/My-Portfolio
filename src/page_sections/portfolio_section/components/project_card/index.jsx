@@ -1,4 +1,6 @@
 import { forwardRef } from 'react';
+import { useMediaQuery } from '../../../../hooks/media_queries/utils';
+import { QUERIES } from '../../../../hooks/media_queries/constants';
 
 const ProjectCard = forwardRef(({ project }) => {
 	const {
@@ -15,13 +17,10 @@ const ProjectCard = forwardRef(({ project }) => {
 		? 'noopener noreferrer'
 		: undefined;
 
-	const isMobile =
-		typeof window !== 'undefined' &&
-		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-			navigator.userAgent
-		);
+	const isTablet = useMediaQuery({ query: QUERIES.isTablet });
+	const isMobile = useMediaQuery({ query: QUERIES.isMobileOnly });
 
-	if (isMobile) {
+	if (isMobile || isTablet) {
 		return (
 			<a
 				href={url}

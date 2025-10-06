@@ -42,9 +42,9 @@ const NavBar = () => {
 					</ul>
 				</nav>
 
-				<a href="#contact" className="contact-btn group">
+				<a href="#app-showcase" className="contact-btn group">
 					<div className="inner">
-						<span>Contact me</span>
+						<span>App Showcase</span>
 					</div>
 				</a>
 			</div>
