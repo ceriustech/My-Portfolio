@@ -23,6 +23,10 @@ const UpcomingAppsShowcase = () => {
 					{LOGO_ICONS.map((icon, index) => (
 						<LogoIcon key={index} icon={icon} />
 					))}
+
+					{LOGO_ICONS.map((icon, index) => (
+						<LogoIcon key={index} icon={icon} />
+					))}
 				</div>
 			</div>
 		</div>
