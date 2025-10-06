@@ -403,7 +403,7 @@ section {
 }
 
 /* marquee */
-.marquee {
+/* .marquee {
 	width: 100dvw;
 	overflow: hidden;
 	position: relative;
@@ -431,6 +431,40 @@ section {
 	}
 	100% {
 		left: -100%;
+	}
+} */
+
+.marquee {
+	width: 100dvw;
+	overflow: hidden;
+	position: relative;
+}
+.marquee-box {
+	display: flex;
+	align-items: center;
+	gap: 1.25rem; /* 20px - single gap value */
+	width: max-content; /* Critical change */
+	height: 100%;
+	animation: marquee 40s linear infinite;
+	will-change: transform; /* Performance hint for mobile */
+}
+
+@media (min-width: 768px) {
+	.marquee-box {
+		gap: 3rem; /* 48px */
+	}
+}
+
+.marquee-item {
+	flex-shrink: 0; /* Prevent items from shrinking */
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%); /* Move exactly half the width */
 	}
 }
 /* marquee end */
