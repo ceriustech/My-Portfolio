@@ -23,11 +23,12 @@ export const PROJECT_CARDS = [
 	{
 		id: 'apply-wiser',
 		title: 'ApplyWiser',
-		description: 'A platform that uses AI to auto modify resumes',
+		description:
+			'A data driven job platform tracker with automated dashboard analytics',
 		image: '/images/apply-wiser-logo-min.png',
 		alt: 'YC Directory App',
 		backgroundColor: '#FFE7EB',
 		className: 'project-list-wrapper',
-		url: 'https://github.com/ceriustech/apply-wiser',
+		url: 'https://applywiser.app/',
 	},
 ];
